@@ -60,15 +60,15 @@ header-includes: |-
   <meta name="citation_author" content="Benoît Zuber" />
   <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" />
   <meta name="citation_author_orcid" content="0000-0001-7725-5579" />
-  <link rel="canonical" href="https://Zuber-group.github.io/deep-prepyto-paper/" />
-  <meta property="og:url" content="https://Zuber-group.github.io/deep-prepyto-paper/" />
-  <meta property="twitter:url" content="https://Zuber-group.github.io/deep-prepyto-paper/" />
-  <meta name="citation_fulltext_html_url" content="https://Zuber-group.github.io/deep-prepyto-paper/" />
-  <meta name="citation_pdf_url" content="https://Zuber-group.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="application/pdf" href="https://Zuber-group.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Zuber-group.github.io/deep-prepyto-paper/v/090ff44bb691495cc3aa15453097649b166145bd/" />
-  <meta name="manubot_html_url_versioned" content="https://Zuber-group.github.io/deep-prepyto-paper/v/090ff44bb691495cc3aa15453097649b166145bd/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Zuber-group.github.io/deep-prepyto-paper/v/090ff44bb691495cc3aa15453097649b166145bd/manuscript.pdf" />
+  <link rel="canonical" href="https://elatella.github.io/deep-prepyto-paper/" />
+  <meta property="og:url" content="https://elatella.github.io/deep-prepyto-paper/" />
+  <meta property="twitter:url" content="https://elatella.github.io/deep-prepyto-paper/" />
+  <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
+  <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
+  <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/db51f4ff1c0fcc4094a5d9c3124afee00d4af163/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/db51f4ff1c0fcc4094a5d9c3124afee00d4af163/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/db51f4ff1c0fcc4094a5d9c3124afee00d4af163/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -90,9 +90,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://Zuber-group.github.io/deep-prepyto-paper/v/090ff44bb691495cc3aa15453097649b166145bd/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/db51f4ff1c0fcc4094a5d9c3124afee00d4af163/))
 was automatically generated
-from [Zuber-group/deep-prepyto-paper@090ff44](https://github.com/Zuber-group/deep-prepyto-paper/tree/090ff44bb691495cc3aa15453097649b166145bd)
+from [elatella/deep-prepyto-paper@db51f4f](https://github.com/elatella/deep-prepyto-paper/tree/db51f4ff1c0fcc4094a5d9c3124afee00d4af163)
 on November 8, 2021.
 </em></small>
 

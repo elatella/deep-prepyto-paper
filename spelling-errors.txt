@@ -6,9 +6,9 @@ Amin
 anisotropic
 arachnoid
 aseedb
-Astrocytes
+astrocytes
 astrocytic
-Aurion
+AURION
 Automator
 automize
 Axio
@@ -78,7 +78,7 @@ heterogenous
 heterozygote
 heterozygotes
 heterozygous
-hippocampal
+Hippocampal
 hippocampi
 homebuilt
 HPO
@@ -156,9 +156,9 @@ Spearman’s
 Stansted
 supernatant
 superresolution
-sv
+SV
 SVs
-synapsin
+Synapsin
 synaptobrevin
 synaptosomal
 synaptosome
