@@ -2,10 +2,10 @@
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
-[![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://aseedb.github.io/synaptic_tomo_ms/)
-[![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://aseedb.github.io/synaptic_tomo_ms/manuscript.pdf)
-[![GitHub Actions Status](https://github.com/aseedb/synaptic_tomo_ms/workflows/Manubot/badge.svg)](https://github.com/aseedb/synaptic_tomo_ms/actions)
-[![Travis Build Status](https://travis-ci.com/aseedb/synaptic_tomo_ms.svg?branch=main)](https://travis-ci.com/aseedb/synaptic_tomo_ms)
+[![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://elatella.github.io/deep-prepyto-paper/)
+[![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://elatella.github.io/deep-prepyto-paper/manuscript.pdf)
+[![GitHub Actions Status](https://github.com/elatella/deep-prepyto-paper/workflows/Manubot/badge.svg)](https://github.com/elatella/deep-prepyto-paper/actions)
+
 <!-- usage note: delete CI badges above for services not used by your manuscript -->
 
 ## Manuscript description
@@ -31,13 +31,13 @@ Please open [an issue](https://git.io/fhQHM) for questions related to Manubot us
 
 The directories are as follows:
 
-+ [`content`](content) contains the manuscript source, which includes markdown files as well as inputs for citations and references.
+- [`content`](content) contains the manuscript source, which includes markdown files as well as inputs for citations and references.
   See [`USAGE.md`](USAGE.md) for more information.
-+ [`output`](output) contains the outputs (generated files) from Manubot including the resulting manuscripts.
+- [`output`](output) contains the outputs (generated files) from Manubot including the resulting manuscripts.
   You should not edit these files manually, because they will get overwritten.
-+ [`webpage`](webpage) is a directory meant to be rendered as a static webpage for viewing the HTML manuscript.
-+ [`build`](build) contains commands and tools for building the manuscript.
-+ [`ci`](ci) contains files necessary for deployment via continuous integration.
+- [`webpage`](webpage) is a directory meant to be rendered as a static webpage for viewing the HTML manuscript.
+- [`build`](build) contains commands and tools for building the manuscript.
+- [`ci`](ci) contains files necessary for deployment via continuous integration.
 
 ### Local execution
 
@@ -79,13 +79,13 @@ Whenever a pull request is opened, CI (continuous integration) will test whether
 The build process aims to detect common errors, such as invalid citations.
 If your pull request build fails, see the CI logs for the cause of failure and revise your pull request accordingly.
 
-When a commit to the `main` branch occurs (for example, when a pull request is merged), CI builds the manuscript and writes the results to the [`gh-pages`](https://github.com/aseedb/synaptic_tomo_ms/tree/gh-pages) and [`output`](https://github.com/aseedb/synaptic_tomo_ms/tree/output) branches.
+When a commit to the `main` branch occurs (for example, when a pull request is merged), CI builds the manuscript and writes the results to the [`gh-pages`](https://github.com/elatella/deep-prepyto-paper/tree/gh-pages) and [`output`](https://github.com/elatella/deep-prepyto-paper/tree/output) branches.
 The `gh-pages` branch uses [GitHub Pages](https://pages.github.com/) to host the following URLs:
 
-+ **HTML manuscript** at https://aseedb.github.io/synaptic_tomo_ms/
-+ **PDF manuscript** at https://aseedb.github.io/synaptic_tomo_ms/manuscript.pdf
+- **HTML manuscript** at https://elatella.github.io/deep-prepyto-paper/
+- **PDF manuscript** at https://elatella.github.io/deep-prepyto-paper/manuscript.pdf
 
-For continuous integration configuration details, see [`.github/workflows/manubot.yaml`](.github/workflows/manubot.yaml) if using GitHub Actions or [`.travis.yml`](.travis.yml) if using Travis CI.
+For continuous integration configuration details, see [`.github/workflows/manubot.yaml`](.github/workflows/manubot.yaml) if using GitHub Actions.
 
 ## License
 
@@ -98,24 +98,24 @@ We encourage users to openly license their manuscripts, which is the default as 
 [![License: CC0 1.0](https://img.shields.io/badge/License%20Parts-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 Except when noted otherwise, the entirety of this repository is licensed under a CC BY 4.0 License ([`LICENSE.md`](LICENSE.md)), which allows reuse with attribution.
-Please attribute by linking to https://github.com/aseedb/synaptic_tomo_ms.
+Please attribute by linking to https://github.com/elatella/deep-prepyto-paper.
 
 Since CC BY is not ideal for code and data, certain repository components are also released under the CC0 1.0 public domain dedication ([`LICENSE-CC0.md`](LICENSE-CC0.md)).
 All files matched by the following glob patterns are dual licensed under CC BY 4.0 and CC0 1.0:
 
-+ `*.sh`
-+ `*.py`
-+ `*.yml` / `*.yaml`
-+ `*.json`
-+ `*.bib`
-+ `*.tsv`
-+ `.gitignore`
+- `*.sh`
+- `*.py`
+- `*.yml` / `*.yaml`
+- `*.json`
+- `*.bib`
+- `*.tsv`
+- `.gitignore`
 
 All other files are only available under CC BY 4.0, including:
 
-+ `*.md`
-+ `*.html`
-+ `*.pdf`
-+ `*.docx`
+- `*.md`
+- `*.html`
+- `*.pdf`
+- `*.docx`
 
-Please open [an issue](https://github.com/aseedb/synaptic_tomo_ms/issues) for any question related to licensing.
+Please open [an issue](https://github.com/elatella/deep-prepyto-paper/issues) for any question related to licensing.
