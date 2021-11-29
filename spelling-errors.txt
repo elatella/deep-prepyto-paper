@@ -7,7 +7,7 @@ Amira
 anisotropic
 arachnoid
 aseedb
-astrocytes
+Astrocytes
 astrocytic
 Aurion
 Automator
@@ -18,7 +18,6 @@ AxioVision
 AxioVs
 backcrossed
 Benoît
-bilayer
 Blegdamsvej
 Buerker
 CaCl
@@ -28,8 +27,6 @@ Carlsbergfondet
 CCD
 CMS
 CMV
-colocalized
-constitutively
 convolutional
 cryo
 cryostage
@@ -47,7 +44,6 @@ dx
 EDTA
 Eindhoven
 elatella
-electrophysiological
 Elektron
 Elvehjem
 esterase
@@ -58,7 +54,6 @@ FEI
 fiducial
 fiducials
 fluorescein
-fluorescently
 foetal
 Fonden
 Gatan
@@ -74,7 +69,7 @@ HBSS
 HEPES
 heterozygote
 heterozygotes
-heterozygous
+Heterozygous
 Hippocampal
 hippocampi
 homebuilt
@@ -84,7 +79,6 @@ IACUC
 Immuno
 IMOD
 interquartile
-intervesicular
 isoosmotic
 IU
 Jakob
@@ -101,7 +95,6 @@ kV
 LabView
 lentiviral
 Linkam
-liposomes
 Luc
 Lundbeckfonden
 lutamax
@@ -127,19 +120,15 @@ Oxfordshire
 PCR
 Percoll
 pia
-pipet
 Pleasonton
 pLenti
 pre
 presynapse
-presynaptic
-presynpase
 Pyto
 quartiles
 QuikChange
 Radecke
 Raphaela
-RRP
 segementation
 SEH
 SEM
@@ -150,11 +139,9 @@ Spearman’s
 Stansted
 supernatant
 superresolution
-sv
 SVs
-synapsin
 synaptosomal
-synaptosome
+Synaptosome
 synaptosomes
 synaptsome
 Tecnai
@@ -162,14 +149,13 @@ TEM
 TFS
 Thermo
 Thermofisher
-Tomogram
+tomogram
 tomograms
 Tridiem
 triturated
-Trypsin
+trypsin
 ultracentrifuge
 unbinned
-unstimulated
 utilises
 Vitrobot
 Vladan
