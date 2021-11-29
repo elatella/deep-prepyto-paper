@@ -7,7 +7,7 @@ Amira
 anisotropic
 arachnoid
 aseedb
-Astrocytes
+astrocytes
 astrocytic
 Aurion
 Automator
@@ -74,7 +74,7 @@ HBSS
 HEPES
 heterozygote
 heterozygotes
-Heterozygous
+heterozygous
 Hippocampal
 hippocampi
 homebuilt
@@ -111,7 +111,6 @@ mercaptoethanol
 MgCl
 Millville
 Mopac
-morphologically
 motioncor
 MRm
 NaCl
@@ -151,11 +150,11 @@ Spearman’s
 Stansted
 supernatant
 superresolution
-SV
+sv
 SVs
 synapsin
 synaptosomal
-Synaptosome
+synaptosome
 synaptosomes
 synaptsome
 Tecnai
@@ -167,7 +166,7 @@ Tomogram
 tomograms
 Tridiem
 triturated
-trypsin
+Trypsin
 ultracentrifuge
 unbinned
 unstimulated

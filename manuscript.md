@@ -66,9 +66,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/2e5f006c7e9c5854a4457cf7bb5bd328c01d4a51/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2e5f006c7e9c5854a4457cf7bb5bd328c01d4a51/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2e5f006c7e9c5854a4457cf7bb5bd328c01d4a51/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/e0dc8869581436d60e6ab41f20e6b2e1f71c01aa/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/e0dc8869581436d60e6ab41f20e6b2e1f71c01aa/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/e0dc8869581436d60e6ab41f20e6b2e1f71c01aa/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -90,9 +90,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/2e5f006c7e9c5854a4457cf7bb5bd328c01d4a51/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/e0dc8869581436d60e6ab41f20e6b2e1f71c01aa/))
 was automatically generated
-from [elatella/deep-prepyto-paper@2e5f006](https://github.com/elatella/deep-prepyto-paper/tree/2e5f006c7e9c5854a4457cf7bb5bd328c01d4a51)
+from [elatella/deep-prepyto-paper@e0dc886](https://github.com/elatella/deep-prepyto-paper/tree/e0dc8869581436d60e6ab41f20e6b2e1f71c01aa)
 on November 29, 2021.
 </em></small>
 
@@ -313,17 +313,7 @@ These results indicate that prolonged abnormal exocytotic activity is correlated
 
 
 ## Discussion
-### SNAP-25 4K mutant further supports the RRP morphological definition
-Due to its transient nature, SV exocytosis has been difficult to characterize morphologically. 
-The optimal sample preservation delivered by cryo-ET makes it possible to investigate the role of tethers located between SVs and the AT PM and the function of inter-SV connectors. Previously it was shown that the number of tethers of a SV defines whether it is ready to release [@doi:10.1083/jcb.200908082;@doi:10.1016/j.sbi.2019.01.008].
-SVs with at least 3 tethers belong to the RRP. 
-In order to further assess this model, we investigated the presynapse of cultured hippocampal neurons obtained from SNAP-25 KO mice rescued with WT-SNAP-25 or expressing either a more positively charged SNAP-25 mutant (4K) or a more negatively charged mutant (4E). 
- presented a significantly lower density of proximal SVs than the WT (between 0 and 25 nm from the AZ PM). This is in line with the elevated rate of spontaneous exocytosis (minis). 
-_Is this clear or should we state that when a vesicle fuses, it leaves an "empty space" behind?_
-Critically, the 4K mutant had neither triple-tethered SVs nor SVs with more than 3 tethers.
-As the RRP in this mutant was formerly shown through functional assays to be depleted, our observation further supports the previously introduced morphological definition of the RRP [@doi:10.1016/j.celrep.2019.01.103].  
-Interestingly, the 4E mutant, which possesses a normal-sized RRP as per functional assays, had no significant in proximal SV occupancy in comparison to WT synapses and it showed SVs with three or more tethers in the same proportion as WT SVs. 
-These observations are also consistent with a number of studies that have concluded that SV exocytosis requires a minimum of three SNARE complexes [@doi:10.1074/jbc.m109.047381;@doi:10.1126/science.1193134;@doi:10.1126/science.1214984].
+
 
 
 
