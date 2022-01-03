@@ -11,7 +11,7 @@
   <meta name="author" content="Vladan Lučić" />
   <meta name="author" content="Jakob B. Sørensen" />
   <meta name="author" content="Benoît Zuber" />
-  <meta name="dcterms.date" content="2021-12-08" />
+  <meta name="dcterms.date" content="2022-01-03" />
   <meta name="keywords" content="synapse, cryo-electron tomography, synaptic vesicles, deep learning, segmentation, post-processing" />
   <title>Morphofunctional changes at the active zone during synaptic vesicle exocytosis</title>
   <style>
@@ -53,8 +53,8 @@
   <meta name="citation_title" content="Morphofunctional changes at the active zone during synaptic vesicle exocytosis" />
   <meta property="og:title" content="Morphofunctional changes at the active zone during synaptic vesicle exocytosis" />
   <meta property="twitter:title" content="Morphofunctional changes at the active zone during synaptic vesicle exocytosis" />
-  <meta name="dc.date" content="2021-12-08" />
-  <meta name="citation_publication_date" content="2021-12-08" />
+  <meta name="dc.date" content="2022-01-03" />
+  <meta name="citation_publication_date" content="2022-01-03" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -92,9 +92,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/a6778eb0a8b9154149811cc0cd1283c249006e48/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a6778eb0a8b9154149811cc0cd1283c249006e48/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a6778eb0a8b9154149811cc0cd1283c249006e48/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4200c75a7bc853168071b7194dff57aae2b6c67c/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4200c75a7bc853168071b7194dff57aae2b6c67c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4200c75a7bc853168071b7194dff57aae2b6c67c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -108,10 +108,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/a6778eb0a8b9154149811cc0cd1283c249006e48/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/4200c75a7bc853168071b7194dff57aae2b6c67c/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/a6778eb0a8b9154149811cc0cd1283c249006e48">elatella/deep-prepyto-paper@a6778eb</a>
-on December 8, 2021.
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/4200c75a7bc853168071b7194dff57aae2b6c67c">elatella/deep-prepyto-paper@4200c75</a>
+on January 3, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -195,6 +195,8 @@ But also in the field of cryo electron microscopy has recently recognized the be
 It brings many advantages compared to other cryo-electron microscopy (EM) methods, as it yields images at in situ conditions.
 Therefore cryo ET can help to reveal the natural cellular environment of protein(-complexes), their function as well as their structure.
 In order to analyze the cellular context within a tomogram, cellular features are being segmented. Popular programs for manual segementation are IMOD and Amira.</p>
+<p>3D machine learning
+We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and ould represent a complete 360 degree 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.</p>
 <h2 id="results">Results</h2>
 <h3 id="comparison-of-manual-segmentation-with-automatic-deep-learning-based-segmentation">Comparison of manual segmentation with automatic deep-learning based segmentation</h3>
 <h2 id="discussion">Discussion</h2>
@@ -252,13 +254,13 @@ The tomograms that were used for this analysis were binned by a factor of 2 to 3
 <div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>Machine Learning in Medicine</strong> <div class="csl-block">Alvin Rajkomar, Jeffrey Dean, Isaac Kohane</div> <em>New England Journal of Medicine</em> (2019-04-04) <a href="https://doi.org/gfzk8r">https://doi.org/gfzk8r</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1056/nejmra1814259">10.1056/nejmra1814259</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30943338">30943338</a></div></div>
 </div>
 <div id="ref-gZQPMDan" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Application of machine learning techniques to electron microscopic/spectroscopic image data analysis</strong> <div class="csl-block">Shunsuke Muto, Motoki Shiga</div> <em>Microscopy</em> (2020-04) <a href="https://doi.org/ggckm4">https://doi.org/ggckm4</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/jmicro/dfz036">10.1093/jmicro/dfz036</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31682260">31682260</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7141894">PMC7141894</a></div></div>
+<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Application of machine learning techniques to electron microscopic/spectroscopic image data analysis</strong> <div class="csl-block">Shunsuke Muto, Motoki Shiga</div> <em>Microscopy</em> (2020-04-08) <a href="https://doi.org/ggckm4">https://doi.org/ggckm4</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/jmicro/dfz036">10.1093/jmicro/dfz036</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31682260">31682260</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7141894">PMC7141894</a></div></div>
 </div>
 <div id="ref-ldzj1tqz" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>Current data processing strategies for cryo-electron tomography and subtomogram averaging</strong> <div class="csl-block">Euan Pyle, Giulia Zanetti</div> <em>Biochemical Journal</em> (2021-05-28) <a href="https://doi.org/gkqqv6">https://doi.org/gkqqv6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1042/bcj20200715">10.1042/bcj20200715</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34003255">34003255</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8133831">PMC8133831</a></div></div>
 </div>
 <div id="ref-7sGZgtQa" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>A rapid Percoll gradient procedure for preparation of synaptosomes</strong> <div class="csl-block">Peter R Dunkley, Paula E Jarvie, Phillip J Robinson</div> <em>Nature Protocols</em> (2008-10-16) <a href="https://doi.org/b7zwh8">https://doi.org/b7zwh8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nprot.2008.171">10.1038/nprot.2008.171</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18927557">18927557</a></div></div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>A rapid Percoll gradient procedure for preparation of synaptosomes</strong> <div class="csl-block">Peter R Dunkley, Paula E Jarvie, Phillip J Robinson</div> <em>Nature Protocols</em> (2008-11) <a href="https://doi.org/b7zwh8">https://doi.org/b7zwh8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nprot.2008.171">10.1038/nprot.2008.171</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18927557">18927557</a></div></div>
 </div>
 <div id="ref-19ZFerhph" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Automated electron microscope tomography using robust prediction of specimen movements</strong> <div class="csl-block">David N Mastronarde</div> <em>Journal of Structural Biology</em> (2005-10) <a href="https://doi.org/ff7gzx">https://doi.org/ff7gzx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2005.07.007">10.1016/j.jsb.2005.07.007</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16182563">16182563</a></div></div>
@@ -267,7 +269,7 @@ The tomograms that were used for this analysis were binned by a factor of 2 to 3
 <div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>2dx_automator: Implementation of a semiautomatic high-throughput high-resolution cryo-electron crystallography pipeline</strong> <div class="csl-block">Sebastian Scherer, Julia Kowal, Mohamed Chami, Venkata Dandey, Marcel Arheit, Philippe Ringler, Henning Stahlberg</div> <em>Journal of Structural Biology</em> (2014-05) <a href="https://doi.org/f522h3">https://doi.org/f522h3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.03.016">10.1016/j.jsb.2014.03.016</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24680783">24680783</a></div></div>
 </div>
 <div id="ref-4rVTIFyw" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Electron counting and beam-induced motion correction enable near-atomic-resolution single-particle cryo-EM</strong> <div class="csl-block">Xueming Li, Paul Mooney, Shawn Zheng, Christopher R Booth, Michael B Braunfeld, Sander Gubbens, David A Agard, Yifan Cheng</div> <em>Nature Methods</em> (2013-05-05) <a href="https://doi.org/f4zpjf">https://doi.org/f4zpjf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.2472">10.1038/nmeth.2472</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23644547">23644547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3684049">PMC3684049</a></div></div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Electron counting and beam-induced motion correction enable near-atomic-resolution single-particle cryo-EM</strong> <div class="csl-block">Xueming Li, Paul Mooney, Shawn Zheng, Christopher R Booth, Michael B Braunfeld, Sander Gubbens, David A Agard, Yifan Cheng</div> <em>Nature Methods</em> (2013-06) <a href="https://doi.org/f4zpjf">https://doi.org/f4zpjf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.2472">10.1038/nmeth.2472</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23644547">23644547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3684049">PMC3684049</a></div></div>
 </div>
 <div id="ref-136NHHp17" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Computer Visualization of Three-Dimensional Image Data Using IMOD</strong> <div class="csl-block">James R Kremer, David N Mastronarde, JRichard McIntosh</div> <em>Journal of Structural Biology</em> (1996-01) <a href="https://doi.org/d9nfzw">https://doi.org/d9nfzw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1006/jsbi.1996.0013">10.1006/jsbi.1996.0013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/8742726">8742726</a></div></div>
