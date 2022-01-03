@@ -8,7 +8,7 @@ keywords:
 - segmentation
 - post-processing
 lang: en-US
-date-meta: '2021-12-08'
+date-meta: '2022-01-03'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Morphofunctional changes at the active zone during synaptic vesicle exocytosis" />
   <meta property="og:title" content="Morphofunctional changes at the active zone during synaptic vesicle exocytosis" />
   <meta property="twitter:title" content="Morphofunctional changes at the active zone during synaptic vesicle exocytosis" />
-  <meta name="dc.date" content="2021-12-08" />
-  <meta name="citation_publication_date" content="2021-12-08" />
+  <meta name="dc.date" content="2022-01-03" />
+  <meta name="citation_publication_date" content="2022-01-03" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -66,9 +66,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/a6778eb0a8b9154149811cc0cd1283c249006e48/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a6778eb0a8b9154149811cc0cd1283c249006e48/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a6778eb0a8b9154149811cc0cd1283c249006e48/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4200c75a7bc853168071b7194dff57aae2b6c67c/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4200c75a7bc853168071b7194dff57aae2b6c67c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4200c75a7bc853168071b7194dff57aae2b6c67c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -90,10 +90,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/a6778eb0a8b9154149811cc0cd1283c249006e48/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/4200c75a7bc853168071b7194dff57aae2b6c67c/))
 was automatically generated
-from [elatella/deep-prepyto-paper@a6778eb](https://github.com/elatella/deep-prepyto-paper/tree/a6778eb0a8b9154149811cc0cd1283c249006e48)
-on December 8, 2021.
+from [elatella/deep-prepyto-paper@4200c75](https://github.com/elatella/deep-prepyto-paper/tree/4200c75a7bc853168071b7194dff57aae2b6c67c)
+on January 3, 2022.
 </em></small>
 
 ## Authors
@@ -197,6 +197,10 @@ The method of cryo-electron tomography (ET) utilises a series of tilted two-dime
 It brings many advantages compared to other cryo-electron microscopy (EM) methods, as it yields images at in situ conditions.
 Therefore cryo ET can help to reveal the natural cellular environment of protein(-complexes), their function as well as their structure.
 In order to analyze the cellular context within a tomogram, cellular features are being segmented. Popular programs for manual segementation are IMOD and Amira.
+
+
+3D machine learning
+We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and ould represent a complete 360 degree 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.
 
 
 ## Results

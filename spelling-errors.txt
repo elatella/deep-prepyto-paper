@@ -15,7 +15,8 @@ Carlsbergfondet
 CCD
 convolutional
 cryo
-datasets
+dataset
+Datasets
 Defocus
 Didcot
 disbalances
@@ -59,6 +60,7 @@ Nordisk
 Novo
 OC
 Onstruments
+ould
 Oxfordshire
 Pleasonton
 Postprocessing
@@ -78,7 +80,7 @@ Tecnai
 TEM
 TFS
 Thermofisher
-tomogram
+Tomogram
 tomograms
 Tridiem
 unbinned

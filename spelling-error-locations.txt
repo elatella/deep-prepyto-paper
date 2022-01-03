@@ -19,6 +19,12 @@ content/02.Introduction.md:11:Amira
 content/02.Introduction.md:11:IMOD
 content/02.Introduction.md:11:segementation
 content/02.Introduction.md:11:tomogram
+content/02.Introduction.md:15:cryo
+content/02.Introduction.md:15:dataset
+content/02.Introduction.md:15:datasets
+content/02.Introduction.md:15:datasets
+content/02.Introduction.md:15:datasets
+content/02.Introduction.md:15:ould
 content/05.materials_and_methods.md:3:Cryo
 content/05.materials_and_methods.md:3:Datasets
 content/05.materials_and_methods.md:5:astrocytic
