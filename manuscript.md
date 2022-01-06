@@ -66,9 +66,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4f5ee20f924a85e4a3fc722bfabd942cc823c9f2/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4f5ee20f924a85e4a3fc722bfabd942cc823c9f2/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4f5ee20f924a85e4a3fc722bfabd942cc823c9f2/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/373cfbd4cb5387ffc88d808d0a702b1413db8708/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/373cfbd4cb5387ffc88d808d0a702b1413db8708/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/373cfbd4cb5387ffc88d808d0a702b1413db8708/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -90,9 +90,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/4f5ee20f924a85e4a3fc722bfabd942cc823c9f2/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/373cfbd4cb5387ffc88d808d0a702b1413db8708/))
 was automatically generated
-from [elatella/deep-prepyto-paper@4f5ee20](https://github.com/elatella/deep-prepyto-paper/tree/4f5ee20f924a85e4a3fc722bfabd942cc823c9f2)
+from [elatella/deep-prepyto-paper@373cfbd](https://github.com/elatella/deep-prepyto-paper/tree/373cfbd4cb5387ffc88d808d0a702b1413db8708)
 on January 6, 2022.
 </em></small>
 
@@ -205,7 +205,7 @@ Currently manual segmentation is being considered the bottleneck in the worklow 
 Problem 2D and 3D 
 
 3D machine learning
-We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and ould represent a complete 360 degree 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.
+We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and ould represent a complete 360° 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.
 
 
 ## Results
