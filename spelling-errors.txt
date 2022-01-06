@@ -4,8 +4,8 @@ Amin
 Amira
 anisotropic
 aseedb
-Astrocytic
-Aurion
+astrocytic
+AURION
 Automator
 automize
 Benoît
@@ -16,7 +16,7 @@ CCD
 convolutional
 cryo
 dataset
-Datasets
+datasets
 Defocus
 Didcot
 disbalances
@@ -92,6 +92,7 @@ vladanl
 voxel
 Wageningen
 Witz
+worklow
 XXXX
 XXXXXXXX
 Zuber
