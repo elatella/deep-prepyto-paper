@@ -17,6 +17,7 @@ convolutional
 cryo
 dataset
 datasets
+deeplearning
 Defocus
 Didcot
 disbalances

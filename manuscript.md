@@ -8,7 +8,7 @@ keywords:
 - segmentation
 - post-processing
 lang: en-US
-date-meta: '2022-01-06'
+date-meta: '2022-01-07'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Morphofunctional changes at the active zone during synaptic vesicle exocytosis" />
   <meta property="og:title" content="Morphofunctional changes at the active zone during synaptic vesicle exocytosis" />
   <meta property="twitter:title" content="Morphofunctional changes at the active zone during synaptic vesicle exocytosis" />
-  <meta name="dc.date" content="2022-01-06" />
-  <meta name="citation_publication_date" content="2022-01-06" />
+  <meta name="dc.date" content="2022-01-07" />
+  <meta name="citation_publication_date" content="2022-01-07" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -66,9 +66,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/373cfbd4cb5387ffc88d808d0a702b1413db8708/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/373cfbd4cb5387ffc88d808d0a702b1413db8708/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/373cfbd4cb5387ffc88d808d0a702b1413db8708/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/69b721acec69104302323287baac8151ed026c3a/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/69b721acec69104302323287baac8151ed026c3a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/69b721acec69104302323287baac8151ed026c3a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -90,10 +90,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/373cfbd4cb5387ffc88d808d0a702b1413db8708/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/69b721acec69104302323287baac8151ed026c3a/))
 was automatically generated
-from [elatella/deep-prepyto-paper@373cfbd](https://github.com/elatella/deep-prepyto-paper/tree/373cfbd4cb5387ffc88d808d0a702b1413db8708)
-on January 6, 2022.
+from [elatella/deep-prepyto-paper@69b721a](https://github.com/elatella/deep-prepyto-paper/tree/69b721acec69104302323287baac8151ed026c3a)
+on January 7, 2022.
 </em></small>
 
 ## Authors
@@ -192,7 +192,7 @@ The rise of machine learning is sweeping the technological landscape.
 Its use cases are highly diverse and are just starting to reach the scientific community.
 Especially the graphical deep-learning approaches have been quite popular [@doi:10.1056/NEJMra1814259].
 The graphical deep-learning approach is based around learning the description of the common attributes of a group or subset of a universe of objects [@doi:10.1017/S026988899700101X].
-
+Describe the typical make up of a deeplearning approach
 But also the field of cryo electron microscopy has recently recognized the benefits of machine/deep-learning approaches [@doi:10.1093/jmicro/dfz036].
 
 The method of cryo-electron tomography (ET) utilises a series of tilted two-dimensional (2D) images to reconstruct a three-dimensional (3D) image of the imaged sample [@doi:10.1042/BCJ20200715].
