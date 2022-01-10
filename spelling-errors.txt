@@ -4,7 +4,7 @@ Amin
 Amira
 anisotropic
 aseedb
-astrocytic
+Astrocytic
 Aurion
 Automator
 automize
