@@ -92,9 +92,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8550ff8a0394279d41c64b8a6617fd05e70094e4/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8550ff8a0394279d41c64b8a6617fd05e70094e4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8550ff8a0394279d41c64b8a6617fd05e70094e4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/a0047d464815470d879bc35217d5d52ff8e29356/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a0047d464815470d879bc35217d5d52ff8e29356/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a0047d464815470d879bc35217d5d52ff8e29356/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -108,9 +108,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/8550ff8a0394279d41c64b8a6617fd05e70094e4/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/a0047d464815470d879bc35217d5d52ff8e29356/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/8550ff8a0394279d41c64b8a6617fd05e70094e4">elatella/deep-prepyto-paper@8550ff8</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/a0047d464815470d879bc35217d5d52ff8e29356">elatella/deep-prepyto-paper@a0047d4</a>
 on January 10, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -204,6 +204,8 @@ Currently manual segmentation is being considered the bottleneck in the worklow 
 We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and ould represent a complete 360° 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.</p>
 <h2 id="results">Results</h2>
 <h3 id="comparison-of-manual-segmentation-with-automatic-deep-learning-based-segmentation">Comparison of manual segmentation with automatic deep-learning based segmentation</h3>
+<p>Evaluation metric DICE for pixel/pixel analysis
+Global analysis</p>
 <h2 id="discussion">Discussion</h2>
 <h2 id="materials-and-methods">Materials and methods</h2>
 <h3 id="cryo-electron-tomography-datasets">Cryo-electron Tomography Datasets</h3>
@@ -249,8 +251,16 @@ Consequently, the numbers of tethers and connectors should not be considered as 
 As it was done before, an upper limit was set between 2100 and 3200 nm3 on segment volume.
 The tomograms that were used for this analysis were binned by a factor of 2 to 3, resulting in voxel sizes between 2.1 and 2.4 nm.</p>
 <h3 id="description-of-machine-learning-training-stage">Description of Machine Learning: Training Stage</h3>
-<h3 id="training-datasets-and-batch-generation">Training Datasets and Batch Generation</h3>
-<h3 id="optimization-postprocessing">Optimization / Postprocessing</h3>
+<h4 id="deep-model-training">Deep Model Training</h4>
+<p>Unet
+Training Datasets and Batch Generation</p>
+<h3 id="transfer-learning">Transfer Learning</h3>
+<h4 id="optimization-postprocessing">Optimization / Postprocessing</h4>
+<p>-Global Threshold
+-Mask Tuning
+-Compute Radial Profile
+-Radius Estimation (Cross Correlation through Radial Profile)
+-Remove Outlier Labels</p>
 <h3 id="analysis-of-results">Analysis of Results</h3>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
