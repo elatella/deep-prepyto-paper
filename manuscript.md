@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/e18ec8ae5948fdc3aa03467283fb197716394db9/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/e18ec8ae5948fdc3aa03467283fb197716394db9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/e18ec8ae5948fdc3aa03467283fb197716394db9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/0be36c32cac1461d1a224d34aee98e0dfe88662e/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0be36c32cac1461d1a224d34aee98e0dfe88662e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0be36c32cac1461d1a224d34aee98e0dfe88662e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/e18ec8ae5948fdc3aa03467283fb197716394db9/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/0be36c32cac1461d1a224d34aee98e0dfe88662e/))
 was automatically generated
-from [elatella/deep-prepyto-paper@e18ec8a](https://github.com/elatella/deep-prepyto-paper/tree/e18ec8ae5948fdc3aa03467283fb197716394db9)
+from [elatella/deep-prepyto-paper@0be36c3](https://github.com/elatella/deep-prepyto-paper/tree/0be36c32cac1461d1a224d34aee98e0dfe88662e)
 on January 10, 2022.
 </em></small>
 
@@ -213,11 +213,17 @@ We decided to teach our network with a real world dataset rather than using synt
 
 
 ### Comparison of manual segmentation with automatic deep-learning based segmentation
-
+Evaluation metric DICE for pixel/pixel analysis
+Global analysis
 
 
 ## Discussion
 
+DICE
+
+### Outlook
+implement automatic cell-outline and active zone segmentation as deep learning workflow using UNet
+implement automatic connector and tether segmentation as a deep leaning workflow using UNet
 
 
 

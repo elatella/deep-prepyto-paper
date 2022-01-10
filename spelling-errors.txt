@@ -5,7 +5,7 @@ Amira
 anisotropic
 aseedb
 Astrocytic
-Aurion
+AURION
 Automator
 automize
 Benoît
@@ -16,7 +16,7 @@ CCD
 convolutional
 cryo
 dataset
-datasets
+Datasets
 deeplearning
 Defocus
 Didcot
@@ -81,7 +81,7 @@ Tecnai
 TEM
 TFS
 Thermofisher
-tomogram
+Tomogram
 tomograms
 Tridiem
 unbinned
