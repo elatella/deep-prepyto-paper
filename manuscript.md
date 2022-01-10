@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/0be36c32cac1461d1a224d34aee98e0dfe88662e/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0be36c32cac1461d1a224d34aee98e0dfe88662e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0be36c32cac1461d1a224d34aee98e0dfe88662e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/67db72b432bcc6e97b051ef6f839852c8d539c9a/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/67db72b432bcc6e97b051ef6f839852c8d539c9a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/67db72b432bcc6e97b051ef6f839852c8d539c9a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/0be36c32cac1461d1a224d34aee98e0dfe88662e/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/67db72b432bcc6e97b051ef6f839852c8d539c9a/))
 was automatically generated
-from [elatella/deep-prepyto-paper@0be36c3](https://github.com/elatella/deep-prepyto-paper/tree/0be36c32cac1461d1a224d34aee98e0dfe88662e)
+from [elatella/deep-prepyto-paper@67db72b](https://github.com/elatella/deep-prepyto-paper/tree/67db72b432bcc6e97b051ef6f839852c8d539c9a)
 on January 10, 2022.
 </em></small>
 
@@ -203,10 +203,23 @@ In order to analyze the cellular context within a tomogram, cellular features ar
 Popular programs for manual segementation are IMOD and Amira [@doi:10.1006/jsbi.1996.0013; @doi:10.1016/B978-012387582-2/50040-X].
 Currently manual segmentation is being considered the bottleneck in the worklow of cellular cryo-ET.
 
+The communication between neurons is based on the exocytosis of neurotransmitter filled vesicles.
+The communication between CNS synapses depends on the very low basal vesicle fusion rate and the ability to rapidly upregulatethat rate upon stimulation.
+The SNARE complex connects the synaptic vesicles and the presynaptic cell membrane , mediating vesicle fusion.
+Their function and regulation still pose big questions.
+In addition, mutations of involved proteins have been linked to numerous neurological diseases.
+To address these issues, cryo-ET is the methode of choice. To perform quantitative studies on the resulting tomograms, accurate segmentation of both synaptic vesicles and the interconnecting filaments are required.
+Segmenting the cellular features manually is a very time-intensive step.
+Among the different cell features, synaptic vesicles are the most tiime consuming to segment.
+Despite their very homogeneous size and shape, their sheer number and finding their true center (du to the missing wedge problematic) complicates their segmentation.
 Problem 2D and 3D 
 
-3D machine learning
+
+
+Aim
+Creation of a deep-learning pipeline which is taught to segment cellular features, starting with synaptic vesicles.
 We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and ould represent a complete 360° 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.
+proposed method provides the initial step for downstream segmentation of subcellular compartments such as synaptic connectors and tethers for which an extremely accurate vesicle segmentation is required
 
 
 ## Results

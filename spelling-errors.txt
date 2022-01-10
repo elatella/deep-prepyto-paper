@@ -5,7 +5,7 @@ Amira
 anisotropic
 aseedb
 Astrocytic
-AURION
+Aurion
 Automator
 automize
 Benoît
@@ -16,7 +16,7 @@ CCD
 convolutional
 cryo
 dataset
-Datasets
+datasets
 deeplearning
 Defocus
 Didcot
@@ -52,6 +52,7 @@ LabView
 Luc
 Lundbeckfonden
 Martinsried
+methode
 Mopac
 motioncor
 NAD
@@ -65,6 +66,7 @@ ould
 Oxfordshire
 Pleasonton
 Postprocessing
+presynaptic
 Pyto
 Radecke
 Raphaela
@@ -73,6 +75,7 @@ SerialEM
 situ
 Sørensen
 Stansted
+subcellular
 superresolution
 SVs
 synaptosome
@@ -81,12 +84,14 @@ Tecnai
 TEM
 TFS
 Thermofisher
+tiime
 Tomogram
 tomograms
 Tridiem
 unbinned
 undiluteted
 Unet
+upregulatethat
 utilises
 Vitrobot
 Vladan
