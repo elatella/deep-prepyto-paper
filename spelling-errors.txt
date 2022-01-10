@@ -4,8 +4,8 @@ Amin
 Amira
 anisotropic
 aseedb
-astrocytic
-Aurion
+Astrocytic
+AURION
 Automator
 automize
 Benoît
@@ -17,7 +17,7 @@ convolutional
 Convoluttional
 cryo
 dataset
-datasets
+Datasets
 deeplearning
 Defocus
 Didcot
@@ -44,6 +44,7 @@ Jakob
 JBSorensen
 Julika
 julikaradecke
+jupyter
 khosrowzadeh
 Khosrozadeh
 Klopferspitz
@@ -67,8 +68,9 @@ ould
 Oxfordshire
 Pleasonton
 Postprocessing
+pre
 presynaptic
-Pyto
+pyto
 Radecke
 Raphaela
 segementation
