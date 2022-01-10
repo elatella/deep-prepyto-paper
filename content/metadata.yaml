@@ -1,5 +1,6 @@
 ---
 title: Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms
+alternative title: Automatizing tomogram segmentation by utilizing machine learning frameworks on the example of synaptic vesicles
 keywords:
   - synapse
   - cryo-electron tomography
