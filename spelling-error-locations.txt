@@ -103,3 +103,4 @@ content/05.materials_and_methods.md:52:tomograms
 content/05.materials_and_methods.md:52:voxel
 content/05.materials_and_methods.md:56:Datasets
 content/05.materials_and_methods.md:58:Postprocessing
+content/statistics.md:20:synaptosomes
