@@ -14,7 +14,7 @@ CaCl
 Carlsbergfondet
 CCD
 convolutional
-cryo
+Cryo
 dataset
 datasets
 deeplearning
