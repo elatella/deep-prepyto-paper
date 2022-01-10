@@ -5,7 +5,7 @@ Amira
 anisotropic
 aseedb
 astrocytic
-AURION
+Aurion
 Automator
 automize
 Benoît
@@ -81,7 +81,7 @@ Tecnai
 TEM
 TFS
 Thermofisher
-tomogram
+Tomogram
 tomograms
 Tridiem
 unbinned
