@@ -4,8 +4,8 @@ Amin
 Amira
 anisotropic
 aseedb
-astrocytic
-Aurion
+Astrocytic
+AURION
 Automator
 automize
 Benoît
@@ -70,6 +70,7 @@ presynaptic
 Pyto
 Radecke
 Raphaela
+researche
 segementation
 SerialEM
 situ
@@ -84,14 +85,13 @@ Tecnai
 TEM
 TFS
 Thermofisher
-tiime
-Tomogram
+timewise
+tomogram
 tomograms
 Tridiem
 unbinned
 undiluteted
 UNet
-upregulatethat
 utilises
 Vitrobot
 Vladan

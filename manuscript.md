@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/6f36a84f871ac30337696cb7dd610ad78c7b6ec5/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6f36a84f871ac30337696cb7dd610ad78c7b6ec5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6f36a84f871ac30337696cb7dd610ad78c7b6ec5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/fb79674611fd26e73b1d4ba94602f3e8bdfede2f/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fb79674611fd26e73b1d4ba94602f3e8bdfede2f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fb79674611fd26e73b1d4ba94602f3e8bdfede2f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/6f36a84f871ac30337696cb7dd610ad78c7b6ec5/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/fb79674611fd26e73b1d4ba94602f3e8bdfede2f/))
 was automatically generated
-from [elatella/deep-prepyto-paper@6f36a84](https://github.com/elatella/deep-prepyto-paper/tree/6f36a84f871ac30337696cb7dd610ad78c7b6ec5)
+from [elatella/deep-prepyto-paper@fb79674](https://github.com/elatella/deep-prepyto-paper/tree/fb79674611fd26e73b1d4ba94602f3e8bdfede2f)
 on January 10, 2022.
 </em></small>
 
@@ -193,31 +193,31 @@ The rise of machine learning is sweeping the technological landscape.
 Its use cases are highly diverse and are just starting to reach the scientific community.
 Especially the graphical deep-learning approaches have been quite popular [@doi:10.1056/NEJMra1814259].
 The graphical deep-learning approach is based around learning the description of the common attributes of a group or subset of a universe of objects [@doi:10.1017/S026988899700101X].
-Describe the typical make up of a deeplearning approach
+-> Describe the typical make up of a deeplearning approach
 But also the field of cryo electron microscopy has recently recognized the benefits of machine/deep-learning approaches [@doi:10.1093/jmicro/dfz036].
 
-The method of cryo-electron tomography (ET) utilises a series of tilted two-dimensional (2D) images to reconstruct a three-dimensional (3D) image of the imaged sample [@doi:10.1042/BCJ20200715].
+The method of cryo-electron tomography (ET) utilises a series of tilted two-dimensional (2D) images to reconstruct a three-dimensional (3D) volume of the imaged sample [@doi:10.1042/BCJ20200715].
+-> Describe more about cryo EM and cryo ET, also mention missing wedge problem
+
 It brings many advantages compared to other cryo-electron microscopy (EM) methods, as it yields images at in situ conditions.
 Therefore cryo ET can help to reveal the natural cellular environment of protein(-complexes), their function as well as their structure.
 In order to analyze the cellular context within a tomogram, cellular features are being segmented. 
 Popular programs for manual segementation are IMOD and Amira [@doi:10.1006/jsbi.1996.0013; @doi:10.1016/B978-012387582-2/50040-X].
-Currently manual segmentation is being considered the bottleneck in the worklow of cellular cryo-ET.
+Currently manual segmentation is being considered the bottleneck in the worklow timewise of cellular cryo-ET.
 
-The communication between neurons is based on the exocytosis of neurotransmitter filled vesicles.
-The communication between CNS synapses depends on the very low basal vesicle fusion rate and the ability to rapidly upregulatethat rate upon stimulation.
-The SNARE complex connects the synaptic vesicles and the presynaptic cell membrane , mediating vesicle fusion.
+Our lab researche, with the help of cryo-ET, the synaptic architecture and its changes upon neurotransmitter vesicle release.
+A special focus in that research holds the SNARE complex, which connects the synaptic vesicles and the presynaptic cell membrane, mediating vesicle fusion.
 Their function and regulation still pose big questions.
 In addition, mutations of involved proteins have been linked to numerous neurological diseases.
-To address these issues, cryo-ET is the methode of choice. To perform quantitative studies on the resulting tomograms, accurate segmentation of both synaptic vesicles and the interconnecting filaments are required.
-Segmenting the cellular features manually is a very time-intensive step.
-Among the different cell features, synaptic vesicles are the most tiime consuming to segment.
+To address these issues, cryo-ET is the methode of choice. 
+To perform quantitative studies on the resulting tomograms, accurate segmentation of both synaptic vesicles and the interconnecting filaments are required.
+Among the different cell features, synaptic vesicles are the most time consuming to segment.
 Despite their very homogeneous size and shape, their sheer number and finding their true center (du to the missing wedge problematic) complicates their segmentation.
+
 Problem 2D and 3D 
 
-
-
 Aim
-Creation of a deep-learning pipeline which is taught to segment cellular features, starting with synaptic vesicles.
+Creation of a deep-learning pipeline, which is taught to segment cellular features, starting with synaptic vesicles.
 We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and ould represent a complete 360° 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.
 proposed method provides the initial step for downstream segmentation of subcellular compartments such as synaptic connectors and tethers for which an extremely accurate vesicle segmentation is required
 
