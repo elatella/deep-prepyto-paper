@@ -5,7 +5,7 @@ Amira
 anisotropic
 aseedb
 astrocytic
-AURION
+Aurion
 Automator
 automize
 Benoît
@@ -14,7 +14,7 @@ CaCl
 Carlsbergfondet
 CCD
 convolutional
-Cryo
+cryo
 dataset
 datasets
 deeplearning
@@ -81,11 +81,12 @@ Tecnai
 TEM
 TFS
 Thermofisher
-Tomogram
+tomogram
 tomograms
 Tridiem
 unbinned
 undiluteted
+Unet
 utilises
 Vitrobot
 Vladan

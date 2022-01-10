@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8550ff8a0394279d41c64b8a6617fd05e70094e4/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8550ff8a0394279d41c64b8a6617fd05e70094e4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8550ff8a0394279d41c64b8a6617fd05e70094e4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/a0047d464815470d879bc35217d5d52ff8e29356/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a0047d464815470d879bc35217d5d52ff8e29356/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a0047d464815470d879bc35217d5d52ff8e29356/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/8550ff8a0394279d41c64b8a6617fd05e70094e4/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/a0047d464815470d879bc35217d5d52ff8e29356/))
 was automatically generated
-from [elatella/deep-prepyto-paper@8550ff8](https://github.com/elatella/deep-prepyto-paper/tree/8550ff8a0394279d41c64b8a6617fd05e70094e4)
+from [elatella/deep-prepyto-paper@a0047d4](https://github.com/elatella/deep-prepyto-paper/tree/a0047d464815470d879bc35217d5d52ff8e29356)
 on January 10, 2022.
 </em></small>
 
@@ -213,7 +213,8 @@ We decided to teach our network with a real world dataset rather than using synt
 
 
 ### Comparison of manual segmentation with automatic deep-learning based segmentation
-
+Evaluation metric DICE for pixel/pixel analysis
+Global analysis
 
 
 ## Discussion
@@ -278,9 +279,19 @@ The tomograms that were used for this analysis were binned by a factor of 2 to 3
 
 ### Description of Machine Learning: Training Stage
 
-### Training Datasets and Batch Generation
+#### Deep Model Training  
+Unet
+Training Datasets and Batch Generation
 
-### Optimization / Postprocessing
+### Transfer Learning
+
+
+#### Optimization / Postprocessing
+-Global Threshold
+-Mask Tuning
+-Compute Radial Profile
+-Radius Estimation (Cross Correlation through Radial Profile)
+-Remove Outlier Labels
 
 ### Analysis of Results
 

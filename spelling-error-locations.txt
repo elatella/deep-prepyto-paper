@@ -101,8 +101,9 @@ content/05.materials_and_methods.md:43:Pyto
 content/05.materials_and_methods.md:45:voxel
 content/05.materials_and_methods.md:52:tomograms
 content/05.materials_and_methods.md:52:voxel
-content/05.materials_and_methods.md:56:Datasets
-content/05.materials_and_methods.md:58:Postprocessing
+content/05.materials_and_methods.md:57:Unet
+content/05.materials_and_methods.md:58:Datasets
+content/05.materials_and_methods.md:63:Postprocessing
 content/statistics.md:2:synaptosomes
 content/statistics.md:3:Dataset
 content/statistics.md:18:Dataset
