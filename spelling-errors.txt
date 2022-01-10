@@ -16,7 +16,7 @@ CCD
 convolutional
 cryo
 dataset
-datasets
+Datasets
 deeplearning
 Defocus
 Didcot
@@ -81,7 +81,7 @@ Tecnai
 TEM
 TFS
 Thermofisher
-Tomogram
+tomogram
 tomograms
 Tridiem
 unbinned
