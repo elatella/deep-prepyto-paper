@@ -66,9 +66,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8693bc0a0b783ded095a3545f1d581e60a2eeebb/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8693bc0a0b783ded095a3545f1d581e60a2eeebb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8693bc0a0b783ded095a3545f1d581e60a2eeebb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/cb746c364c1582501eade118f070b841692bdf02/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/cb746c364c1582501eade118f070b841692bdf02/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/cb746c364c1582501eade118f070b841692bdf02/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -90,9 +90,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/8693bc0a0b783ded095a3545f1d581e60a2eeebb/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/cb746c364c1582501eade118f070b841692bdf02/))
 was automatically generated
-from [elatella/deep-prepyto-paper@8693bc0](https://github.com/elatella/deep-prepyto-paper/tree/8693bc0a0b783ded095a3545f1d581e60a2eeebb)
+from [elatella/deep-prepyto-paper@cb746c3](https://github.com/elatella/deep-prepyto-paper/tree/cb746c364c1582501eade118f070b841692bdf02)
 on January 10, 2022.
 </em></small>
 
@@ -168,7 +168,7 @@ on January 10, 2022.
 
 
 ::: {#correspondence}
-✉ Address correspondence to <benoit.zuber@ana.unibe.ch> and <jakobbs@sund.ku.dk>.
+✉ Address correspondence to <benoit.zuber@ana.unibe.ch>.
 :::
 ::: {#equal_contribution}
 \* These authors contributed equally.

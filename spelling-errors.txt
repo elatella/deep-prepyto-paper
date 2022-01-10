@@ -5,7 +5,7 @@ Amira
 anisotropic
 aseedb
 astrocytic
-Aurion
+AURION
 Automator
 automize
 Benoît
