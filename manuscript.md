@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/fb79674611fd26e73b1d4ba94602f3e8bdfede2f/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fb79674611fd26e73b1d4ba94602f3e8bdfede2f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fb79674611fd26e73b1d4ba94602f3e8bdfede2f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/aa67e8c6f21c440d15b5e37cd575dd37fe84bd0f/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/aa67e8c6f21c440d15b5e37cd575dd37fe84bd0f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/aa67e8c6f21c440d15b5e37cd575dd37fe84bd0f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/fb79674611fd26e73b1d4ba94602f3e8bdfede2f/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/aa67e8c6f21c440d15b5e37cd575dd37fe84bd0f/))
 was automatically generated
-from [elatella/deep-prepyto-paper@fb79674](https://github.com/elatella/deep-prepyto-paper/tree/fb79674611fd26e73b1d4ba94602f3e8bdfede2f)
+from [elatella/deep-prepyto-paper@aa67e8c](https://github.com/elatella/deep-prepyto-paper/tree/aa67e8c6f21c440d15b5e37cd575dd37fe84bd0f)
 on January 10, 2022.
 </em></small>
 
@@ -193,10 +193,16 @@ The rise of machine learning is sweeping the technological landscape.
 Its use cases are highly diverse and are just starting to reach the scientific community.
 Especially the graphical deep-learning approaches have been quite popular [@doi:10.1056/NEJMra1814259].
 The graphical deep-learning approach is based around learning the description of the common attributes of a group or subset of a universe of objects [@doi:10.1017/S026988899700101X].
+This results in the segmentation of the input image, the computer seperates the image into different partitions, each of them representing a different integer.
+Adapting this image segmentation into the medical and biological research has resulted in the design of UNet, rather than using the unsuitable Convoluttional Neural Network (CNN).
+
+
 -> Describe the typical make up of a deeplearning approach
+
 But also the field of cryo electron microscopy has recently recognized the benefits of machine/deep-learning approaches [@doi:10.1093/jmicro/dfz036].
 
 The method of cryo-electron tomography (ET) utilises a series of tilted two-dimensional (2D) images to reconstruct a three-dimensional (3D) volume of the imaged sample [@doi:10.1042/BCJ20200715].
+
 -> Describe more about cryo EM and cryo ET, also mention missing wedge problem
 
 It brings many advantages compared to other cryo-electron microscopy (EM) methods, as it yields images at in situ conditions.
@@ -205,7 +211,7 @@ In order to analyze the cellular context within a tomogram, cellular features ar
 Popular programs for manual segementation are IMOD and Amira [@doi:10.1006/jsbi.1996.0013; @doi:10.1016/B978-012387582-2/50040-X].
 Currently manual segmentation is being considered the bottleneck in the worklow timewise of cellular cryo-ET.
 
-Our lab researche, with the help of cryo-ET, the synaptic architecture and its changes upon neurotransmitter vesicle release.
+Our lab researches, with the help of cryo-ET, the synaptic architecture and its changes upon neurotransmitter vesicle release.
 A special focus in that research holds the SNARE complex, which connects the synaptic vesicles and the presynaptic cell membrane, mediating vesicle fusion.
 Their function and regulation still pose big questions.
 In addition, mutations of involved proteins have been linked to numerous neurological diseases.

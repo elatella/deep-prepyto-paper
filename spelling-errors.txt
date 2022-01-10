@@ -4,8 +4,8 @@ Amin
 Amira
 anisotropic
 aseedb
-Astrocytic
-AURION
+astrocytic
+Aurion
 Automator
 automize
 Benoît
@@ -14,6 +14,7 @@ CaCl
 Carlsbergfondet
 CCD
 convolutional
+Convoluttional
 cryo
 dataset
 datasets
@@ -70,8 +71,8 @@ presynaptic
 Pyto
 Radecke
 Raphaela
-researche
 segementation
+seperates
 SerialEM
 situ
 Sørensen
@@ -86,12 +87,12 @@ TEM
 TFS
 Thermofisher
 timewise
-tomogram
+Tomogram
 tomograms
 Tridiem
 unbinned
 undiluteted
-UNet
+Unet
 utilises
 Vitrobot
 Vladan
