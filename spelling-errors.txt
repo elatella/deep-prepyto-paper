@@ -8,6 +8,7 @@ astrocytic
 Aurion
 Automator
 automize
+backpropagation
 Benoît
 Blegdamsvej
 CaCl
@@ -16,9 +17,9 @@ CCD
 convolutional
 Convoluttional
 cryo
+Cybenko
 dataset
 datasets
-deeplearning
 Defocus
 Didcot
 disbalances
@@ -40,6 +41,8 @@ guiwitz
 homebuilt
 Immuno
 IMOD
+initalization
+initilizing
 Jakob
 JBSorensen
 Julika
@@ -73,6 +76,7 @@ presynaptic
 pyto
 Radecke
 Raphaela
+revolutinized
 segementation
 seperates
 SerialEM
@@ -87,14 +91,15 @@ synaptosomes
 Tecnai
 TEM
 TFS
+theoratically
 Thermofisher
 timewise
-Tomogram
+tomogram
 tomograms
 Tridiem
 unbinned
 undiluteted
-UNet
+Unet
 usecases
 utilises
 Vitrobot

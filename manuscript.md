@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/e056492f815d2d3caa3ab45b49aeadc8d436e30e/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/e056492f815d2d3caa3ab45b49aeadc8d436e30e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/e056492f815d2d3caa3ab45b49aeadc8d436e30e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/e056492f815d2d3caa3ab45b49aeadc8d436e30e/))
 was automatically generated
-from [elatella/deep-prepyto-paper@76e95ba](https://github.com/elatella/deep-prepyto-paper/tree/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725)
+from [elatella/deep-prepyto-paper@e056492](https://github.com/elatella/deep-prepyto-paper/tree/e056492f815d2d3caa3ab45b49aeadc8d436e30e)
 on January 11, 2022.
 </em></small>
 
@@ -190,14 +190,21 @@ We designed a framework that consists of two parts: 1) U-Net convolutional netwo
 ## Introduction
 
 The rise of machine learning is sweeping the technological landscape.
-Its use cases are highly diverse and are just starting to reach the scientific community.
+
+While machine learning has been around for several decades prior to its boom, and it theoratically would be able to learn anything using a shallow neural network of 1 hidden layer (universal approximation theorem by Cybenko), more complex problems required several hidden layers. 
+However, with an increased number of hidden layers, the chance of finding the correct weights, which are initialized as random numbers, through backpropagation is low, as they are being multiplied over the layers and eventually approach 0. 
+The initilizing booster for this hype in 2006 was moving from back propagation in multiple layer neural networks and eventually vanish (they are fractions) to deep learning [@doi:10.1126/science.1127647]. 
+Deep learning uses a new initalization strategy: series of single layer networks. (check the prior 2 sentences, especially if the citation fits)
+In the following years many new publications revolutinized the field further with new concepts of how to train deep neural networks [@doi:10.5555/3042817.3043064] 
+
+Since then the use cases of deep learning have become highly diverse and are just starting to reach the scientific community.
 Especially the graphical deep-learning approaches have been quite popular [@doi:10.1056/NEJMra1814259].
 The graphical deep-learning approach is based around learning the description of the common attributes of a group or subset of a universe of objects [@doi:10.1017/S026988899700101X].
 This results in the segmentation of the input image, the computer seperates the image into different partitions, each of them representing a different integer.
-Adapting this image segmentation into the medical and biological research has resulted in the design of UNet, rather than using the unsuitable Convoluttional Neural Network (CNN), which usecases resolve mostly around character recognition tasks.
+Adapting this image segmentation into the medical and biological research has resulted in the design of UNet, [rather than using the unsuitable Convoluttional Neural Network (CNN), which usecases resolve mostly around character recognition tasks.]`*__check this again, compare UNet to something different? is CNN deep or shallow learning?__*`{.blue}.
 
 
--> Describe the typical make up of a deeplearning approach
+-> Describe the typical make up of a deep learning approach
 
 But also the field of cryo electron microscopy has recently recognized the benefits of machine/deep-learning approaches [@doi:10.1093/jmicro/dfz036].
 
