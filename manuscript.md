@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-01-10'
+date-meta: '2022-01-11'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,8 +28,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-01-10" />
-  <meta name="citation_publication_date" content="2022-01-10" />
+  <meta name="dc.date" content="2022-01-11" />
+  <meta name="citation_publication_date" content="2022-01-11" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/23533c6a64e5f53e7f4315586d518eb5709a11dd/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/23533c6a64e5f53e7f4315586d518eb5709a11dd/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/23533c6a64e5f53e7f4315586d518eb5709a11dd/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,10 +91,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/23533c6a64e5f53e7f4315586d518eb5709a11dd/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725/))
 was automatically generated
-from [elatella/deep-prepyto-paper@23533c6](https://github.com/elatella/deep-prepyto-paper/tree/23533c6a64e5f53e7f4315586d518eb5709a11dd)
-on January 10, 2022.
+from [elatella/deep-prepyto-paper@76e95ba](https://github.com/elatella/deep-prepyto-paper/tree/76e95ba96f6eeaf12ab437dee5aaa91b03dd7725)
+on January 11, 2022.
 </em></small>
 
 ## Authors
@@ -194,7 +194,7 @@ Its use cases are highly diverse and are just starting to reach the scientific c
 Especially the graphical deep-learning approaches have been quite popular [@doi:10.1056/NEJMra1814259].
 The graphical deep-learning approach is based around learning the description of the common attributes of a group or subset of a universe of objects [@doi:10.1017/S026988899700101X].
 This results in the segmentation of the input image, the computer seperates the image into different partitions, each of them representing a different integer.
-Adapting this image segmentation into the medical and biological research has resulted in the design of UNet, rather than using the unsuitable Convoluttional Neural Network (CNN).
+Adapting this image segmentation into the medical and biological research has resulted in the design of UNet, rather than using the unsuitable Convoluttional Neural Network (CNN), which usecases resolve mostly around character recognition tasks.
 
 
 -> Describe the typical make up of a deeplearning approach

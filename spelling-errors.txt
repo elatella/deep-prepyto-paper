@@ -4,8 +4,8 @@ Amin
 Amira
 anisotropic
 aseedb
-Astrocytic
-AURION
+astrocytic
+Aurion
 Automator
 automize
 Benoît
@@ -17,7 +17,7 @@ convolutional
 Convoluttional
 cryo
 dataset
-Datasets
+datasets
 deeplearning
 Defocus
 Didcot
@@ -94,7 +94,8 @@ tomograms
 Tridiem
 unbinned
 undiluteted
-Unet
+UNet
+usecases
 utilises
 Vitrobot
 Vladan
