@@ -5,8 +5,8 @@ Amin
 Amira
 anisotropic
 aseedb
-Astrocytic
-AURION
+astrocytic
+Aurion
 Automator
 automize
 backpropagation
@@ -78,7 +78,7 @@ Pleasonton
 Postprocessing
 pre
 presynaptic
-pyto
+Pyto
 Radecke
 Raphaela
 Relion
@@ -102,12 +102,12 @@ TFS
 theoratically
 Thermofisher
 timewise
-Tomogram
+tomogram
 tomograms
 Tridiem
 unbinned
 undiluteted
-unet
+UNet
 utilises
 Vitrobot
 Vladan

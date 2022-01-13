@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/80f4df4648ff3d4bcc2709790878ed580466d98e/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/80f4df4648ff3d4bcc2709790878ed580466d98e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/80f4df4648ff3d4bcc2709790878ed580466d98e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/3fa7e91980fb2dca46924eefe2ad8705b7593ddd/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/3fa7e91980fb2dca46924eefe2ad8705b7593ddd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/3fa7e91980fb2dca46924eefe2ad8705b7593ddd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/80f4df4648ff3d4bcc2709790878ed580466d98e/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/3fa7e91980fb2dca46924eefe2ad8705b7593ddd/))
 was automatically generated
-from [elatella/deep-prepyto-paper@80f4df4](https://github.com/elatella/deep-prepyto-paper/tree/80f4df4648ff3d4bcc2709790878ed580466d98e)
+from [elatella/deep-prepyto-paper@3fa7e91](https://github.com/elatella/deep-prepyto-paper/tree/3fa7e91980fb2dca46924eefe2ad8705b7593ddd)
 on January 13, 2022.
 </em></small>
 
@@ -275,6 +275,7 @@ implement automatic connector and tether segmentation as a deep leaning workflow
 ### Cryo-electron Tomography Datasets
 
 Two datasets of different origin were used as input and test subjects for the automatic segmentation pipeline, rat synaptosomes as well as astrocytic and neural cell cultures derived from mice.
+`\_cite Vladan, segmentation write a bit more*`{.green}
 
 #### Rat synaptosomes
 
