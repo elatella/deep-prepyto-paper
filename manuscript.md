@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/3fa7e91980fb2dca46924eefe2ad8705b7593ddd/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/3fa7e91980fb2dca46924eefe2ad8705b7593ddd/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/3fa7e91980fb2dca46924eefe2ad8705b7593ddd/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/12e70b40aa8d6b19cf06552240db11a95f588d95/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/12e70b40aa8d6b19cf06552240db11a95f588d95/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/12e70b40aa8d6b19cf06552240db11a95f588d95/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/3fa7e91980fb2dca46924eefe2ad8705b7593ddd/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/12e70b40aa8d6b19cf06552240db11a95f588d95/))
 was automatically generated
-from [elatella/deep-prepyto-paper@3fa7e91](https://github.com/elatella/deep-prepyto-paper/tree/3fa7e91980fb2dca46924eefe2ad8705b7593ddd)
+from [elatella/deep-prepyto-paper@12e70b4](https://github.com/elatella/deep-prepyto-paper/tree/12e70b40aa8d6b19cf06552240db11a95f588d95)
 on January 13, 2022.
 </em></small>
 
@@ -242,6 +242,7 @@ Our proposed method provides the initial step for downstream segmentation of sub
 Evaluation metric DICE for pixel/pixel analysis
 Global analysis
 
+![Dice coefficient and loss value for training and validation set.](images/blinddice.png){#fig:dice width="10cm"}
 
 
 3d unet good for 3D processing
@@ -254,9 +255,8 @@ through the network, output is a mask, smooth DICE/ binary DICE = which one for 
 when we encounter error until now we remove sv(?), bug inside function -> fix bug for better performance, how many fail and why?
 evaluation: objectwise evaluation for I/O, radius, center (according to nature paper) -> compare with manual seg
 	other common evaluation tool other than DICE (Amin wants to check)
-
-
-
+  
+  
 
 ## Discussion
 
