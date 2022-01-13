@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/12666a80d1f887eda8071325ef8c662a11a32661/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/12666a80d1f887eda8071325ef8c662a11a32661/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/12666a80d1f887eda8071325ef8c662a11a32661/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/c5fef83c2e8929e4f2475360d044be7e35e85217/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/c5fef83c2e8929e4f2475360d044be7e35e85217/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/c5fef83c2e8929e4f2475360d044be7e35e85217/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/12666a80d1f887eda8071325ef8c662a11a32661/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/c5fef83c2e8929e4f2475360d044be7e35e85217/))
 was automatically generated
-from [elatella/deep-prepyto-paper@12666a8](https://github.com/elatella/deep-prepyto-paper/tree/12666a80d1f887eda8071325ef8c662a11a32661)
+from [elatella/deep-prepyto-paper@c5fef83](https://github.com/elatella/deep-prepyto-paper/tree/c5fef83c2e8929e4f2475360d044be7e35e85217)
 on January 13, 2022.
 </em></small>
 
@@ -199,12 +199,13 @@ In the following years many new publications revolutinized the field further wit
 
 Since then the use cases of deep learning have become highly diverse and are just starting to reach the scientific community.
 Especially the graphical deep-learning approaches have been quite popular [@doi:10.1056/NEJMra1814259].
-The graphical deep-learning approach is based around learning the description of the common attributes of a group or subset of a universe of objects [@doi:10.1017/S026988899700101X].
+Its approach is based around learning the description of the common attributes of a group or subset of a universe of objects [@doi:10.1017/S026988899700101X].
 The segmentation of an input image is a typical area of application. 
-Here the computer seperates the image into different partitions, each of them representing a different feature and traces the feature in the original image.
+Here the computer seperates the image into different partitions, each of them representing a different feature and traces the detected feature in the original image.
 Adapting this image segmentation into the medical and biological research has resulted in the design of UNet [@doi:10.1007/978-3-319-24574-4_28].
-
--> Describe the typical make up of a deep learning approach
+UNet is able to localise, distinguish and trace borders, by treating the segmentation as a multiclass classification problem for each pixel.
+Its architecture consists of two parts: the contracting part which captures context, and the symmetric expanding path that enables precise localization [@doi:10.1109/TPAMI.2021.3059968].
+`*_What UNet type are we using: Extended 3D U-Net, Joint 2D-3D CNN, CNN with optimization module or Hierarchical networks_*`{.blue}
 
 But also the field of cryo electron microscopy has recently recognized the benefits of machine/deep-learning approaches [@doi:10.1093/jmicro/dfz036].
 
@@ -225,14 +226,13 @@ In addition, mutations of involved proteins have been linked to numerous neurolo
 To address these issues, cryo-ET is the methode of choice. 
 To perform quantitative studies on the resulting tomograms, accurate segmentation of both synaptic vesicles and the interconnecting filaments are required.
 Among the different cell features, synaptic vesicles are the most time consuming to segment.
-Despite their very homogeneous size and shape, their sheer number and finding their true center (du to the missing wedge problematic) complicates their segmentation.
+Despite their very homogeneous size and shape, their sheer number and finding their true center (due to the missing wedge problem) complicates their segmentation.
 
 Problem 2D and 3D 
 
-Aim
-Creation of a deep-learning pipeline, which is taught to segment cellular features, starting with synaptic vesicles.
-We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and ould represent a complete 360° 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.
-proposed method provides the initial step for downstream segmentation of subcellular compartments such as synaptic connectors and tethers for which an extremely accurate vesicle segmentation is required
+Our aim is the creation of a deep-learning pipeline, which is taught to segment cellular features, starting with synaptic vesicles.
+We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and would represent a complete 360° 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.
+Our proposed method provides the initial step for downstream segmentation of subcellular compartments such as synaptic connectors and tethers for which an extremely accurate vesicle segmentation is required.
 
 
 ## Results
