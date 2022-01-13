@@ -1,3 +1,4 @@
+accuratly
 AGS
 ameen
 Amin
@@ -19,13 +20,16 @@ cryo
 Cybenko
 dataset
 datasets
+DeepFinder
 Defocus
 Didcot
 disbalances
+dl
 dx
 Eindhoven
 elatella
 Elektron
+Engel
 exess
 exocytosis
 exocytotic
@@ -66,6 +70,7 @@ Neatherlands
 NNF
 Nordisk
 Novo
+objectwise
 OC
 Onstruments
 Oxfordshire
@@ -73,10 +78,12 @@ Pleasonton
 Postprocessing
 pre
 presynaptic
-Pyto
+pyto
 Radecke
 Raphaela
+Relion
 revolutinized
+seg
 segementation
 seperates
 SerialEM
@@ -85,6 +92,7 @@ Sørensen
 Stansted
 subcellular
 superresolution
+sv
 SVs
 synaptosome
 synaptosomes
@@ -99,7 +107,7 @@ tomograms
 Tridiem
 unbinned
 undiluteted
-UNet
+unet
 utilises
 Vitrobot
 Vladan

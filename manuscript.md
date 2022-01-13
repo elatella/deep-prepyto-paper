@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/c5fef83c2e8929e4f2475360d044be7e35e85217/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/c5fef83c2e8929e4f2475360d044be7e35e85217/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/c5fef83c2e8929e4f2475360d044be7e35e85217/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/80f4df4648ff3d4bcc2709790878ed580466d98e/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/80f4df4648ff3d4bcc2709790878ed580466d98e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/80f4df4648ff3d4bcc2709790878ed580466d98e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/c5fef83c2e8929e4f2475360d044be7e35e85217/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/80f4df4648ff3d4bcc2709790878ed580466d98e/))
 was automatically generated
-from [elatella/deep-prepyto-paper@c5fef83](https://github.com/elatella/deep-prepyto-paper/tree/c5fef83c2e8929e4f2475360d044be7e35e85217)
+from [elatella/deep-prepyto-paper@80f4df4](https://github.com/elatella/deep-prepyto-paper/tree/80f4df4648ff3d4bcc2709790878ed580466d98e)
 on January 13, 2022.
 </em></small>
 
@@ -241,6 +241,21 @@ Our proposed method provides the initial step for downstream segmentation of sub
 ### Comparison of manual segmentation with automatic deep-learning based segmentation
 Evaluation metric DICE for pixel/pixel analysis
 Global analysis
+
+
+
+3d unet good for 3D processing
+recent Nature methods paper by Ben Engel, DeepFinder -> Relion for STA creates mask to find more using dl
+	-what are they doing, maybe compare that in the text, different aims; we might compare results we achieve (keep as bonus, revision)
+
+3 different types of dl: classification, localization and segmentation
+We specialize in accuratly segmenting 3D svs -> results
+through the network, output is a mask, smooth DICE/ binary DICE = which one for our mask? one function for both? -> Amin will check
+when we encounter error until now we remove sv(?), bug inside function -> fix bug for better performance, how many fail and why?
+evaluation: objectwise evaluation for I/O, radius, center (according to nature paper) -> compare with manual seg
+	other common evaluation tool other than DICE (Amin wants to check)
+
+
 
 
 ## Discussion
