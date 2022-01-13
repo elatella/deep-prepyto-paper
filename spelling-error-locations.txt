@@ -15,11 +15,8 @@ content/02.Introduction.md:6:backpropagation
 content/02.Introduction.md:7:initilizing
 content/02.Introduction.md:8:initalization
 content/02.Introduction.md:9:revolutinized
-content/02.Introduction.md:14:seperates
-content/02.Introduction.md:15:Convoluttional
-content/02.Introduction.md:15:UNet
-content/02.Introduction.md:15:UNet
-content/02.Introduction.md:15:usecases
+content/02.Introduction.md:15:seperates
+content/02.Introduction.md:16:UNet
 content/02.Introduction.md:20:cryo
 content/02.Introduction.md:22:cryo
 content/02.Introduction.md:22:utilises

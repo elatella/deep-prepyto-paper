@@ -15,7 +15,6 @@ CaCl
 Carlsbergfondet
 CCD
 convolutional
-Convoluttional
 cryo
 Cybenko
 dataset
@@ -94,13 +93,12 @@ TFS
 theoratically
 Thermofisher
 timewise
-tomogram
+Tomogram
 tomograms
 Tridiem
 unbinned
 undiluteted
-Unet
-usecases
+UNet
 utilises
 Vitrobot
 Vladan

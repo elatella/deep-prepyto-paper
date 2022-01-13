@@ -11,7 +11,7 @@
   <meta name="author" content="Vladan Lučić" />
   <meta name="author" content="Jakob B. Sørensen" />
   <meta name="author" content="Benoît Zuber" />
-  <meta name="dcterms.date" content="2022-01-11" />
+  <meta name="dcterms.date" content="2022-01-13" />
   <meta name="keywords" content="synapse, cryo-electron tomography, synaptic vesicles, deep learning, segmentation, post-processing, automation" />
   <title>Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms</title>
   <style>
@@ -53,8 +53,8 @@
   <meta name="citation_title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-01-11" />
-  <meta name="citation_publication_date" content="2022-01-11" />
+  <meta name="dc.date" content="2022-01-13" />
+  <meta name="citation_publication_date" content="2022-01-13" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -92,9 +92,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/e056492f815d2d3caa3ab45b49aeadc8d436e30e/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/e056492f815d2d3caa3ab45b49aeadc8d436e30e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/e056492f815d2d3caa3ab45b49aeadc8d436e30e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/12666a80d1f887eda8071325ef8c662a11a32661/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/12666a80d1f887eda8071325ef8c662a11a32661/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/12666a80d1f887eda8071325ef8c662a11a32661/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -108,10 +108,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/e056492f815d2d3caa3ab45b49aeadc8d436e30e/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/12666a80d1f887eda8071325ef8c662a11a32661/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/e056492f815d2d3caa3ab45b49aeadc8d436e30e">elatella/deep-prepyto-paper@e056492</a>
-on January 11, 2022.
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/12666a80d1f887eda8071325ef8c662a11a32661">elatella/deep-prepyto-paper@12666a8</a>
+on January 13, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -196,16 +196,17 @@ In the following years many new publications revolutinized the field further wit
 <p>Since then the use cases of deep learning have become highly diverse and are just starting to reach the scientific community.
 Especially the graphical deep-learning approaches have been quite popular <span class="citation" data-cites="guaQJuDA">[<a href="#ref-guaQJuDA" role="doc-biblioref">2</a>]</span>.
 The graphical deep-learning approach is based around learning the description of the common attributes of a group or subset of a universe of objects <span class="citation" data-cites="7Ti0vWmU">[<a href="#ref-7Ti0vWmU" role="doc-biblioref">3</a>]</span>.
-This results in the segmentation of the input image, the computer seperates the image into different partitions, each of them representing a different integer.
-Adapting this image segmentation into the medical and biological research has resulted in the design of UNet, [rather than using the unsuitable Convoluttional Neural Network (CNN), which usecases resolve mostly around character recognition tasks.]<code class="blue">*__check this again, compare UNet to something different? is CNN deep or shallow learning?__*</code>.</p>
+The segmentation of an input image is a typical area of application.
+Here the computer seperates the image into different partitions, each of them representing a different feature and traces the feature in the original image.
+Adapting this image segmentation into the medical and biological research has resulted in the design of UNet <span class="citation" data-cites="TutLhFSz">[<a href="#ref-TutLhFSz" role="doc-biblioref">4</a>]</span>.</p>
 <p>-&gt; Describe the typical make up of a deep learning approach</p>
-<p>But also the field of cryo electron microscopy has recently recognized the benefits of machine/deep-learning approaches <span class="citation" data-cites="gZQPMDan">[<a href="#ref-gZQPMDan" role="doc-biblioref">4</a>]</span>.</p>
-<p>The method of cryo-electron tomography (ET) utilises a series of tilted two-dimensional (2D) images to reconstruct a three-dimensional (3D) volume of the imaged sample <span class="citation" data-cites="ldzj1tqz">[<a href="#ref-ldzj1tqz" role="doc-biblioref">5</a>]</span>.</p>
+<p>But also the field of cryo electron microscopy has recently recognized the benefits of machine/deep-learning approaches <span class="citation" data-cites="gZQPMDan">[<a href="#ref-gZQPMDan" role="doc-biblioref">5</a>]</span>.</p>
+<p>The method of cryo-electron tomography (ET) utilises a series of tilted two-dimensional (2D) images to reconstruct a three-dimensional (3D) volume of the imaged sample <span class="citation" data-cites="ldzj1tqz">[<a href="#ref-ldzj1tqz" role="doc-biblioref">6</a>]</span>.</p>
 <p>-&gt; Describe more about cryo EM and cryo ET, also mention missing wedge problem</p>
 <p>It brings many advantages compared to other cryo-electron microscopy (EM) methods, as it yields images at in situ conditions.
 Therefore cryo ET can help to reveal the natural cellular environment of protein(-complexes), their function as well as their structure.
 In order to analyze the cellular context within a tomogram, cellular features are being segmented.
-Popular programs for manual segementation are IMOD and Amira <span class="citation" data-cites="136NHHp17 11QfS4fSX">[<a href="#ref-136NHHp17" role="doc-biblioref">6</a>,<a href="#ref-11QfS4fSX" role="doc-biblioref">7</a>]</span>.
+Popular programs for manual segementation are IMOD and Amira <span class="citation" data-cites="136NHHp17 11QfS4fSX">[<a href="#ref-136NHHp17" role="doc-biblioref">7</a>,<a href="#ref-11QfS4fSX" role="doc-biblioref">8</a>]</span>.
 Currently manual segmentation is being considered the bottleneck in the worklow timewise of cellular cryo-ET.</p>
 <p>Our lab researches, with the help of cryo-ET, the synaptic architecture and its changes upon neurotransmitter vesicle release.
 A special focus in that research holds the SNARE complex, which connects the synaptic vesicles and the presynaptic cell membrane, mediating vesicle fusion.
@@ -233,7 +234,7 @@ implement automatic connector and tether segmentation as a deep leaning workflow
 <h3 id="cryo-electron-tomography-datasets">Cryo-electron Tomography Datasets</h3>
 <p>Two datasets of different origin were used as input and test subjects for the automatic segmentation pipeline, rat synaptosomes as well as astrocytic and neural cell cultures derived from mice.</p>
 <h4 id="rat-synaptosomes">Rat synaptosomes</h4>
-<p>The preparation of the rat synaptosomes were previously described <span class="citation" data-cites="7sGZgtQa">[<a href="#ref-7sGZgtQa" role="doc-biblioref">8</a>]</span>.
+<p>The preparation of the rat synaptosomes were previously described <span class="citation" data-cites="doi:10.1038/nprot.2008.171">[<a href="#ref-doi:10.1038/nprot.2008.171" role="doc-biblioref"><strong>doi:10.1038/nprot.2008.171?</strong></a>]</span>.
 After the purification, the synaptosomes were incubated for 30min at room temperature.
 1.3mM CaCl2 and 10 nm gold fiducials were added (gold fiducials, #s10110/8. AURION Immuno Gold Reagents &amp; Accessories. Wageningen, The Neatherlands).
 The synaptosome solution was applied to a 200-mesh lacey finder carbon film grid (#AGS166-H2. Agar Scientific. Elektron Technology UK Ltd. Stansted, UK).
@@ -250,7 +251,7 @@ The K2 camera was operated in superresolution counting mode and between 8-40 fra
 Tilt series were acquired using the Latitude software (Gatan) for automated acquisition recorded typically from -60° to 60° with a 2° angular increment and an unbinned pixel size of 0.6 nm.
 Defocus was set between -8 to -12 µm and the total electron dose used was about 80-100 e<sup>-</sup>/Å<sup>2</sup>.
 Prior to image processing the frames at each tilt angle, frames were aligned and averaged in 2dx MC_Automator <span class="citation" data-cites="7UkCfakv">[<a href="#ref-7UkCfakv" role="doc-biblioref">10</a>]</span> with motioncor <span class="citation" data-cites="4rVTIFyw">[<a href="#ref-4rVTIFyw" role="doc-biblioref">11</a>]</span>.
-3D reconstruction was done in IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">6</a>]</span>.
+3D reconstruction was done in IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">7</a>]</span>.
 The alignments were done using the automated fiducial tracking function and the 3D reconstructions were done using the weighted back projection followed by a nonlinear anisotropic diffusion (NAD) filtering.</p>
 <h4 id="astrocytic-and-neuronal-mouse-culture">Astrocytic and neuronal mouse culture</h4>
 <p>The preparation of astrocytic and neuronal culture has been published before <span class="citation" data-cites="5DZLPDB7">[<a href="#ref-5DZLPDB7" role="doc-biblioref">12</a>]</span>.
@@ -297,20 +298,20 @@ Training Datasets and Batch Generation</p>
 <div id="ref-7Ti0vWmU" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>A review of machine learning</strong> <div class="csl-block">David M Dutton, Gerard V Conroy</div> <em>The Knowledge Engineering Review</em> (1997-12) <a href="https://doi.org/dcswnd">https://doi.org/dcswnd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1017/s026988899700101x">10.1017/s026988899700101x</a></div></div>
 </div>
+<div id="ref-TutLhFSz" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>U-Net: Convolutional Networks for Biomedical Image Segmentation</strong> <div class="csl-block">Olaf Ronneberger, Philipp Fischer, Thomas Brox</div> <em>Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015</em> (2015) <a href="https://doi.org/gcgk7j">https://doi.org/gcgk7j</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/978-3-319-24574-4_28">10.1007/978-3-319-24574-4_28</a> · ISBN: 9783319245737</div></div>
+</div>
 <div id="ref-gZQPMDan" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Application of machine learning techniques to electron microscopic/spectroscopic image data analysis</strong> <div class="csl-block">Shunsuke Muto, Motoki Shiga</div> <em>Microscopy</em> (2020-04) <a href="https://doi.org/ggckm4">https://doi.org/ggckm4</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/jmicro/dfz036">10.1093/jmicro/dfz036</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31682260">31682260</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7141894">PMC7141894</a></div></div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Application of machine learning techniques to electron microscopic/spectroscopic image data analysis</strong> <div class="csl-block">Shunsuke Muto, Motoki Shiga</div> <em>Microscopy</em> (2020-04-08) <a href="https://doi.org/ggckm4">https://doi.org/ggckm4</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/jmicro/dfz036">10.1093/jmicro/dfz036</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31682260">31682260</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7141894">PMC7141894</a></div></div>
 </div>
 <div id="ref-ldzj1tqz" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Current data processing strategies for cryo-electron tomography and subtomogram averaging</strong> <div class="csl-block">Euan Pyle, Giulia Zanetti</div> <em>Biochemical Journal</em> (2021-05-28) <a href="https://doi.org/gkqqv6">https://doi.org/gkqqv6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1042/bcj20200715">10.1042/bcj20200715</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34003255">34003255</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8133831">PMC8133831</a></div></div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Current data processing strategies for cryo-electron tomography and subtomogram averaging</strong> <div class="csl-block">Euan Pyle, Giulia Zanetti</div> <em>Biochemical Journal</em> (2021-05-28) <a href="https://doi.org/gkqqv6">https://doi.org/gkqqv6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1042/bcj20200715">10.1042/bcj20200715</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34003255">34003255</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8133831">PMC8133831</a></div></div>
 </div>
 <div id="ref-136NHHp17" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Computer Visualization of Three-Dimensional Image Data Using IMOD</strong> <div class="csl-block">James R Kremer, David N Mastronarde, JRichard McIntosh</div> <em>Journal of Structural Biology</em> (1996-01) <a href="https://doi.org/d9nfzw">https://doi.org/d9nfzw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1006/jsbi.1996.0013">10.1006/jsbi.1996.0013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/8742726">8742726</a></div></div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Computer Visualization of Three-Dimensional Image Data Using IMOD</strong> <div class="csl-block">James R Kremer, David N Mastronarde, JRichard McIntosh</div> <em>Journal of Structural Biology</em> (1996-01) <a href="https://doi.org/d9nfzw">https://doi.org/d9nfzw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1006/jsbi.1996.0013">10.1006/jsbi.1996.0013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/8742726">8742726</a></div></div>
 </div>
 <div id="ref-11QfS4fSX" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>amira: A Highly Interactive System for Visual Data Analysis</strong> <div class="csl-block">DETLEV STALLING, MALTE WESTERHOFF, HANS-CHRISTIAN HEGE</div> <em>Visualization Handbook</em> (2005) <a href="https://doi.org/dj723z">https://doi.org/dj723z</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/b978-012387582-2/50040-x">10.1016/b978-012387582-2/50040-x</a></div></div>
-</div>
-<div id="ref-7sGZgtQa" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>A rapid Percoll gradient procedure for preparation of synaptosomes</strong> <div class="csl-block">Peter R Dunkley, Paula E Jarvie, Phillip J Robinson</div> <em>Nature Protocols</em> (2008-10-16) <a href="https://doi.org/b7zwh8">https://doi.org/b7zwh8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nprot.2008.171">10.1038/nprot.2008.171</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18927557">18927557</a></div></div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>amira: A Highly Interactive System for Visual Data Analysis</strong> <div class="csl-block">Detlev Stalling, Malte Westerhoff, Hans-Christian Hege</div> <em>Visualization Handbook</em> (2005) <a href="https://doi.org/dj723z">https://doi.org/dj723z</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/b978-012387582-2/50040-x">10.1016/b978-012387582-2/50040-x</a> · ISBN: 9780123875822</div></div>
 </div>
 <div id="ref-19ZFerhph" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Automated electron microscope tomography using robust prediction of specimen movements</strong> <div class="csl-block">David N Mastronarde</div> <em>Journal of Structural Biology</em> (2005-10) <a href="https://doi.org/ff7gzx">https://doi.org/ff7gzx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2005.07.007">10.1016/j.jsb.2005.07.007</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16182563">16182563</a></div></div>
