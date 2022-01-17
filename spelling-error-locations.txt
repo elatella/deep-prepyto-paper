@@ -141,9 +141,9 @@ content/05.materials_and_methods.md:55:jupyter
 content/05.materials_and_methods.md:55:pre
 content/05.materials_and_methods.md:55:Pre
 content/05.materials_and_methods.md:55:pyto
-content/05.materials_and_methods.md:62:Unet
-content/05.materials_and_methods.md:63:Datasets
-content/05.materials_and_methods.md:68:Postprocessing
+content/05.materials_and_methods.md:63:Unet
+content/05.materials_and_methods.md:64:Datasets
+content/05.materials_and_methods.md:69:Postprocessing
 content/statistics.md:2:synaptosomes
 content/statistics.md:3:Dataset
 content/statistics.md:18:Dataset

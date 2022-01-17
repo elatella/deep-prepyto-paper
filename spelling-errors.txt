@@ -5,7 +5,7 @@ Amin
 Amira
 anisotropic
 aseedb
-Astrocytic
+astrocytic
 Aurion
 Automator
 automize
@@ -19,7 +19,7 @@ convolutional
 cryo
 Cybenko
 dataset
-datasets
+Datasets
 DeepFinder
 Defocus
 Didcot
@@ -76,9 +76,9 @@ Onstruments
 Oxfordshire
 Pleasonton
 Postprocessing
-pre
+Pre
 presynaptic
-Pyto
+pyto
 Radecke
 Raphaela
 Relion
@@ -93,7 +93,7 @@ Stansted
 subcellular
 superresolution
 sv
-svs
+SVs
 synaptosome
 synaptosomes
 Tecnai
@@ -102,7 +102,7 @@ TFS
 theoratically
 Thermofisher
 timewise
-Tomogram
+tomogram
 tomograms
 Tridiem
 unbinned

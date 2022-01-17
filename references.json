@@ -32,7 +32,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -100,7 +100,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -145,7 +145,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -183,7 +183,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -248,7 +248,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -300,7 +300,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -345,7 +345,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -412,7 +412,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -461,7 +461,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -505,7 +505,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -555,7 +555,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -616,7 +616,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -662,7 +662,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -722,7 +722,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -739,6 +739,7 @@
   {
     "id": "764aXjfI",
     "type": "article-journal",
+    "abstract": "High-dimensional data can be converted to low-dimensional codes by training a multilayer neural network with a small central layer to reconstruct high-dimensional input vectors. Gradient descent can be used for fine-tuning the weights in such “autoencoder” networks, but this works well only if the initial weights are close to a good solution. We describe an effective way of initializing the weights that allows deep autoencoder networks to learn low-dimensional codes that work much better than principal components analysis as a tool to reduce the dimensionality of data.",
     "container-title": "Science",
     "DOI": "10.1126/science.1127647",
     "ISSN": "0036-8075, 1095-9203",
@@ -765,7 +766,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
@@ -829,7 +830,7 @@
         [
           "2022",
           1,
-          13
+          17
         ]
       ]
     },
