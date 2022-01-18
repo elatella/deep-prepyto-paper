@@ -1,5 +1,5 @@
 ---
-title: Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms
+title: Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms
 keywords:
 - synapse
 - cryo-electron tomography
@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-01-17'
+date-meta: '2022-01-18'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -24,12 +24,12 @@ header-includes: |-
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
-  <meta name="citation_title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
-  <meta property="og:title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
-  <meta property="twitter:title" content="Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-01-17" />
-  <meta name="citation_publication_date" content="2022-01-17" />
+  <meta name="dc.title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
+  <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
+  <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
+  <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
+  <meta name="dc.date" content="2022-01-18" />
+  <meta name="citation_publication_date" content="2022-01-18" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/638c211ce844dd0b41c5d6bd0446004af8c7ed18/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/638c211ce844dd0b41c5d6bd0446004af8c7ed18/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/638c211ce844dd0b41c5d6bd0446004af8c7ed18/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/ccda5f6c962f497feceff6e5bf222d584dca1561/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/ccda5f6c962f497feceff6e5bf222d584dca1561/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/ccda5f6c962f497feceff6e5bf222d584dca1561/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,10 +91,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/638c211ce844dd0b41c5d6bd0446004af8c7ed18/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/ccda5f6c962f497feceff6e5bf222d584dca1561/))
 was automatically generated
-from [elatella/deep-prepyto-paper@638c211](https://github.com/elatella/deep-prepyto-paper/tree/638c211ce844dd0b41c5d6bd0446004af8c7ed18)
-on January 17, 2022.
+from [elatella/deep-prepyto-paper@ccda5f6](https://github.com/elatella/deep-prepyto-paper/tree/ccda5f6c962f497feceff6e5bf222d584dca1561)
+on January 18, 2022.
 </em></small>
 
 ## Authors
