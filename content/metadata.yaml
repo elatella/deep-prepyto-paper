@@ -1,6 +1,5 @@
 ---
-title: Deep-learning based automatic segmentation of synaptic vesicles in cryo-electron tomograms
-alternative title: Automatizing tomogram segmentation by utilizing machine learning frameworks on the example of synaptic vesicles
+title: Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms
 keywords:
   - synapse
   - cryo-electron tomography
@@ -15,7 +14,7 @@ authors:
     name: Amin Khosrozadeh
     initials: AK
     orcid: XXXX-XXXX-XXXX-XXXX
-    email: mohammadamin.khosrozadeh@ana.unibe.ch
+    email: amin.khosrozadeh@unibe.ch
     affiliations:
       - Institute of Anatomy, University of Bern, Bern, Switzerland
       - Graduate School for Cellular and Biomedical Sciences, University of Bern
@@ -27,7 +26,7 @@ authors:
     name: Raphaela Seeger
     initials: RS
     orcid: XXXX-XXXX-XXXX-XXXX
-    email: raphaela.seeger@ana.unibe.ch
+    email: raphaela.seeger@unibe.ch
     affiliations:
       - Institute of Anatomy, University of Bern, Bern, Switzerland
       - Graduate School for Cellular and Biomedical Sciences, University of Bern
@@ -72,7 +71,7 @@ authors:
     name: Benoît Zuber
     initials: BZ
     orcid: 0000-0001-7725-5579
-    email: benoit.zuber@ana.unibe.ch
+    email: benoit.zuber@unibe.ch
     affiliations:
       - Institute of Anatomy, University of Bern, Bern, Switzerland
     funders:
