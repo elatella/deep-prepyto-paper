@@ -9,13 +9,12 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-01-18'
+date-meta: '2022-01-19'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
 - Julika Radecke
 - Guillaume Witz
-- Vladan Lučić
 - Jakob B. Sørensen
 - Benoît Zuber
 header-includes: |-
@@ -28,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-01-18" />
-  <meta name="citation_publication_date" content="2022-01-18" />
+  <meta name="dc.date" content="2022-01-19" />
+  <meta name="citation_publication_date" content="2022-01-19" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -51,10 +50,8 @@ header-includes: |-
   <meta name="citation_author_orcid" content="0000-0002-5815-5537" />
   <meta name="citation_author" content="Guillaume Witz" />
   <meta name="citation_author_institution" content="Science IT Service, University of Bern, Bern, Switzerland" />
+  <meta name="citation_author_institution" content="Microscopy Imaging Center, University of Bern, Bern, Switzerland" />
   <meta name="citation_author_orcid" content="0000-0003-1562-4265" />
-  <meta name="citation_author" content="Vladan Lučić" />
-  <meta name="citation_author_institution" content="Max-Planck-Institute of Biochemistry, Am Klopferspitz 18, 82152 Martinsried, Germany" />
-  <meta name="citation_author_orcid" content="0000-0003-3698-7436" />
   <meta name="citation_author" content="Jakob B. Sørensen" />
   <meta name="citation_author_institution" content="Department of Neuroscience, University of Copenhagen, Blegdamsvej 3B, 2200 Copenhagen N, Denmark" />
   <meta name="citation_author_orcid" content="0000-0001-5465-3769" />
@@ -67,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/ccda5f6c962f497feceff6e5bf222d584dca1561/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/ccda5f6c962f497feceff6e5bf222d584dca1561/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/ccda5f6c962f497feceff6e5bf222d584dca1561/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/6d26ebf8fbeb7d1d2b309cd8921bc2880c3a600c/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6d26ebf8fbeb7d1d2b309cd8921bc2880c3a600c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6d26ebf8fbeb7d1d2b309cd8921bc2880c3a600c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/ccda5f6c962f497feceff6e5bf222d584dca1561/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/6d26ebf8fbeb7d1d2b309cd8921bc2880c3a600c/))
 was automatically generated
-from [elatella/deep-prepyto-paper@ccda5f6](https://github.com/elatella/deep-prepyto-paper/tree/ccda5f6c962f497feceff6e5bf222d584dca1561)
-on January 18, 2022.
+from [elatella/deep-prepyto-paper@6d26ebf](https://github.com/elatella/deep-prepyto-paper/tree/6d26ebf8fbeb7d1d2b309cd8921bc2880c3a600c)
+on January 19, 2022.
 </em></small>
 
 ## Authors
@@ -135,16 +132,7 @@ on January 18, 2022.
     · ![GitHub icon](images/github.svg){.inline_icon}
     [guiwitz](https://github.com/guiwitz)<br>
   <small>
-     Science IT Service, University of Bern, Bern, Switzerland
-  </small>
-
-+ **Vladan Lučić**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [0000-0003-3698-7436](https://orcid.org/0000-0003-3698-7436)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [vladanl](https://github.com/vladanl)<br>
-  <small>
-     Max-Planck-Institute of Biochemistry, Am Klopferspitz 18, 82152 Martinsried, Germany
+     Science IT Service, University of Bern, Bern, Switzerland; Microscopy Imaging Center, University of Bern, Bern, Switzerland
   </small>
 
 + **Jakob B. Sørensen**<br>
@@ -178,13 +166,25 @@ on January 18, 2022.
 
 ## Abstract {.page_break_before}
 
-The communication between neurons is based on the exocytosis of neurotransmitter filled vesicles. Even small disbalances in this delicate system can result in different disorders. Numerous questions are still unanswered about synaptic vesicle exocytosis regulation as well as about which proteins affect this fundamental process. Hundreds to thousands of vesicles are present at the synapse and most of them are interconnected. There is a number of evidence suggesting that the connectivity between the vesicles influences synaptic vesicle exocytotic activity and that connectivity can be regulated. To address these issues, cryo-electron tomography is a method of choice. Yet inevitable quantitative studies require accurate segmentation of both synaptic vesicles and the interconnecting filaments.
+Cryo-electron Tomography (Cryo-ET) has the potential to reveal cell structure down to atomic resolution.
+Nevertheless, cellular cryo-ET data is often highly complex and visualization, as well as quantification, of subcellular structures require image segmentation.
+Due to a relatively high level of noise and to anisotropic resolution in cryo-ET data, automatic segmentation based on classical computer vision approaches usually does not perform satisfyingly.
+For this reason, cryo-ET researchers have mostly performed manual segmentation.
 
-This segmentation process has been widely recognized as a bottleneck by the community. When working with synapses, an incredibly tedious cellular feature to segment are synaptic vesicles. Even though they have a very homogeneous shape and size, which makes it easy to distinguish them from other cellular features, their high occurrence makes their segmentation challenging (one average-sized synapse or synaptosomes can easily contain between 300-500 synaptic vesicles).
+Communication between neurons rely on neurotransmitter-filled synaptic vesicle (SV) exocytosis.
+Recruitment of SVs to the plasma membrane is an important means of regulating exocytosis and is influenced by interactions between SVs.
+Cryo-ET study of the spatial organization of SVs and of their interconnections allows a better understanding of the mechanisms of exocytosis regulation.
+To obtain a faithful representation of SV connectivity state, an absolutely vital prerequisite is an extremely accurate SV segmentation.
+Hundreds to thousands of SVs are present in a typical synapse, and their manual segmentation is a burden.
+Typically accurately segmenting all SVs in one synapse takes between 3 to 8 days.
+This segmentation process has been widely recognized as a bottleneck by the community.
 
-Several attempts at utilizing machine learning algorithms  to automize the segmentation of synaptic vesicles yielded in unfavorable results. We analyzed these approaches and realized that most algorithms solely worked with the 2D image planes within the tomogram, but didn’t tap into their 3D information and therefore increased the weight of the missing wedge.
-
-We designed a framework that consists of two parts: 1) U-Net convolutional network to obtain mask for SVs following by 2) post-processing step which fine-tunes the mask and provides entire 3D-vesicles. A deep-learning model has been trained with manually segmented synaptic vesicles, which have been entirely annotated as 3D objects. By post-processing, we achieved to transfer the vesicle recognition through this pipeline. The evaluation metrics like the DICE value suggest a very high success rate.
+Several attempts to automate vesicle segmentation by classical computer vision or machine learning algorithms have not yielded very robust results.
+We addressed this problem by designing a workflow consisting of a U-Net convolutional network followed by post-processing steps.
+This combination yields highly accurate results.
+Furthermore, we provide an interactive tool for accurately segmenting spherical vesicles in a fraction of the time required by available manual segmentation methods.
+This tool can be used to segment vesicles that were missed by the fully automatic procedure or to quickly segment a handful of vesicles, while bypassing the fully automatic procedure.
+Our pipeline can in principle be used to segment any spherical vesicle in any cell type as well as extracellular vesicles.
 
 
 ## Introduction
@@ -271,6 +271,8 @@ implement automatic connector and tether segmentation as a deep leaning workflow
 
 
 ## Materials and methods
+
+Benoît doing some tests.
 
 ### Cryo-electron Tomography Datasets
 
