@@ -5,7 +5,7 @@ Amin
 Amira
 anisotropic
 aseedb
-astrocytic
+Astrocytic
 Aurion
 Automator
 backpropagation
@@ -18,7 +18,7 @@ convolutional
 Cryo
 Cybenko
 dataset
-datasets
+Datasets
 DeepFinder
 Defocus
 Didcot
@@ -86,7 +86,7 @@ Sørensen
 Stansted
 subcellular
 superresolution
-sv
+SV
 SVs
 synaptosome
 synaptosomes
@@ -101,7 +101,7 @@ tomograms
 Tridiem
 unbinned
 undiluteted
-unet
+Unet
 utilises
 Vitrobot
 voxel
