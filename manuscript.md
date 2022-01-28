@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-01-26'
+date-meta: '2022-01-28'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-01-26" />
-  <meta name="citation_publication_date" content="2022-01-26" />
+  <meta name="dc.date" content="2022-01-28" />
+  <meta name="citation_publication_date" content="2022-01-28" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/5b3759c8a48c4617b6b4499b3214639f274ef7c9/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5b3759c8a48c4617b6b4499b3214639f274ef7c9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5b3759c8a48c4617b6b4499b3214639f274ef7c9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/91a55f299320985e27ee133e88c0f3669a10509d/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/91a55f299320985e27ee133e88c0f3669a10509d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/91a55f299320985e27ee133e88c0f3669a10509d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/5b3759c8a48c4617b6b4499b3214639f274ef7c9/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/91a55f299320985e27ee133e88c0f3669a10509d/))
 was automatically generated
-from [elatella/deep-prepyto-paper@5b3759c](https://github.com/elatella/deep-prepyto-paper/tree/5b3759c8a48c4617b6b4499b3214639f274ef7c9)
-on January 26, 2022.
+from [elatella/deep-prepyto-paper@91a55f2](https://github.com/elatella/deep-prepyto-paper/tree/91a55f299320985e27ee133e88c0f3669a10509d)
+on January 28, 2022.
 </em></small>
 
 ## Authors
@@ -189,50 +189,55 @@ Our pipeline can in principle be used to segment any spherical vesicle in any ce
 
 ## Introduction
 
-The rise of machine learning is sweeping the technological landscape.
+The fine architecture of cells can be investigated by cryo-electron tomography (cryo-ET) [@doi:10.1016/j.jmb.2021.167187].
+Cellular structures are preserved down to the atomic scale through vitrification and observation of the samples in a fully hydrated state.
+When a macromolecule is present in a sufficient number of copies in the cells imaged by cryo-ET, it is possible to obtain its atomic structure in situ using subtomogram averaging [@doi:10.1101/2022.01.10.475481; @doi:10.1038/s41596-021-00648-5].
+Cellular cryo-ET datasets are usually extremely complex, making them difficult to analyze. 
+This is aggravated by the sensitivity of biological samples to electron radiation, which limits the signal-to-noise ratio in cryo-ET datasets [@doi:10.1146/annurev.biochem.73.011303.074112].
+Tomographic reconstructions are generated from a series of images of the sample acquired at different viewing angles.
+The geometry of the samples prevents acquisition at certain angles, resulting in anisotropic spatial coverage.
+The resolution in the directions close to the axis of the electron beam incident on the untilted sample is strongly reduced. 
+This effect, commonly referred to as the missing-wedge artifact, further complicates data analysis. 
+In particular, organelles fully bounded by a membrane appear to have holes at their top and bottom (relative to the electron beam axis) [@doi:10.1146/annurev.biochem.73.011303.074112].
 
-While machine learning has been around for several decades prior to its boom, and it theoratically would be able to learn anything using a shallow neural network of 1 hidden layer (universal approximation theorem by Cybenko), more complex problems required several hidden layers. 
-However, with an increased number of hidden layers, the chance of finding the correct weights, which are initialized as random numbers, through backpropagation is low, as they are being multiplied over the layers and eventually approach 0. 
-The initilizing booster for this hype in 2006 was moving from back propagation in multiple layer neural networks and eventually vanish (they are fractions) to deep learning [@doi:10.1126/science.1127647]. 
-Deep learning uses a new initalization strategy: series of single layer networks. (check the prior 2 sentences, especially if the citation fits)
-In the following years many new publications revolutinized the field further with new concepts of how to train deep neural networks [@doi:10.5555/3042817.3043064] 
+The synapse is the functional cellular contact at which information is transmitted from a neuron to another. 
+The former neuron is called presynaptic and the latter is postsynaptic. 
+In most cases, the signal is transmitted by the release of neurotransmitters into the intercellular space.
+Neurotransmitters are stored in SVs and are released following the fusion of a vesicle with the presynaptic plasma membrane.
+A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures [@doi:10.1083/jcb.200908082 ]. 
+The characterization of these interactions can be performed automatically with the pyto software, which implements a hierarchical connectivity approach to detect and annotate connectors [@doi:10.1016/j.jsb.2016.10.004]. For accurate connector segmentation, an exceptionally precise segmentation of SVs is prerequisite.
+To date, this SV segmentation has been achieved manually, but given the massive number of SVs per dataset, it is an extremely time-consuming process. 
+Typically, one person spends 3 to 8 working days to segment a single dataset.
+Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate performance [@doi:10.1016/j.jsb.2014.02.015].  
+To alleviate this situation, we considered applying deep learning methods.
 
-Since then the use cases of deep learning have become highly diverse and are just starting to reach the scientific community.
-Especially the graphical deep-learning approaches have been quite popular [@doi:10.1056/NEJMra1814259].
-Its approach is based around learning the description of the common attributes of a group or subset of a universe of objects [@doi:10.1017/S026988899700101X].
-The segmentation of an input image is a typical area of application. 
-Here the computer seperates the image into different partitions, each of them representing a different feature and traces the detected feature in the original image.
-Adapting this image segmentation into the medical and biological research has resulted in the design of UNet [@doi:10.1007/978-3-319-24574-4_28].
-UNet is able to localise, distinguish and trace borders, by treating the segmentation as a multiclass classification problem for each pixel.
-Its architecture consists of two parts: the contracting part which captures context, and the symmetric expanding path that enables precise localization [@doi:10.1109/TPAMI.2021.3059968].
-`*_What UNet type are we using: Extended 3D U-Net, Joint 2D-3D CNN, CNN with optimization module or Hierarchical networks_*`{.blue}
+Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
+Although entirely satisfying for visualization purposes, this approach has not met the requirements of pyto.
+A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021]. 
+For our use-case, a common issue is that the input data consists of 2-dimensional images.
+In the first study, cryo-ET data are decomposed in individual 2-dimensional slices, which are handed as seperate input to the CNN. 
+The independent output prediction images are re-assembled in a 3-dimensional stack.[@doi:10.1038/nmeth.4405]
+As discussed above, membranes oriented approximately parallel to the plane of the 2-dimensional tomographic images are not resolved.
+In the absence of contextual knowledge of the other 2-dimensional images, the CNN fails to segment these regions of the vesicles.
+Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
+To overcome this limitation, we used a U-Net CNN that takes 3-dimensional images as input.
+U-Net architecture has been introduced in 2015 by Ronenberger et al. [@arxiv:1505.04597].
+It consists of a contracting path, typical of CNN, and a symmetric expanding path. 
+At each expansion step, the correspondingly cropped feature map of the contracting path is concatenated. 
+The contracting path captures context, while the expanding path coupled with concatenation enables precise localization.
+The U-Net architecture was developed to achieve a fast and accurate segmentation of biomedical two-dimensional images, with the requirement of only a small fraction of training data in comparison to previous CNNs.
+It was then extended to segment 3-dimensional biomedical images (3D U-Net) [@arxiv:1606.06650].
+Weigert et al. [@doi:10.1038/s41592-018-0216-7] implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.
 
-But also the field of cryo electron microscopy has recently recognized the benefits of machine/deep-learning approaches [@doi:10.1093/jmicro/dfz036].
+We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets. 
+This method provided good accuracy and was only slightly affected by the missing wedge artifact. 
+Nevertheless, it was not quite sufficient for our downstream pyto analysis.
+Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location.
+This leads to a substantial accuracy improvement, which are reflected in better pyto performance.
+Additionally, we designed a multivariate ranking procedure, highlighting possibly wrongly segmented SVs. 
+We also introduce a semi-automatic method to very quickly fix wrongly segmented and missed SVs.
 
-The method of cryo-electron tomography (ET) utilises a series of tilted two-dimensional (2D) images to reconstruct a three-dimensional (3D) volume of the imaged sample [@doi:10.1042/BCJ20200715].
-
--> Describe more about cryo EM and cryo ET, also mention missing wedge problem
-
-It brings many advantages compared to other cryo-electron microscopy (EM) methods, as it yields images at in situ conditions.
-Therefore cryo ET can help to reveal the natural cellular environment of protein(-complexes), their function as well as their structure.
-In order to analyze the cellular context within a tomogram, cellular features are being segmented. 
-Popular programs for manual segementation are IMOD and Amira [@doi:10.1006/jsbi.1996.0013; @doi:10.1016/B978-012387582-2/50040-X].
-Currently manual segmentation is being considered the bottleneck in the worklow timewise of cellular cryo-ET.
-
-Our lab researches, with the help of cryo-ET, the synaptic architecture and its changes upon neurotransmitter vesicle release.
-A special focus in that research holds the SNARE complex, which connects the synaptic vesicles and the presynaptic cell membrane, mediating vesicle fusion.
-Their function and regulation still pose big questions.
-In addition, mutations of involved proteins have been linked to numerous neurological diseases.
-To address these issues, cryo-ET is the methode of choice. 
-To perform quantitative studies on the resulting tomograms, accurate segmentation of both synaptic vesicles and the interconnecting filaments are required.
-Among the different cell features, synaptic vesicles are the most time consuming to segment.
-Despite their very homogeneous size and shape, their sheer number and finding their true center (due to the missing wedge problem) complicates their segmentation.
-
-Problem 2D and 3D 
-
-Our aim is the creation of a deep-learning pipeline, which is taught to segment cellular features, starting with synaptic vesicles.
-We decided to teach our network with a real world dataset rather than using synthetic datasets, as it is often custom, as the synthetic datasets lack noise and would represent a complete 360° 3D object, which our datasets cannot due to the missing wedge problem in cryo-ET.
-Our proposed method provides the initial step for downstream segmentation of subcellular compartments such as synaptic connectors and tethers for which an extremely accurate vesicle segmentation is required.
+Although our set of procedures was developed with the use case of SV segmentation in mind, it can be used to segment any other types of biological spherical vesicles, such as transport vesicles, secretory vesicles, endocytic vesicles, and extracellular vesicles.
 
 
 ## Results
