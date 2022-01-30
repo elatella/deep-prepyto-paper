@@ -5,7 +5,7 @@ Amin
 anisotropic
 aseedb
 astrocytic
-Aurion
+AURION
 Automator
 Benoît
 Blegdamsvej
@@ -13,8 +13,8 @@ CaCl
 Carlsbergfondet
 CCD
 CNNs
-Convolutional
-Cryo
+convolutional
+cryo
 dataset
 datasets
 DeepFinder
@@ -83,7 +83,7 @@ Stansted
 subcellular
 subtomogram
 superresolution
-SV
+sv
 SVs
 synaptosome
 synaptosomes
