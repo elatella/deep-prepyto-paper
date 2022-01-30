@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/1bbd44d12638dee7c1239ee8d81a2494b1c05455/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/1bbd44d12638dee7c1239ee8d81a2494b1c05455/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/1bbd44d12638dee7c1239ee8d81a2494b1c05455/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/92fc4f38de58d734b3fdb93140f8200f55ef7b5a/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/92fc4f38de58d734b3fdb93140f8200f55ef7b5a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/92fc4f38de58d734b3fdb93140f8200f55ef7b5a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/1bbd44d12638dee7c1239ee8d81a2494b1c05455/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/92fc4f38de58d734b3fdb93140f8200f55ef7b5a/))
 was automatically generated
-from [elatella/deep-prepyto-paper@1bbd44d](https://github.com/elatella/deep-prepyto-paper/tree/1bbd44d12638dee7c1239ee8d81a2494b1c05455)
+from [elatella/deep-prepyto-paper@92fc4f3](https://github.com/elatella/deep-prepyto-paper/tree/92fc4f38de58d734b3fdb93140f8200f55ef7b5a)
 on January 30, 2022.
 </em></small>
 
@@ -356,13 +356,6 @@ Training Datasets and Batch Generation
 -Remove Outlier Labels
 
 ### Analysis of Results
-
-
-\pagenumbering{gobble}
-
-\tableofcontents
-
-\newpage
 
 
 ## References {.page_break_before}
