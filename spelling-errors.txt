@@ -5,7 +5,7 @@ Amin
 anisotropic
 aseedb
 astrocytic
-AURION
+Aurion
 Automator
 Benoît
 Blegdamsvej
@@ -13,10 +13,10 @@ CaCl
 Carlsbergfondet
 CCD
 CNNs
-convolutional
-Cryo
+Convolutional
+cryo
 dataset
-datasets
+Datasets
 DeepFinder
 Defocus
 Didcot
@@ -66,7 +66,7 @@ Onstruments
 Oxfordshire
 Pleasonton
 Postprocessing
-pre
+Pre
 presynaptic
 pyto
 Radecke
@@ -96,7 +96,7 @@ tomograms
 Tridiem
 unbinned
 undiluteted
-UNet
+unet
 untilted
 Vitrobot
 voxel
