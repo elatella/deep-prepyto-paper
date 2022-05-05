@@ -10,7 +10,7 @@
   <meta name="author" content="Guillaume Witz" />
   <meta name="author" content="Jakob B. Sørensen" />
   <meta name="author" content="Benoît Zuber" />
-  <meta name="dcterms.date" content="2022-01-30" />
+  <meta name="dcterms.date" content="2022-05-05" />
   <meta name="keywords" content="synapse, cryo-electron tomography, synaptic vesicles, deep learning, segmentation, post-processing, automation" />
   <title>Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms</title>
   <style>
@@ -52,8 +52,8 @@
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-01-30" />
-  <meta name="citation_publication_date" content="2022-01-30" />
+  <meta name="dc.date" content="2022-05-05" />
+  <meta name="citation_publication_date" content="2022-05-05" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8c0a992e1426b6fd746ae4d679258604d25662a2/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8c0a992e1426b6fd746ae4d679258604d25662a2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8c0a992e1426b6fd746ae4d679258604d25662a2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -105,10 +105,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/8c0a992e1426b6fd746ae4d679258604d25662a2/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2">elatella/deep-prepyto-paper@4e63ce6</a>
-on January 30, 2022.
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/8c0a992e1426b6fd746ae4d679258604d25662a2">elatella/deep-prepyto-paper@8c0a992</a>
+on May 5, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -235,6 +235,23 @@ Additionally, we designed a multivariate ranking procedure, highlighting possibl
 We also introduce a semi-automatic method to very quickly fix wrongly segmented and missed SVs.</p>
 <p>Although our set of procedures was developed with the use case of SV segmentation in mind, it can be used to segment any other types of biological spherical vesicles, such as transport vesicles, secretory vesicles, endocytic vesicles, and extracellular vesicles.</p>
 <h2 id="results">Results</h2>
+<p>Fig 1- Pipeline of Segmentation: a) tomograms b) patchify the tomograms into 3d patches c) Segmentation Network d) probability masks e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile</p>
+<p><img src="images/unet.png" id="fig:unet" style="width:10cm" alt="UNET." />
+Fig 2- U-Net - Input Size is 32^3, in each resolution we have two convolution layer followed by batch normalization layer and relu activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).</p>
+<p><img src="images/tom.png" alt="tom1." />
+<img src="images/tom2.png" alt="tom2." />
+<img src="images/tom3.png" alt="tom3." /></p>
+<p>Fig 3- a) a section from z axis of a tomogram’s presynaptic terminal of a neuron
+b) instance mask of the vesicles after post processing
+c) predicted probability mask by the segmentation network</p>
+<p>Fig 4- Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets</p>
+<p>Fig 5- Vesicle radius and position through radial profile and cross-correlation
+Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile
+E, F, H, G) Same as above columns after refinement. (<span class="citation" data-cites="Benoit">[<a href="#ref-Benoit" role="doc-biblioref"><strong>Benoit?</strong></a>]</span> change column naming)</p>
+<p>Fig 6- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw label with connected vesicle-labels; C) modified label with seperated vesicles —&gt; for software: IMOD</p>
+<p><img src="images/3d.png" alt="3d." />
+Manual segmentation and automatic segmenbtation of synaptosome</p>
+<p>Table 1- Evaluation of the segmentation- MDICE: Mask Dice coefficient for the predicted mask PDICE: Dice coefficient after post-processing SIGMA-d: diameter error on correctly detected vesicle, DELTA-c: average error center (nm) #Vesicles: number of expected vesicles TP: True Positive FN: False Negative FP: False Positive</p>
 <h3 id="comparison-of-manual-segmentation-with-automatic-deep-learning-based-segmentation">Comparison of manual segmentation with automatic deep-learning based segmentation</h3>
 <p>Evaluation metric DICE for pixel/pixel analysis
 Global analysis</p>
@@ -325,7 +342,7 @@ Training Datasets and Batch Generation</p>
 <div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Exploring high-resolution cryo-ET and subtomogram averaging capabilities of contemporary DEDs</strong> <div class="csl-block">Martin Obr, Wim JH Hagen, Robert A Dick, Lingbo Yu, Abhay Kotecha, Florian KM Schur</div> <em>Molecular Biology</em> (2022-01-10) <a href="https://doi.org/gn92pd">https://doi.org/gn92pd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.01.10.475481">10.1101/2022.01.10.475481</a></div></div>
 </div>
 <div id="ref-EGfvt7aR" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>High-resolution in situ structure determination by cryo-electron tomography and subtomogram averaging using emClarity</strong> <div class="csl-block">Tao Ni, Thomas Frosio, Luiza Mendonça, Yuewen Sheng, Daniel Clare, Benjamin A Himes, Peijun Zhang</div> <em>Nature Protocols</em> (2022-01-12) <a href="https://doi.org/gn92pc">https://doi.org/gn92pc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41596-021-00648-5">10.1038/s41596-021-00648-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/35022621">35022621</a></div></div>
+<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>High-resolution in situ structure determination by cryo-electron tomography and subtomogram averaging using emClarity</strong> <div class="csl-block">Tao Ni, Thomas Frosio, Luiza Mendonça, Yuewen Sheng, Daniel Clare, Benjamin A Himes, Peijun Zhang</div> <em>Nature Protocols</em> (2022-02) <a href="https://doi.org/gn92pc">https://doi.org/gn92pc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41596-021-00648-5">10.1038/s41596-021-00648-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/35022621">35022621</a></div></div>
 </div>
 <div id="ref-WmTa9taa" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>STRUCTURAL STUDIES BY ELECTRON TOMOGRAPHY: From Cells to Molecules</strong> <div class="csl-block">Vladan Lučić, Friedrich Förster, Wolfgang Baumeister</div> <em>Annual Review of Biochemistry</em> (2005-06-01) <a href="https://doi.org/cfd27f">https://doi.org/cfd27f</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1146/annurev.biochem.73.011303.074112">10.1146/annurev.biochem.73.011303.074112</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15952904">15952904</a></div></div>
@@ -343,7 +360,7 @@ Training Datasets and Batch Generation</p>
 <div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Convolutional neural networks for automated annotation of cellular cryo-electron tomograms</strong> <div class="csl-block">Muyuan Chen, Wei Dai, Stella Y Sun, Darius Jonasch, Cynthia Y He, Michael F Schmid, Wah Chiu, Steven J Ludtke</div> <em>Nature Methods</em> (2017-10) <a href="https://doi.org/gkpj62">https://doi.org/gkpj62</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.4405">10.1038/nmeth.4405</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28846087">28846087</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5623144">PMC5623144</a></div></div>
 </div>
 <div id="ref-RdPTGoZx" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Automated Detection and Localization of Synaptic Vesicles in Electron Microscopy Images</strong> <div class="csl-block">Barbara Imbrosci, Dietmar Schmitz, Marta Orlando</div> <em>eneuro</em> (2022-01) <a href="https://doi.org/gn9n8k">https://doi.org/gn9n8k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1523/eneuro.0400-20.2021">10.1523/eneuro.0400-20.2021</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34983830">34983830</a></div></div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Automated Detection and Localization of Synaptic Vesicles in Electron Microscopy Images</strong> <div class="csl-block">Barbara Imbrosci, Dietmar Schmitz, Marta Orlando</div> <em>eneuro</em> (2022-01) <a href="https://doi.org/gn9n8k">https://doi.org/gn9n8k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1523/eneuro.0400-20.2021">10.1523/eneuro.0400-20.2021</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34983830">34983830</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8805189">PMC8805189</a></div></div>
 </div>
 <div id="ref-ld1EnZ6i" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>U-Net: Convolutional Networks for Biomedical Image Segmentation</strong> <div class="csl-block">Olaf Ronneberger, Philipp Fischer, Thomas Brox</div> <em>arXiv</em> (2015-05-19) <a href="https://arxiv.org/abs/1505.04597">https://arxiv.org/abs/1505.04597</a></div>

@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-01-30'
+date-meta: '2022-05-05'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-01-30" />
-  <meta name="citation_publication_date" content="2022-01-30" />
+  <meta name="dc.date" content="2022-05-05" />
+  <meta name="citation_publication_date" content="2022-05-05" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8c0a992e1426b6fd746ae4d679258604d25662a2/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8c0a992e1426b6fd746ae4d679258604d25662a2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8c0a992e1426b6fd746ae4d679258604d25662a2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/8c0a992e1426b6fd746ae4d679258604d25662a2/))
 was automatically generated
-from [elatella/deep-prepyto-paper@4e63ce6](https://github.com/elatella/deep-prepyto-paper/tree/4e63ce6ca4d69d73caad29b27b1c0e76739c86d2)
-on January 30, 2022.
+from [elatella/deep-prepyto-paper@8c0a992](https://github.com/elatella/deep-prepyto-paper/tree/8c0a992e1426b6fd746ae4d679258604d25662a2)
+on May 5, 2022.
 </em></small>
 
 ## Authors
@@ -243,6 +243,44 @@ Although our set of procedures was developed with the use case of SV segmentatio
 ## Results
 
 
+
+Fig 1- Pipeline of Segmentation: a) tomograms b) patchify the tomograms into 3d patches c) Segmentation Network d) probability masks  e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile
+
+
+
+
+![UNET.](images/unet.png){#fig:unet width="10cm"}
+Fig 2- U-Net - Input Size is 32^3, in each resolution we have two convolution layer followed by batch normalization layer and relu activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).
+
+
+
+
+![tom1.](images/tom.png)
+![tom2.](images/tom2.png)
+![tom3.](images/tom3.png)
+
+Fig 3- a) a section from z axis of a tomogram’s presynaptic terminal of a neuron
+b) instance mask of the vesicles after post processing
+c) predicted probability mask by the segmentation network
+
+
+
+Fig 4- Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets 
+
+
+Fig 5- Vesicle radius and position through radial profile and cross-correlation
+Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile
+E, F, H, G) Same as above columns after refinement. (@Benoit change column naming)
+
+
+Fig 6- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw label with connected vesicle-labels; C) modified label with seperated vesicles ---> for software: IMOD
+
+![3d.](images/3d.png)
+Manual segmentation and automatic segmenbtation of synaptosome
+
+Table 1- Evaluation of the segmentation- MDICE: Mask Dice coefficient for the predicted mask PDICE: Dice coefficient after post-processing SIGMA-d: diameter error on correctly detected vesicle, DELTA-c: average error center (nm) #Vesicles: number of expected vesicles TP: True Positive  FN: False Negative FP: False Positive
+
+
 ### Comparison of manual segmentation with automatic deep-learning based segmentation
 Evaluation metric DICE for pixel/pixel analysis
 Global analysis
@@ -262,6 +300,7 @@ evaluation: objectwise evaluation for I/O, radius, center (according to nature p
 	other common evaluation tool other than DICE (Amin wants to check)
   
   
+
 
 ## Discussion
 
