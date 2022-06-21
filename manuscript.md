@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4db34a242f9b908dcd0cf86ceae726ce97417f07/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4db34a242f9b908dcd0cf86ceae726ce97417f07/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4db34a242f9b908dcd0cf86ceae726ce97417f07/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/7ce4142b39c40f26ea274e1e28acacda836631d4/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/7ce4142b39c40f26ea274e1e28acacda836631d4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/7ce4142b39c40f26ea274e1e28acacda836631d4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/4db34a242f9b908dcd0cf86ceae726ce97417f07/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/7ce4142b39c40f26ea274e1e28acacda836631d4/))
 was automatically generated
-from [elatella/deep-prepyto-paper@4db34a2](https://github.com/elatella/deep-prepyto-paper/tree/4db34a242f9b908dcd0cf86ceae726ce97417f07)
+from [elatella/deep-prepyto-paper@7ce4142](https://github.com/elatella/deep-prepyto-paper/tree/7ce4142b39c40f26ea274e1e28acacda836631d4)
 on June 21, 2022.
 </em></small>
 
@@ -250,59 +250,42 @@ Therefore, we decided to develop the automatic segmentation for synaptic vesicle
 The used tomograms were previously manually segmented with IMOD [@doi:10.1006/jsbi.1996.0013].
 In a next step, filaments connecting the synaptic vesicles with each other (connectors) and to the active zone (AZ) were automatically segmented with the algorithm application Pyto [@doi:10.1016/j.jsb.2016.10.004].
 
-![**Pipeline of automatic segmentation.** a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks  e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile [@doi:10.1007/978-3-319-67443-8_39]](images/pipeline.svg){#fig:pipeline width="15cm"}
-
-
-
+![**Pipeline of automatic segmentation.** a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks  e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile](images/pipeline.svg){#fig:pipeline width="15cm"}
 
 ![**Segmentation Network: UNET.** Input Size is 32^3, in each resolution we have two convolution layer followed by batch normalization layer and relu activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).](images/unet.png){#fig:unet width="10cm"}
 
+![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network](images/tomo.svg){#fig:tom width="15cm"}
 
-![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network [@doi:10.1007/978-3-319-67443-8_39]](images/tomo.svg){#fig:tom width="15cm"}
+Fig 4- Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets
 
-
-
-Fig 4- Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets 
-
-
-Fig 5- Vesicle radius and position through radial profile and cross-correlation
+![**Vesicle radius and position through radial profile and cross-correlation**
 Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile
-E, F, H, G) Same as above columns after refinement. (@Benoit change column naming)
-
+E, F, H, G) Same as above columns after refinement.] (images/radial_avg_115-099.svg){#fig:radial_profile width="15cm"}
 
 Fig 6- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw label with connected vesicle-labels; C) modified label with seperated vesicles ---> for software: IMOD
 
-
-
-
 ### Comparison of manual segmentation with automatic deep-learning based segmentation
-
 
 ![**3D model of manual segmented and automatically segmented synaptosome.**](images/3d.png)
 
-
 Evaluation metric DICE for pixel/pixel analysis
 
-Table 1- Evaluation of the segmentation- MDICE: Mask Dice coefficient for the predicted mask PDICE: Dice coefficient after post-processing SIGMA-d: diameter error on correctly detected vesicle, DELTA-c: average error center (nm) #Vesicles: number of expected vesicles TP: True Positive  FN: False Negative FP: False Positive
-
+Table 1- Evaluation of the segmentation- MDICE: Mask Dice coefficient for the predicted mask PDICE: Dice coefficient after post-processing SIGMA-d: diameter error on correctly detected vesicle, DELTA-c: average error center (nm) #Vesicles: number of expected vesicles TP: True Positive FN: False Negative FP: False Positive
 
 Global analysis
 
 ![**Dice coefficient and loss value for training and validation set.** ](images/blinddice.png){#fig:dice width="10cm"}
 
-
 3d unet good for 3D processing
 recent Nature methods paper by Ben Engel, DeepFinder -> Relion for STA creates mask to find more using dl
-	-what are they doing, maybe compare that in the text, different aims; we might compare results we achieve (keep as bonus, revision)
+-what are they doing, maybe compare that in the text, different aims; we might compare results we achieve (keep as bonus, revision)
 
 3 different types of dl: classification, localization and segmentation
 We specialize in accuratly segmenting 3D svs -> results
 through the network, output is a mask, smooth DICE/ binary DICE = which one for our mask? one function for both? -> Amin will check
 when we encounter error until now we remove sv(?), bug inside function -> fix bug for better performance, how many fail and why?
 evaluation: objectwise evaluation for I/O, radius, center (according to nature paper) -> compare with manual seg
-	other common evaluation tool other than DICE (Amin wants to check)
-  
-  
+other common evaluation tool other than DICE (Amin wants to check)
 
 
 ## Discussion

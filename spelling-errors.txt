@@ -4,11 +4,10 @@ ameen
 Amin
 anisotropic
 aseedb
-Astrocytic
-AURION
+astrocytic
+Aurion
 Automator
 automize
-Benoit
 Benoît
 Blegdamsvej
 CaCl
@@ -16,7 +15,7 @@ Carlsbergfondet
 CCD
 CNNs
 Convolutional
-Cryo
+cryo
 dataset
 datasets
 DeepFinder
@@ -75,7 +74,7 @@ Pleasonton
 Postprocessing
 pre
 presynaptic
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability
@@ -108,7 +107,7 @@ TP
 Tridiem
 unbinned
 undiluteted
-UNET
+UNet
 untilted
 Vitrobot
 voxel
