@@ -5,8 +5,9 @@ Amin
 anisotropic
 aseedb
 Astrocytic
-Aurion
+AURION
 Automator
+automize
 Benoit
 Benoît
 Blegdamsvej
@@ -15,7 +16,7 @@ Carlsbergfondet
 CCD
 CNNs
 Convolutional
-cryo
+Cryo
 dataset
 datasets
 DeepFinder
@@ -82,7 +83,6 @@ Relion
 relu
 Ronenberger
 seg
-segmenbtation
 seperate
 seperated
 SerialEM
@@ -92,8 +92,8 @@ Stansted
 subcellular
 subtomogram
 superresolution
-sv
-svs
+SV
+SVs
 synaptosome
 synaptosomes
 Tecnai
@@ -108,7 +108,7 @@ TP
 Tridiem
 unbinned
 undiluteted
-unet
+UNET
 untilted
 Vitrobot
 voxel
