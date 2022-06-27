@@ -4,8 +4,8 @@ ameen
 Amin
 anisotropic
 aseedb
-astrocytic
-Aurion
+Astrocytic
+AURION
 Automator
 automize
 Benoît
@@ -14,10 +14,10 @@ CaCl
 Carlsbergfondet
 CCD
 CNNs
-Convolutional
+convolutional
 cryo
 dataset
-datasets
+Datasets
 DeepFinder
 Defocus
 Didcot
