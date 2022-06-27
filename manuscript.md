@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/3d8bf4731d001fffbe8b12e55000318e5d4ea823/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/3d8bf4731d001fffbe8b12e55000318e5d4ea823/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/3d8bf4731d001fffbe8b12e55000318e5d4ea823/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/1a8c7afda20c5daace0e40e7ccc211aca03facc5/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/1a8c7afda20c5daace0e40e7ccc211aca03facc5/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/1a8c7afda20c5daace0e40e7ccc211aca03facc5/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/3d8bf4731d001fffbe8b12e55000318e5d4ea823/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/1a8c7afda20c5daace0e40e7ccc211aca03facc5/))
 was automatically generated
-from [elatella/deep-prepyto-paper@3d8bf47](https://github.com/elatella/deep-prepyto-paper/tree/3d8bf4731d001fffbe8b12e55000318e5d4ea823)
+from [elatella/deep-prepyto-paper@1a8c7af](https://github.com/elatella/deep-prepyto-paper/tree/1a8c7afda20c5daace0e40e7ccc211aca03facc5)
 on June 27, 2022.
 </em></small>
 
