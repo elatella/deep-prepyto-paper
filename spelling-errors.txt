@@ -5,7 +5,7 @@ Amin
 anisotropic
 aseedb
 astrocytic
-AURION
+Aurion
 Automator
 automize
 Benoît
@@ -14,10 +14,10 @@ CaCl
 Carlsbergfondet
 CCD
 CNNs
-convolutional
-cryo
+Convolutional
+Cryo
 dataset
-Datasets
+datasets
 DeepFinder
 Defocus
 Didcot
@@ -72,7 +72,7 @@ patchify
 PDICE
 Pleasonton
 Postprocessing
-pre
+Pre
 presynaptic
 pyto
 Radecke
@@ -91,8 +91,8 @@ Stansted
 subcellular
 subtomogram
 superresolution
-SV
-SVs
+sv
+svs
 synaptosome
 synaptosomes
 Tecnai
