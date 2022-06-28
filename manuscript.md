@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-06-27'
+date-meta: '2022-06-28'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-06-27" />
-  <meta name="citation_publication_date" content="2022-06-27" />
+  <meta name="dc.date" content="2022-06-28" />
+  <meta name="citation_publication_date" content="2022-06-28" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/1a8c7afda20c5daace0e40e7ccc211aca03facc5/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/1a8c7afda20c5daace0e40e7ccc211aca03facc5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/1a8c7afda20c5daace0e40e7ccc211aca03facc5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/7e77aa9472be13eb37f2606889bf2801f196519f/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/7e77aa9472be13eb37f2606889bf2801f196519f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/7e77aa9472be13eb37f2606889bf2801f196519f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/1a8c7afda20c5daace0e40e7ccc211aca03facc5/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/7e77aa9472be13eb37f2606889bf2801f196519f/))
 was automatically generated
-from [elatella/deep-prepyto-paper@1a8c7af](https://github.com/elatella/deep-prepyto-paper/tree/1a8c7afda20c5daace0e40e7ccc211aca03facc5)
-on June 27, 2022.
+from [elatella/deep-prepyto-paper@7e77aa9](https://github.com/elatella/deep-prepyto-paper/tree/7e77aa9472be13eb37f2606889bf2801f196519f)
+on June 28, 2022.
 </em></small>
 
 ## Authors
