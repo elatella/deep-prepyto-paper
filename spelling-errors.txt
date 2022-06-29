@@ -15,7 +15,7 @@ Carlsbergfondet
 CCD
 CNNs
 Convolutional
-cryo
+Cryo
 dataset
 datasets
 DeepFinder
@@ -72,9 +72,9 @@ patchify
 PDICE
 Pleasonton
 Postprocessing
-Pre
+pre
 presynaptic
-pyto
+Pyto
 Radecke
 Raphaela
 recruitability
@@ -92,7 +92,7 @@ subcellular
 subtomogram
 superresolution
 SV
-SVs
+svs
 synaptosome
 synaptosomes
 Tecnai
@@ -107,7 +107,7 @@ TP
 Tridiem
 unbinned
 undiluteted
-unet
+UNET
 untilted
 Vitrobot
 voxel
