@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -105,9 +105,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/bb3d0ac988aab0ce06b7a095630bf125459e9bf7">elatella/deep-prepyto-paper@bb3d0ac</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/0255b95503941225f8d84dfd14c28c9e4d1490e3">elatella/deep-prepyto-paper@0255b95</a>
 on July 12, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -189,43 +189,43 @@ Furthermore, we provide an interactive tool for accurately segmenting spherical 
 This tool can be used to segment vesicles that were missed by the fully automatic procedure or to quickly segment a handful of vesicles, while bypassing the fully automatic procedure.
 Our pipeline can in principle be used to segment any spherical vesicle in any cell type as well as extracellular vesicles.</p>
 <h2 id="introduction">Introduction</h2>
-<p>The fine architecture of cells can be investigated by cryo-electron tomography (cryo-ET) <span class="citation" data-cites="IpfJPPLG">[<a href="#ref-IpfJPPLG" role="doc-biblioref">1</a>]</span>.
+<p>The fine architecture of cells can be investigated by cryo-electron tomography (cryo-ET) <span class="citation" data-cites="doi:10.1016/j.jmb.2021.167187">[<a href="#ref-doi:10.1016/j.jmb.2021.167187" role="doc-biblioref"><strong>doi:10.1016/j.jmb.2021.167187?</strong></a>]</span>.
 Cellular structures are preserved down to the atomic scale through vitrification and observation of the samples in a fully hydrated state.
-When a macromolecule is present in a sufficient number of copies in the cells imaged by cryo-ET, it is possible to obtain its atomic structure in situ using subtomogram averaging <span class="citation" data-cites="2TrAHWcN EGfvt7aR">[<a href="#ref-2TrAHWcN" role="doc-biblioref">2</a>,<a href="#ref-EGfvt7aR" role="doc-biblioref">3</a>]</span>.
+When a macromolecule is present in a sufficient number of copies in the cells imaged by cryo-ET, it is possible to obtain its atomic structure in situ using subtomogram averaging <span class="citation" data-cites="doi:10.1101/2022.01.10.475481 doi:10.1038/s41596-021-00648-5">[<a href="#ref-doi:10.1101/2022.01.10.475481" role="doc-biblioref"><strong>doi:10.1101/2022.01.10.475481?</strong></a>,<a href="#ref-doi:10.1038/s41596-021-00648-5" role="doc-biblioref"><strong>doi:10.1038/s41596-021-00648-5?</strong></a>]</span>.
 Cellular cryo-ET datasets are usually extremely complex, making them difficult to analyze.
-This is aggravated by the sensitivity of biological samples to electron radiation, which limits the signal-to-noise ratio in cryo-ET datasets <span class="citation" data-cites="WmTa9taa">[<a href="#ref-WmTa9taa" role="doc-biblioref">4</a>]</span>.
+This is aggravated by the sensitivity of biological samples to electron radiation, which limits the signal-to-noise ratio in cryo-ET datasets <span class="citation" data-cites="WmTa9taa">[<a href="#ref-WmTa9taa" role="doc-biblioref">1</a>]</span>.
 Tomographic reconstructions are generated from a series of images of the sample acquired at different viewing angles.
 The geometry of the samples prevents acquisition at certain angles, resulting in anisotropic spatial coverage.
 The resolution in the directions close to the axis of the electron beam incident on the untilted sample is strongly reduced.
 This effect, commonly referred to as the missing-wedge artifact, further complicates data analysis.
-In particular, organelles fully bounded by a membrane appear to have holes at their top and bottom (relative to the electron beam axis) <span class="citation" data-cites="WmTa9taa">[<a href="#ref-WmTa9taa" role="doc-biblioref">4</a>]</span>.</p>
+In particular, organelles fully bounded by a membrane appear to have holes at their top and bottom (relative to the electron beam axis) <span class="citation" data-cites="WmTa9taa">[<a href="#ref-WmTa9taa" role="doc-biblioref">1</a>]</span>.</p>
 <p>The synapse is the functional cellular contact at which information is transmitted from a neuron to another.
 The former neuron is called presynaptic and the latter is postsynaptic.
 In most cases, the signal is transmitted by the release of neurotransmitters into the intercellular space.
 Neurotransmitters are stored in SVs and are released following the fusion of a vesicle with the presynaptic plasma membrane.
-A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures <span class="citation" data-cites="XQJ3R1HJ">[<a href="#ref-XQJ3R1HJ" role="doc-biblioref">5</a> ]</span>.
-The characterization of these interactions can be performed automatically with the pyto software, which implements a hierarchical connectivity approach to detect and annotate connectors <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>. For accurate connector segmentation, an exceptionally precise segmentation of SVs is prerequisite.
+A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures <span class="citation" data-cites="doi:10.1083/jcb.200908082">[<a href="#ref-doi:10.1083/jcb.200908082" role="doc-biblioref"><strong>doi:10.1083/jcb.200908082?</strong></a> ]</span>.
+The characterization of these interactions can be performed automatically with the pyto software, which implements a hierarchical connectivity approach to detect and annotate connectors <span class="citation" data-cites="doi:10.1016/j.jsb.2016.10.004">[<a href="#ref-doi:10.1016/j.jsb.2016.10.004" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2016.10.004?</strong></a>]</span>. For accurate connector segmentation, an exceptionally precise segmentation of SVs is prerequisite.
 To date, this SV segmentation has been achieved manually, but given the massive number of SVs per dataset, it is an extremely time-consuming process.
 Typically, one person spends 3 to 8 working days to segment a single dataset.
-Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate performance <span class="citation" data-cites="JWuvfT0Z">[<a href="#ref-JWuvfT0Z" role="doc-biblioref">7</a>]</span>.<br />
+Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate performance <span class="citation" data-cites="doi:10.1016/j.jsb.2014.02.015">[<a href="#ref-doi:10.1016/j.jsb.2014.02.015" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2014.02.015?</strong></a>]</span>.<br />
 To alleviate this situation, we considered applying deep learning methods.</p>
-<p>Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data <span class="citation" data-cites="GNLHO53d">[<a href="#ref-GNLHO53d" role="doc-biblioref">8</a>]</span>.
+<p>Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data <span class="citation" data-cites="doi:10.1038/nmeth.4405">[<a href="#ref-doi:10.1038/nmeth.4405" role="doc-biblioref"><strong>doi:10.1038/nmeth.4405?</strong></a>]</span>.
 Although entirely satisfying for visualization purposes, this approach has not met the requirements of pyto.
-A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional images of resin-embedded synapses <span class="citation" data-cites="RdPTGoZx">[<a href="#ref-RdPTGoZx" role="doc-biblioref">9</a>]</span>.
+A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional images of resin-embedded synapses <span class="citation" data-cites="doi:10.1523/ENEURO.0400-20.2021">[<a href="#ref-doi:10.1523/ENEURO.0400-20.2021" role="doc-biblioref"><strong>doi:10.1523/ENEURO.0400-20.2021?</strong></a>]</span>.
 For our use-case, a common issue is that the input data consists of 2-dimensional images.
 In the first study, cryo-ET data are decomposed in individual 2-dimensional slices, which are handed as seperate input to the CNN.
-The independent output prediction images are re-assembled in a 3-dimensional stack.<span class="citation" data-cites="GNLHO53d">[<a href="#ref-GNLHO53d" role="doc-biblioref">8</a>]</span>
+The independent output prediction images are re-assembled in a 3-dimensional stack.<span class="citation" data-cites="doi:10.1038/nmeth.4405">[<a href="#ref-doi:10.1038/nmeth.4405" role="doc-biblioref"><strong>doi:10.1038/nmeth.4405?</strong></a>]</span>
 As discussed above, membranes oriented approximately parallel to the plane of the 2-dimensional tomographic images are not resolved.
 In the absence of contextual knowledge of the other 2-dimensional images, the CNN fails to segment these regions of the vesicles.
 Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
 To overcome this limitation, we used a U-Net CNN that takes 3-dimensional images as input.
-U-Net architecture has been introduced in 2015 by Ronenberger et al. <span class="citation" data-cites="ld1EnZ6i">[<a href="#ref-ld1EnZ6i" role="doc-biblioref">10</a>]</span>.
+U-Net architecture has been introduced in 2015 by Ronenberger et al. <span class="citation" data-cites="ld1EnZ6i">[<a href="#ref-ld1EnZ6i" role="doc-biblioref">2</a>]</span>.
 It consists of a contracting path, typical of CNN, and a symmetric expanding path.
 At each expansion step, the correspondingly cropped feature map of the contracting path is concatenated.
 The contracting path captures context, while the expanding path coupled with concatenation enables precise localization.
 The U-Net architecture was developed to achieve a fast and accurate segmentation of biomedical two-dimensional images, with the requirement of only a small fraction of training data in comparison to previous CNNs.
-It was then extended to segment 3-dimensional biomedical images (3D U-Net) <span class="citation" data-cites="D7hXMn0y">[<a href="#ref-D7hXMn0y" role="doc-biblioref">11</a>]</span>.
-Weigert et al. <span class="citation" data-cites="12G712Zky">[<a href="#ref-12G712Zky" role="doc-biblioref">12</a>]</span> implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.</p>
+It was then extended to segment 3-dimensional biomedical images (3D U-Net) <span class="citation" data-cites="D7hXMn0y">[<a href="#ref-D7hXMn0y" role="doc-biblioref">3</a>]</span>.
+Weigert et al. <span class="citation" data-cites="doi:10.1038/s41592-018-0216-7">[<a href="#ref-doi:10.1038/s41592-018-0216-7" role="doc-biblioref"><strong>doi:10.1038/s41592-018-0216-7?</strong></a>]</span> implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.</p>
 <p>We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets.
 This method provided good accuracy and was only slightly affected by the missing wedge artifact.
 Nevertheless, it was not quite sufficient for our downstream pyto analysis.
@@ -240,8 +240,8 @@ We also introduce a semi-automatic method to very quickly fix wrongly segmented 
 The manual segmentation of synaptic vesicles is one of the most time-intensive steps, when segmenting tomograms of presynaptic terminals.
 Synaptic vesicles also constitute a large, homogeneous group, which would create a large training set for deep learning applications.
 Therefore, we decided to develop the automatic segmentation for synaptic vesicles in an initial step.
-The used tomograms were previously manually segmented with IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">13</a>]</span>.
-In a next step, filaments connecting the synaptic vesicles with each other (connectors) and to the active zone (AZ) were automatically segmented with the algorithm application Pyto <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.</p>
+The used tomograms were previously manually segmented with IMOD <span class="citation" data-cites="doi:10.1006/jsbi.1996.0013">[<a href="#ref-doi:10.1006/jsbi.1996.0013" role="doc-biblioref"><strong>doi:10.1006/jsbi.1996.0013?</strong></a>]</span>.
+In a next step, filaments connecting the synaptic vesicles with each other (connectors) and to the active zone (AZ) were automatically segmented with the algorithm application Pyto <span class="citation" data-cites="doi:10.1016/j.jsb.2016.10.004">[<a href="#ref-doi:10.1016/j.jsb.2016.10.004" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2016.10.004?</strong></a>]</span>.</p>
 <div id="fig:pipeline" class="fignos">
 <figure>
 <img src="images/pipeline.svg" style="width:15cm" alt="Figure 1: Pipeline of automatic segmentation. a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile" /><figcaption aria-hidden="true"><span>Figure 1:</span> <strong>Pipeline of automatic segmentation.</strong> a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile</figcaption>
@@ -294,7 +294,7 @@ implement automatic connector and tether segmentation as a deep leaning workflow
 <p>Two datasets of different origin were used as input and test subjects for the automatic segmentation pipeline, rat synaptosomes as well as astrocytic and neural cell cultures derived from mice.
 <code class="green">\_cite Vladan, segmentation write a bit more*</code></p>
 <h4 id="rat-synaptosomes">Rat synaptosomes</h4>
-<p>The preparation of the rat synaptosomes were previously described <span class="citation" data-cites="7sGZgtQa">[<a href="#ref-7sGZgtQa" role="doc-biblioref">14</a>]</span>.
+<p>The preparation of the rat synaptosomes were previously described <span class="citation" data-cites="doi:10.1038/nprot.2008.171">[<a href="#ref-doi:10.1038/nprot.2008.171" role="doc-biblioref"><strong>doi:10.1038/nprot.2008.171?</strong></a>]</span>.
 After the purification, the synaptosomes were incubated for 30min at room temperature.
 1.3mM CaCl2 and 10 nm gold fiducials were added (gold fiducials, #s10110/8. AURION Immuno Gold Reagents &amp; Accessories. Wageningen, The Neatherlands).
 The synaptosome solution was applied to a 200-mesh lacey finder carbon film grid (#AGS166-H2. Agar Scientific. Elektron Technology UK Ltd. Stansted, UK).
@@ -303,18 +303,18 @@ Thereafter the grid was immediately plunge frozen in liquid ethane using a homeb
 The grids coated with rat synaptosomes were mounted in a cryo-holder (Gatan, Pleasonton, CA, USA) and transferred to a Tecnai F20 (FEI, Eindhoven, The Netherlands) which was set to low dose conditions, operated at 200 kV, and equipped with a field emission gun.
 Images were recorded with a 2k x 2k CCD camera (Gatan) mounted after a GIF Tridiem post-column filter (Gatan) operated in zero-loss mode.
 The sample was kept at about -180°C.
-Tilt series were acquired using SerialEM <span class="citation" data-cites="19ZFerhph">[<a href="#ref-19ZFerhph" role="doc-biblioref">15</a>]</span> for automated acquisition recorded typically from -50° to 50° with a 2° angular increment and an unbinned pixel size of 0.75 or 1.2 nm.
+Tilt series were acquired using SerialEM <span class="citation" data-cites="doi:10.1016/j.jsb.2005.07.007">[<a href="#ref-doi:10.1016/j.jsb.2005.07.007" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2005.07.007?</strong></a>]</span> for automated acquisition recorded typically from -50° to 50° with a 2° angular increment and an unbinned pixel size of 0.75 or 1.2 nm.
 Due to sample thickness (400-700 nm), tomograms were usually not recorded with higher tilt angles.
 Defocus was set between -8 to -12 µm and the total electron dose used was about 80-100 e<sup>-</sup>/Å<sup>2</sup>.
 Some tomograms were acquired at a Titan Krios equipped with a K2 direct electron detector (Gatan) without energy filter.
 The K2 camera was operated in superresolution counting mode and between 8-40 frames per tilt angle were taken.
 Tilt series were acquired using the Latitude software (Gatan) for automated acquisition recorded typically from -60° to 60° with a 2° angular increment and an unbinned pixel size of 0.6 nm.
 Defocus was set between -8 to -12 µm and the total electron dose used was about 80-100 e<sup>-</sup>/Å<sup>2</sup>.
-Prior to image processing the frames at each tilt angle, frames were aligned and averaged in 2dx MC_Automator <span class="citation" data-cites="7UkCfakv">[<a href="#ref-7UkCfakv" role="doc-biblioref">16</a>]</span> with motioncor <span class="citation" data-cites="4rVTIFyw">[<a href="#ref-4rVTIFyw" role="doc-biblioref">17</a>]</span>.
-3D reconstruction was done in IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">13</a>]</span>.
+Prior to image processing the frames at each tilt angle, frames were aligned and averaged in 2dx MC_Automator <span class="citation" data-cites="doi:10.1016/j.jsb.2014.03.016">[<a href="#ref-doi:10.1016/j.jsb.2014.03.016" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2014.03.016?</strong></a>]</span> with motioncor <span class="citation" data-cites="doi:10.1038/nmeth.2472">[<a href="#ref-doi:10.1038/nmeth.2472" role="doc-biblioref"><strong>doi:10.1038/nmeth.2472?</strong></a>]</span>.
+3D reconstruction was done in IMOD <span class="citation" data-cites="doi:10.1006/jsbi.1996.0013">[<a href="#ref-doi:10.1006/jsbi.1996.0013" role="doc-biblioref"><strong>doi:10.1006/jsbi.1996.0013?</strong></a>]</span>.
 The alignments were done using the automated fiducial tracking function and the 3D reconstructions were done using the weighted back projection followed by a nonlinear anisotropic diffusion (NAD) filtering.</p>
 <h4 id="astrocytic-and-neuronal-mouse-culture">Astrocytic and neuronal mouse culture</h4>
-<p>The preparation of astrocytic and neuronal culture has been published before <span class="citation" data-cites="5DZLPDB7">[<a href="#ref-5DZLPDB7" role="doc-biblioref">18</a>]</span>.
+<p>The preparation of astrocytic and neuronal culture has been published before <span class="citation" data-cites="doi:10.3791/50783">[<a href="#ref-doi:10.3791/50783" role="doc-biblioref"><strong>doi:10.3791/50783?</strong></a>]</span>.
 After 12 to 14 days of incubation grids with mouse neurons were plunge frozen with a Vitrobot (Thermofisher Scientific, Mark IV) with a blot time of 3 s and a blot force of -10. Wait time and drain time were not used. Humidity was set to 100% at 4°C. 4 undiluteted 10 nm BSA gold tracer (Aurion) was added directly onto the grid prior to plunge freezing.
 Cultured mouse neurons tilt series were acquired at a Titan Krios, equipped with a Falcon 3 direct electron detector (Thermofisher Scientific) without energy filter.
 The Falcon camera was operated in linear mode.
@@ -323,8 +323,8 @@ Defocus was set between -6 to -10 µm and the total electron dose used was about
 Tomogram reconstruction was done in the same way as for the synaptosome datasets.</p>
 <h3 id="manual-segmentation-procedures">Manual segmentation procedures</h3>
 <p>Manual segmentation of SVs, mitochondria, and the active zone PM was done in IMOD (Figure S4A&amp;B).
-The boundary marked the region to be analyzed by Pyto <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.
-The analysis by Pyto was essentially the same as described previously <span class="citation" data-cites="XQJ3R1HJ">[<a href="#ref-XQJ3R1HJ" role="doc-biblioref">5</a>]</span> <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.</p>
+The boundary marked the region to be analyzed by Pyto <span class="citation" data-cites="doi:10.1016/j.jsb.2016.10.004">[<a href="#ref-doi:10.1016/j.jsb.2016.10.004" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2016.10.004?</strong></a>]</span>.
+The analysis by Pyto was essentially the same as described previously <span class="citation" data-cites="doi:10.1083/jcb.200908082">[<a href="#ref-doi:10.1083/jcb.200908082" role="doc-biblioref"><strong>doi:10.1083/jcb.200908082?</strong></a>]</span> <span class="citation" data-cites="doi:10.1016/j.jsb.2016.10.004">[<a href="#ref-doi:10.1016/j.jsb.2016.10.004" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2016.10.004?</strong></a>]</span>.</p>
 <p>In short, the segmented area is divided in 1 voxel thick layers parallel to the active zone for distance calculations.
 A hierarchical connectivity segmentation detects densities interconnecting vesicles (so called connectors) and densities connecting vesicles to the active zone PM (so called tethers) (Figure S4C).
 Distance calculations are done with the center of the vesicle.
@@ -372,62 +372,35 @@ Then by searching more into the probability mask, we try to expand the partially
 <p>We define feature space on predicted vesicles’ label containing thickness, membrane density, and estimated radius of a vesicle. (Benoit: after radial profile, we can add the definition of thinness and membrane as well)
 While we face different metrics for detecting outliers we apply Mahalanobis Distance MD on this multivariate space MD to calculate L2 norm distance on normalized variable using the covariance matrix of observation. Afterward, we calculate the p-value of MD and bring this evaluation setup in iterative form while giving the second chance to detect outlier vesicles while recalculating radial profile in a specific margin range (0-10) and removing them if they could not pass a margin on the p-value.</p>
 <h3 id="analysis-of-results">Analysis of Results</h3>
+<p>Evaluation</p>
+<p>We design the evaluation framework to show robust capabilities of the proposed toolbox on synaptic vesicles segmentation which not only to be content with quantitative evaluation on the neural network performance but rather assay the segmentation of vesicles in practice and using the output of the segmentation with another pre-developed toolbox for segmenting tethers and connectors in presynaptic.</p>
+<ol type="1">
+<li>Dataset: All tomograms that we partially segmented and used for training (Synaptosome)</li>
+<li>A single tomogram with the exactly same setup and sample preparation like the train dataset</li>
+<li>Dataset: 8 Synaptosome tomogram with ground truth (with an exceeding treatment on the samples)</li>
+<li>Dataset: 12 Neuron fully segmented tomograms with completely different sample preparation and microscope setup</li>
+</ol>
+<p>Dice</p>
+<p>The quantification of the performance of the model while training is calculated with the general form of dice coefficient for the probabilistic maps and after stitching the probabilistic mask of patches back together and building the tomogram probabilistic map we have another calculation on the whole tomogram for evaluating the similarity of the predicted probability mask with ground truth. The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples.
+We monitored all the stages of post-processing on the eventual label file with DICE to see the effect of each post-processing step and we report the final label’s DICE.</p>
+<p>However dice coefficient is a good global measure to assess our prediction in comparison to ground truth but it is far away from how individually vesicles are segmented. For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value. What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. We can also calculate the error of the estimated diameter and center. We define a vesicle as a true-detected vesicle if the predicted center is in the hand-segmented vesicle and the other way around the center of prediction is in the predicted vesicle. This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is: (Wolfram alpha website)
+<em>V=1/12 </em> pi *(4R+d)(2R-d)</p>
+<p>Diameter Error</p>
+<p>The relevant characterization of each vesicle would diameter of vesicles which also we used to remove outliers as well (radius of vesicles in that case). The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters [formula copy-paste!]</p>
+<p>where dGTi diameter of each true manual segmented vesicle, and dSi is the diameter of its estimation.</p>
+<p>Center error</p>
+<p>The center error is a euclidean distance of ground truth and corresponding true predicted vesicles. Besides this calculation, if we measure each axis error it will reveal that human bias in segmentation is more affected on the Z-axis. [we didn’t show it in number but its checked the hypothesis]</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-IpfJPPLG" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>Towards Visual Proteomics at High Resolution</strong> <div class="csl-block">Felix JB Bäuerlein, Wolfgang Baumeister</div> <em>Journal of Molecular Biology</em> (2021-10) <a href="https://doi.org/gn9t3v">https://doi.org/gn9t3v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jmb.2021.167187">10.1016/j.jmb.2021.167187</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34384780">34384780</a></div></div>
-</div>
-<div id="ref-2TrAHWcN" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Exploring high-resolution cryo-ET and subtomogram averaging capabilities of contemporary DEDs</strong> <div class="csl-block">Martin Obr, Wim JH Hagen, Robert A Dick, Lingbo Yu, Abhay Kotecha, Florian KM Schur</div> <em>Molecular Biology</em> (2022-01-10) <a href="https://doi.org/gn92pd">https://doi.org/gn92pd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.01.10.475481">10.1101/2022.01.10.475481</a></div></div>
-</div>
-<div id="ref-EGfvt7aR" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>High-resolution in situ structure determination by cryo-electron tomography and subtomogram averaging using emClarity</strong> <div class="csl-block">Tao Ni, Thomas Frosio, Luiza Mendonça, Yuewen Sheng, Daniel Clare, Benjamin A Himes, Peijun Zhang</div> <em>Nature Protocols</em> (2022-02) <a href="https://doi.org/gn92pc">https://doi.org/gn92pc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41596-021-00648-5">10.1038/s41596-021-00648-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/35022621">35022621</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9251519">PMC9251519</a></div></div>
-</div>
 <div id="ref-WmTa9taa" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>STRUCTURAL STUDIES BY ELECTRON TOMOGRAPHY: From Cells to Molecules</strong> <div class="csl-block">Vladan Lučić, Friedrich Förster, Wolfgang Baumeister</div> <em>Annual Review of Biochemistry</em> (2005-06-01) <a href="https://doi.org/cfd27f">https://doi.org/cfd27f</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1146/annurev.biochem.73.011303.074112">10.1146/annurev.biochem.73.011303.074112</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15952904">15952904</a></div></div>
-</div>
-<div id="ref-XQJ3R1HJ" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Quantitative analysis of the native presynaptic cytomatrix by cryoelectron tomography</strong> <div class="csl-block">Rubén Fernández-Busnadiego, Benoît Zuber, Ulrike Elisabeth Maurer, Marek Cyrklaff, Wolfgang Baumeister, Vladan Lučić</div> <em>Journal of Cell Biology</em> (2010-01-11) <a href="https://doi.org/b9c26b">https://doi.org/b9c26b</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1083/jcb.200908082">10.1083/jcb.200908082</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20065095">20065095</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2812849">PMC2812849</a></div></div>
-</div>
-<div id="ref-1HtRUUZQi" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Hierarchical detection and analysis of macromolecular complexes in cryo-electron tomograms using Pyto software</strong> <div class="csl-block">Vladan Lučić, Rubén Fernández-Busnadiego, Ulrike Laugks, Wolfgang Baumeister</div> <em>Journal of Structural Biology</em> (2016-12) <a href="https://doi.org/f9d5t2">https://doi.org/f9d5t2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2016.10.004">10.1016/j.jsb.2016.10.004</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27742578">27742578</a></div></div>
-</div>
-<div id="ref-JWuvfT0Z" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Robust membrane detection based on tensor voting for electron tomography</strong> <div class="csl-block">Antonio Martinez-Sanchez, Inmaculada Garcia, Shoh Asano, Vladan Lucic, Jose-Jesus Fernandez</div> <em>Journal of Structural Biology</em> (2014-04) <a href="https://doi.org/f5zkj8">https://doi.org/f5zkj8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.02.015">10.1016/j.jsb.2014.02.015</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24625523">24625523</a></div></div>
-</div>
-<div id="ref-GNLHO53d" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Convolutional neural networks for automated annotation of cellular cryo-electron tomograms</strong> <div class="csl-block">Muyuan Chen, Wei Dai, Stella Y Sun, Darius Jonasch, Cynthia Y He, Michael F Schmid, Wah Chiu, Steven J Ludtke</div> <em>Nature Methods</em> (2017-10) <a href="https://doi.org/gkpj62">https://doi.org/gkpj62</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.4405">10.1038/nmeth.4405</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28846087">28846087</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5623144">PMC5623144</a></div></div>
-</div>
-<div id="ref-RdPTGoZx" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Automated Detection and Localization of Synaptic Vesicles in Electron Microscopy Images</strong> <div class="csl-block">Barbara Imbrosci, Dietmar Schmitz, Marta Orlando</div> <em>eneuro</em> (2022-01) <a href="https://doi.org/gn9n8k">https://doi.org/gn9n8k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1523/eneuro.0400-20.2021">10.1523/eneuro.0400-20.2021</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34983830">34983830</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8805189">PMC8805189</a></div></div>
+<div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>STRUCTURAL STUDIES BY ELECTRON TOMOGRAPHY: From Cells to Molecules</strong> <div class="csl-block">Vladan Lučić, Friedrich Förster, Wolfgang Baumeister</div> <em>Annual Review of Biochemistry</em> (2005-06-01) <a href="https://doi.org/cfd27f">https://doi.org/cfd27f</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1146/annurev.biochem.73.011303.074112">10.1146/annurev.biochem.73.011303.074112</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15952904">15952904</a></div></div>
 </div>
 <div id="ref-ld1EnZ6i" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>U-Net: Convolutional Networks for Biomedical Image Segmentation</strong> <div class="csl-block">Olaf Ronneberger, Philipp Fischer, Thomas Brox</div> <em>arXiv</em> (2015-05-19) <a href="https://arxiv.org/abs/1505.04597">https://arxiv.org/abs/1505.04597</a></div>
+<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>U-Net: Convolutional Networks for Biomedical Image Segmentation</strong> <div class="csl-block">Olaf Ronneberger, Philipp Fischer, Thomas Brox</div> <em>arXiv</em> (2015-05-19) <a href="https://arxiv.org/abs/1505.04597">https://arxiv.org/abs/1505.04597</a></div>
 </div>
 <div id="ref-D7hXMn0y" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation</strong> <div class="csl-block">Özgün Çiçek, Ahmed Abdulkadir, Soeren S Lienkamp, Thomas Brox, Olaf Ronneberger</div> <em>arXiv</em> (2016-06-22) <a href="https://arxiv.org/abs/1606.06650">https://arxiv.org/abs/1606.06650</a></div>
-</div>
-<div id="ref-12G712Zky" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Content-aware image restoration: pushing the limits of fluorescence microscopy</strong> <div class="csl-block">Martin Weigert, Uwe Schmidt, Tobias Boothe, Andreas Müller, Alexandr Dibrov, Akanksha Jain, Benjamin Wilhelm, Deborah Schmidt, Coleman Broaddus, Siân Culley, … Eugene W Myers</div> <em>Nature Methods</em> (2018-12) <a href="https://doi.org/gfkkfd">https://doi.org/gfkkfd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-018-0216-7">10.1038/s41592-018-0216-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30478326">30478326</a></div></div>
-</div>
-<div id="ref-136NHHp17" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Computer Visualization of Three-Dimensional Image Data Using IMOD</strong> <div class="csl-block">James R Kremer, David N Mastronarde, JRichard McIntosh</div> <em>Journal of Structural Biology</em> (1996-01) <a href="https://doi.org/d9nfzw">https://doi.org/d9nfzw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1006/jsbi.1996.0013">10.1006/jsbi.1996.0013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/8742726">8742726</a></div></div>
-</div>
-<div id="ref-7sGZgtQa" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>A rapid Percoll gradient procedure for preparation of synaptosomes</strong> <div class="csl-block">Peter R Dunkley, Paula E Jarvie, Phillip J Robinson</div> <em>Nature Protocols</em> (2008-11) <a href="https://doi.org/b7zwh8">https://doi.org/b7zwh8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nprot.2008.171">10.1038/nprot.2008.171</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18927557">18927557</a></div></div>
-</div>
-<div id="ref-19ZFerhph" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Automated electron microscope tomography using robust prediction of specimen movements</strong> <div class="csl-block">David N Mastronarde</div> <em>Journal of Structural Biology</em> (2005-10) <a href="https://doi.org/ff7gzx">https://doi.org/ff7gzx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2005.07.007">10.1016/j.jsb.2005.07.007</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16182563">16182563</a></div></div>
-</div>
-<div id="ref-7UkCfakv" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>2dx_automator: Implementation of a semiautomatic high-throughput high-resolution cryo-electron crystallography pipeline</strong> <div class="csl-block">Sebastian Scherer, Julia Kowal, Mohamed Chami, Venkata Dandey, Marcel Arheit, Philippe Ringler, Henning Stahlberg</div> <em>Journal of Structural Biology</em> (2014-05) <a href="https://doi.org/f522h3">https://doi.org/f522h3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.03.016">10.1016/j.jsb.2014.03.016</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24680783">24680783</a></div></div>
-</div>
-<div id="ref-4rVTIFyw" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Electron counting and beam-induced motion correction enable near-atomic-resolution single-particle cryo-EM</strong> <div class="csl-block">Xueming Li, Paul Mooney, Shawn Zheng, Christopher R Booth, Michael B Braunfeld, Sander Gubbens, David A Agard, Yifan Cheng</div> <em>Nature Methods</em> (2013-06) <a href="https://doi.org/f4zpjf">https://doi.org/f4zpjf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.2472">10.1038/nmeth.2472</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23644547">23644547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3684049">PMC3684049</a></div></div>
-</div>
-<div id="ref-5DZLPDB7" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Preparation of Primary Neurons for Visualizing Neurites in a Frozen-hydrated State Using Cryo-Electron Tomography</strong> <div class="csl-block">Sarah H Shahmoradian, Mauricio R Galiano, Chengbiao Wu, Shurui Chen, Matthew N Rasband, William C Mobley, Wah Chiu</div> <em>Journal of Visualized Experiments</em> (2014-02-12) <a href="https://doi.org/gmh9w3">https://doi.org/gmh9w3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.3791/50783">10.3791/50783</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24561719">24561719</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4089403">PMC4089403</a></div></div>
+<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation</strong> <div class="csl-block">Özgün Çiçek, Ahmed Abdulkadir, Soeren S Lienkamp, Thomas Brox, Olaf Ronneberger</div> <em>arXiv</em> (2016-06-22) <a href="https://arxiv.org/abs/1606.06650">https://arxiv.org/abs/1606.06650</a></div>
 </div>
 </div>
 <!-- default theme -->
