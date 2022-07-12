@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/))
 was automatically generated
-from [elatella/deep-prepyto-paper@d259e64](https://github.com/elatella/deep-prepyto-paper/tree/d259e64849830c6998f8b5898189319183c59ac6)
+from [elatella/deep-prepyto-paper@8fa07a3](https://github.com/elatella/deep-prepyto-paper/tree/8fa07a3e071abcc8237a35e09ebe30e713b329dd)
 on July 12, 2022.
 </em></small>
 
@@ -357,7 +357,6 @@ implement automatic connector and tether segmentation as a deep leaning workflow
 Two datasets of different origin were used as input and test subjects for the automatic segmentation pipeline, rat synaptosomes as well as astrocytic and neural cell cultures derived from mice.
 Both datasets have been previously analyzed [@doi:10.1101/2022.03.07.483217].
 
-
 #### Rat synaptosomes
 
 The preparation of the rat synaptosomes were previously described [@doi:10.1038/nprot.2008.171].
@@ -400,7 +399,7 @@ The boundary marked the region to be analyzed by Pyto [@doi:10.1016/j.jsb.2016.1
 The analysis by Pyto was essentially the same as described previously [@doi:10.1083/jcb.200908082; @doi:10.1016/j.jsb.2016.10.004].
 
 In short, the segmented area is divided in 1 voxel thick layers parallel to the active zone for distance calculations.
-A hierarchical connectivity segmentation detects densities interconnecting vesicles (so called connectors) and densities connecting vesicles to the active zone PM (so called tethers) (Figure ).
+A hierarchical connectivity segmentation detects densities interconnecting vesicles (so called connectors) and densities connecting vesicles to the active zone PM (so called tethers) (Figure `\_add figure number*`{.green}).
 Distance calculations are done with the center of the vesicle.
 Mainly default settings were used.
 The segmentation procedure is conservative and tends to miss some tethers and connectors because of noise.
@@ -414,33 +413,53 @@ The tomograms that were used for this analysis were binned by a factor of 2 to 3
 
 ### Description of Machine Learning 
 
-#### Create a Training Set
+This experiment was conducted on a workstation with an AMD Ryzen Threadripper 3970X CPU with a NVIDIA GeForce RTX 2080 Ti GPU. 
+All the framework has been implemented in Python using the Keras library (2.4.3) and Tensorflow (2.4.1). 
+The workflow includes a GUI based on a multi-dimensional image viewer, Napari (0.4.15), enabling the user to add and remove vesicles.
 
-The training set was prepared by splitting the 3D tomographic volume into 32x32x32 `\_unit??*`{.green} sub volumes and keeping only volumes occupied by a sufficient amount (> 1000 voxels) of binarized vesicle labels.
-The obtained sub volumes were randomly divided into ten subsets of the training set, this method is termed k-fold cross-validation in the field of machine learning.
-All of these subsets or "folds" were used as training sets, as an entirely seperate set of tomographic subvolumes was used for validation, to avoid overfitting.
-
-`\_add image from odt?? ---> results*`{.green}
+The used datasets included a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution.
 
 #### Deep Model Training with a 3D U-Net
 
-This experiment was conducted on AMD Ryzen Threadripper 3970X, 32x 3.7GHz workstation empowered NVIDIA GeForce RTX 2080 Ti, 11GB. All the framework has been implemented in Python using the Keras library (2.4.3) and Tensorflow (2.4.1). 
-Moreover, we developed the GUI based on Napari (0.4.15) multi-dimensional image viewer for adding and removing vesicles by users.
+The U-Net is a CNN 
+Instance segmentation (segment each vesicle separately)
+Convolution: 
+
+![**Segmentation Network: U-Net.** Input Size is 32^3 `\_voxels??*`, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).](images/unet.png){#fig:unet width="10cm"}
+
+
+Introduction
+" U-Net architecture has been introduced in 2015 by Ronenberger et al. [@arxiv:1505.04597]. It consists of a contracting path, typical of CNN, and a symmetric expanding path. At each expansion step, the correspondingly cropped feature map of the contracting path is concatenated. The contracting path captures context, while the expanding path coupled with concatenation enables precise localization. The U-Net architecture was developed to achieve a fast and accurate segmentation of biomedical two-dimensional images, with the requirement of only a small fraction of training data in comparison to previous CNNs. It was then extended to segment 3-dimensional biomedical images (3D U-Net) [@arxiv:1606.06650]. Weigert et al. [@doi:10.1038/s41592-018-0216-7] implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.
+
+We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets. This method provided good accuracy and was only slightly affected by the missing wedge artifact. Nevertheless, it was not quite sufficient for our downstream pyto analysis. Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. This leads to a substantial accuracy improvement, which are reflected in better pyto performance. Additionally, we designed a multivariate ranking procedure, highlighting possibly wrongly segmented SVs. We also introduce a semi-automatic method to very quickly fix wrongly segmented and missed SVs.
+"
+
+
+##### Create an Input Voxel Patch
+
+The training set was prepared by splitting the 3D tomographic volume into 32x32x32 `\_voxels??*`{.green} sub volumes and keeping only volumes occupied by a sufficient amount (> 1000 voxels) of binarized vesicle labels.
+The obtained sub volumes were randomly divided into ten subsets of the training set, this method is termed k-fold cross-validation in the field of machine learning.
+All of these subsets or "folds" were used as training sets, as an entirely seperate set of tomographic subvolumes was used for validation, to avoid overfitting.
+
+`\_are the folds overlapping? are the tomograms normalized any further than the NAD from previous segementation before feeding it to the deeplearning model? add image from odt?? ---> results*`{.green}
+
+##### U-Net architecture
+
 Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel. 
 For 200 epochs, the batch size was 50, and to stabilize our training we used batch normalization. 
 Furthermore, on configuration, we resolved binary cross-entropy as a loss function and Adam optimizer for the training of the network.
 
 In the encoding path, we have two layers of the resolution followed by two convolutional layers, Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel with Max poling of 2x2x2. 
 In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation. 
-Each convolutional layer in the network goes along with the RELU activation function. 
+Each convolutional layer in the network goes along with the ReLU activation function. 
 Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.
 
-#### Mask prediction
+##### Mask prediction
 
 We split large tomograms into 32x32x32 patches with step size of 24 (stride) and then stitch together the predictions to get the final probability mask.
 
 
-### Transfer Learning
+#### Transfer Learning
 
 
 ### Postprocessing

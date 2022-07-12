@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/d259e64849830c6998f8b5898189319183c59ac6">elatella/deep-prepyto-paper@d259e64</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/8fa07a3e071abcc8237a35e09ebe30e713b329dd">elatella/deep-prepyto-paper@8fa07a3</a>
 on July 12, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -784,7 +784,7 @@ Tomogram reconstruction was done in the same way as for the synaptosome datasets
 The boundary marked the region to be analyzed by Pyto <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.
 The analysis by Pyto was essentially the same as described previously <span class="citation" data-cites="XQJ3R1HJ 1HtRUUZQi">[<a href="#ref-XQJ3R1HJ" role="doc-biblioref">5</a>,<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.</p>
 <p>In short, the segmented area is divided in 1 voxel thick layers parallel to the active zone for distance calculations.
-A hierarchical connectivity segmentation detects densities interconnecting vesicles (so called connectors) and densities connecting vesicles to the active zone PM (so called tethers) (Figure ).
+A hierarchical connectivity segmentation detects densities interconnecting vesicles (so called connectors) and densities connecting vesicles to the active zone PM (so called tethers) (Figure <code class="green">\_add figure number*</code>).
 Distance calculations are done with the center of the vesicle.
 Mainly default settings were used.
 The segmentation procedure is conservative and tends to miss some tethers and connectors because of noise.
@@ -793,24 +793,39 @@ As it was done before, an upper limit was set between 2100 and 3200 nm<sup>3</su
 The tomograms that were used for this analysis were binned by a factor of 2 to 3, resulting in voxel sizes between 2.1 and 2.4 nm.</p>
 <h3 id="pre-processing-of-manual-segmentation-outputs-from-imod-for-further-use-jupyter-notebook-pre-pyto">Pre-processing of manual segmentation outputs from IMOD for further use (jupyter notebook pre-pyto)</h3>
 <h3 id="description-of-machine-learning">Description of Machine Learning</h3>
-<h4 id="create-a-training-set">Create a Training Set</h4>
-<p>The training set was prepared by splitting the 3D tomographic volume into 32x32x32 <code class="green">\_unit??*</code> sub volumes and keeping only volumes occupied by a sufficient amount (&gt; 1000 voxels) of binarized vesicle labels.
+<p>This experiment was conducted on a workstation with an AMD Ryzen Threadripper 3970X CPU with a NVIDIA GeForce RTX 2080 Ti GPU.
+All the framework has been implemented in Python using the Keras library (2.4.3) and Tensorflow (2.4.1).
+The workflow includes a GUI based on a multi-dimensional image viewer, Napari (0.4.15), enabling the user to add and remove vesicles.</p>
+<p>The used datasets included a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution.</p>
+<h4 id="deep-model-training-with-a-3d-u-net">Deep Model Training with a 3D U-Net</h4>
+<p>The U-Net is a CNN 
+Instance segmentation (segment each vesicle separately)
+Convolution:</p>
+<div id="fig:unet" class="fignos">
+<figure>
+<img src="images/unet.png" style="width:10cm" alt="Figure 4: Segmentation Network: U-Net. Input Size is 32^3 \_voxels??*, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network)." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Segmentation Network: U-Net.</strong> Input Size is 32^3 <code>\_voxels??*</code>, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).</figcaption>
+</figure>
+</div>
+<p>Introduction
+” U-Net architecture has been introduced in 2015 by Ronenberger et al. <span class="citation" data-cites="ld1EnZ6i">[<a href="#ref-ld1EnZ6i" role="doc-biblioref">10</a>]</span>. It consists of a contracting path, typical of CNN, and a symmetric expanding path. At each expansion step, the correspondingly cropped feature map of the contracting path is concatenated. The contracting path captures context, while the expanding path coupled with concatenation enables precise localization. The U-Net architecture was developed to achieve a fast and accurate segmentation of biomedical two-dimensional images, with the requirement of only a small fraction of training data in comparison to previous CNNs. It was then extended to segment 3-dimensional biomedical images (3D U-Net) <span class="citation" data-cites="D7hXMn0y">[<a href="#ref-D7hXMn0y" role="doc-biblioref">11</a>]</span>. Weigert et al. <span class="citation" data-cites="12G712Zky">[<a href="#ref-12G712Zky" role="doc-biblioref">12</a>]</span> implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.</p>
+<p>We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets. This method provided good accuracy and was only slightly affected by the missing wedge artifact. Nevertheless, it was not quite sufficient for our downstream pyto analysis. Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. This leads to a substantial accuracy improvement, which are reflected in better pyto performance. Additionally, we designed a multivariate ranking procedure, highlighting possibly wrongly segmented SVs. We also introduce a semi-automatic method to very quickly fix wrongly segmented and missed SVs.
+”</p>
+<h5 id="create-an-input-voxel-patch">Create an Input Voxel Patch</h5>
+<p>The training set was prepared by splitting the 3D tomographic volume into 32x32x32 <code class="green">\_voxels??*</code> sub volumes and keeping only volumes occupied by a sufficient amount (&gt; 1000 voxels) of binarized vesicle labels.
 The obtained sub volumes were randomly divided into ten subsets of the training set, this method is termed k-fold cross-validation in the field of machine learning.
 All of these subsets or “folds” were used as training sets, as an entirely seperate set of tomographic subvolumes was used for validation, to avoid overfitting.</p>
-<p><code class="green">\_add image from odt?? ---&gt; results*</code></p>
-<h4 id="deep-model-training-with-a-3d-u-net">Deep Model Training with a 3D U-Net</h4>
-<p>This experiment was conducted on AMD Ryzen Threadripper 3970X, 32x 3.7GHz workstation empowered NVIDIA GeForce RTX 2080 Ti, 11GB. All the framework has been implemented in Python using the Keras library (2.4.3) and Tensorflow (2.4.1).
-Moreover, we developed the GUI based on Napari (0.4.15) multi-dimensional image viewer for adding and removing vesicles by users.
-Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel.
+<p><code class="green">\_are the folds overlapping? are the tomograms normalized any further than the NAD from previous segementation before feeding it to the deeplearning model? add image from odt?? ---&gt; results*</code></p>
+<h5 id="u-net-architecture">U-Net architecture</h5>
+<p>Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel.
 For 200 epochs, the batch size was 50, and to stabilize our training we used batch normalization.
 Furthermore, on configuration, we resolved binary cross-entropy as a loss function and Adam optimizer for the training of the network.</p>
 <p>In the encoding path, we have two layers of the resolution followed by two convolutional layers, Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel with Max poling of 2x2x2.
 In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation.
-Each convolutional layer in the network goes along with the RELU activation function.
+Each convolutional layer in the network goes along with the ReLU activation function.
 Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.</p>
-<h4 id="mask-prediction">Mask prediction</h4>
+<h5 id="mask-prediction">Mask prediction</h5>
 <p>We split large tomograms into 32x32x32 patches with step size of 24 (stride) and then stitch together the predictions to get the final probability mask.</p>
-<h3 id="transfer-learning">Transfer Learning</h3>
+<h4 id="transfer-learning">Transfer Learning</h4>
 <h3 id="postprocessing">Postprocessing</h3>
 <h4 id="estimating-global-threshold">Estimating Global Threshold</h4>
 <p>In order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes something.
