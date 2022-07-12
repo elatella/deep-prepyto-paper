@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -105,9 +105,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/0255b95503941225f8d84dfd14c28c9e4d1490e3">elatella/deep-prepyto-paper@0255b95</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3">elatella/deep-prepyto-paper@22a740e</a>
 on July 12, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -189,43 +189,43 @@ Furthermore, we provide an interactive tool for accurately segmenting spherical 
 This tool can be used to segment vesicles that were missed by the fully automatic procedure or to quickly segment a handful of vesicles, while bypassing the fully automatic procedure.
 Our pipeline can in principle be used to segment any spherical vesicle in any cell type as well as extracellular vesicles.</p>
 <h2 id="introduction">Introduction</h2>
-<p>The fine architecture of cells can be investigated by cryo-electron tomography (cryo-ET) <span class="citation" data-cites="doi:10.1016/j.jmb.2021.167187">[<a href="#ref-doi:10.1016/j.jmb.2021.167187" role="doc-biblioref"><strong>doi:10.1016/j.jmb.2021.167187?</strong></a>]</span>.
+<p>The fine architecture of cells can be investigated by cryo-electron tomography (cryo-ET) <span class="citation" data-cites="IpfJPPLG">[<a href="#ref-IpfJPPLG" role="doc-biblioref">1</a>]</span>.
 Cellular structures are preserved down to the atomic scale through vitrification and observation of the samples in a fully hydrated state.
-When a macromolecule is present in a sufficient number of copies in the cells imaged by cryo-ET, it is possible to obtain its atomic structure in situ using subtomogram averaging <span class="citation" data-cites="doi:10.1101/2022.01.10.475481 doi:10.1038/s41596-021-00648-5">[<a href="#ref-doi:10.1101/2022.01.10.475481" role="doc-biblioref"><strong>doi:10.1101/2022.01.10.475481?</strong></a>,<a href="#ref-doi:10.1038/s41596-021-00648-5" role="doc-biblioref"><strong>doi:10.1038/s41596-021-00648-5?</strong></a>]</span>.
+When a macromolecule is present in a sufficient number of copies in the cells imaged by cryo-ET, it is possible to obtain its atomic structure in situ using subtomogram averaging <span class="citation" data-cites="2TrAHWcN EGfvt7aR">[<a href="#ref-2TrAHWcN" role="doc-biblioref">2</a>,<a href="#ref-EGfvt7aR" role="doc-biblioref">3</a>]</span>.
 Cellular cryo-ET datasets are usually extremely complex, making them difficult to analyze.
-This is aggravated by the sensitivity of biological samples to electron radiation, which limits the signal-to-noise ratio in cryo-ET datasets <span class="citation" data-cites="WmTa9taa">[<a href="#ref-WmTa9taa" role="doc-biblioref">1</a>]</span>.
+This is aggravated by the sensitivity of biological samples to electron radiation, which limits the signal-to-noise ratio in cryo-ET datasets <span class="citation" data-cites="WmTa9taa">[<a href="#ref-WmTa9taa" role="doc-biblioref">4</a>]</span>.
 Tomographic reconstructions are generated from a series of images of the sample acquired at different viewing angles.
 The geometry of the samples prevents acquisition at certain angles, resulting in anisotropic spatial coverage.
 The resolution in the directions close to the axis of the electron beam incident on the untilted sample is strongly reduced.
 This effect, commonly referred to as the missing-wedge artifact, further complicates data analysis.
-In particular, organelles fully bounded by a membrane appear to have holes at their top and bottom (relative to the electron beam axis) <span class="citation" data-cites="WmTa9taa">[<a href="#ref-WmTa9taa" role="doc-biblioref">1</a>]</span>.</p>
+In particular, organelles fully bounded by a membrane appear to have holes at their top and bottom (relative to the electron beam axis) <span class="citation" data-cites="WmTa9taa">[<a href="#ref-WmTa9taa" role="doc-biblioref">4</a>]</span>.</p>
 <p>The synapse is the functional cellular contact at which information is transmitted from a neuron to another.
 The former neuron is called presynaptic and the latter is postsynaptic.
 In most cases, the signal is transmitted by the release of neurotransmitters into the intercellular space.
 Neurotransmitters are stored in SVs and are released following the fusion of a vesicle with the presynaptic plasma membrane.
-A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures <span class="citation" data-cites="doi:10.1083/jcb.200908082">[<a href="#ref-doi:10.1083/jcb.200908082" role="doc-biblioref"><strong>doi:10.1083/jcb.200908082?</strong></a> ]</span>.
-The characterization of these interactions can be performed automatically with the pyto software, which implements a hierarchical connectivity approach to detect and annotate connectors <span class="citation" data-cites="doi:10.1016/j.jsb.2016.10.004">[<a href="#ref-doi:10.1016/j.jsb.2016.10.004" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2016.10.004?</strong></a>]</span>. For accurate connector segmentation, an exceptionally precise segmentation of SVs is prerequisite.
+A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures <span class="citation" data-cites="XQJ3R1HJ">[<a href="#ref-XQJ3R1HJ" role="doc-biblioref">5</a> ]</span>.
+The characterization of these interactions can be performed automatically with the pyto software, which implements a hierarchical connectivity approach to detect and annotate connectors <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>. For accurate connector segmentation, an exceptionally precise segmentation of SVs is prerequisite.
 To date, this SV segmentation has been achieved manually, but given the massive number of SVs per dataset, it is an extremely time-consuming process.
 Typically, one person spends 3 to 8 working days to segment a single dataset.
-Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate performance <span class="citation" data-cites="doi:10.1016/j.jsb.2014.02.015">[<a href="#ref-doi:10.1016/j.jsb.2014.02.015" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2014.02.015?</strong></a>]</span>.<br />
+Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate performance <span class="citation" data-cites="JWuvfT0Z">[<a href="#ref-JWuvfT0Z" role="doc-biblioref">7</a>]</span>.<br />
 To alleviate this situation, we considered applying deep learning methods.</p>
-<p>Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data <span class="citation" data-cites="doi:10.1038/nmeth.4405">[<a href="#ref-doi:10.1038/nmeth.4405" role="doc-biblioref"><strong>doi:10.1038/nmeth.4405?</strong></a>]</span>.
+<p>Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data <span class="citation" data-cites="GNLHO53d">[<a href="#ref-GNLHO53d" role="doc-biblioref">8</a>]</span>.
 Although entirely satisfying for visualization purposes, this approach has not met the requirements of pyto.
-A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional images of resin-embedded synapses <span class="citation" data-cites="doi:10.1523/ENEURO.0400-20.2021">[<a href="#ref-doi:10.1523/ENEURO.0400-20.2021" role="doc-biblioref"><strong>doi:10.1523/ENEURO.0400-20.2021?</strong></a>]</span>.
+A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional images of resin-embedded synapses <span class="citation" data-cites="RdPTGoZx">[<a href="#ref-RdPTGoZx" role="doc-biblioref">9</a>]</span>.
 For our use-case, a common issue is that the input data consists of 2-dimensional images.
 In the first study, cryo-ET data are decomposed in individual 2-dimensional slices, which are handed as seperate input to the CNN.
-The independent output prediction images are re-assembled in a 3-dimensional stack.<span class="citation" data-cites="doi:10.1038/nmeth.4405">[<a href="#ref-doi:10.1038/nmeth.4405" role="doc-biblioref"><strong>doi:10.1038/nmeth.4405?</strong></a>]</span>
+The independent output prediction images are re-assembled in a 3-dimensional stack.<span class="citation" data-cites="GNLHO53d">[<a href="#ref-GNLHO53d" role="doc-biblioref">8</a>]</span>
 As discussed above, membranes oriented approximately parallel to the plane of the 2-dimensional tomographic images are not resolved.
 In the absence of contextual knowledge of the other 2-dimensional images, the CNN fails to segment these regions of the vesicles.
 Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
 To overcome this limitation, we used a U-Net CNN that takes 3-dimensional images as input.
-U-Net architecture has been introduced in 2015 by Ronenberger et al. <span class="citation" data-cites="ld1EnZ6i">[<a href="#ref-ld1EnZ6i" role="doc-biblioref">2</a>]</span>.
+U-Net architecture has been introduced in 2015 by Ronenberger et al. <span class="citation" data-cites="ld1EnZ6i">[<a href="#ref-ld1EnZ6i" role="doc-biblioref">10</a>]</span>.
 It consists of a contracting path, typical of CNN, and a symmetric expanding path.
 At each expansion step, the correspondingly cropped feature map of the contracting path is concatenated.
 The contracting path captures context, while the expanding path coupled with concatenation enables precise localization.
 The U-Net architecture was developed to achieve a fast and accurate segmentation of biomedical two-dimensional images, with the requirement of only a small fraction of training data in comparison to previous CNNs.
-It was then extended to segment 3-dimensional biomedical images (3D U-Net) <span class="citation" data-cites="D7hXMn0y">[<a href="#ref-D7hXMn0y" role="doc-biblioref">3</a>]</span>.
-Weigert et al. <span class="citation" data-cites="doi:10.1038/s41592-018-0216-7">[<a href="#ref-doi:10.1038/s41592-018-0216-7" role="doc-biblioref"><strong>doi:10.1038/s41592-018-0216-7?</strong></a>]</span> implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.</p>
+It was then extended to segment 3-dimensional biomedical images (3D U-Net) <span class="citation" data-cites="D7hXMn0y">[<a href="#ref-D7hXMn0y" role="doc-biblioref">11</a>]</span>.
+Weigert et al. <span class="citation" data-cites="12G712Zky">[<a href="#ref-12G712Zky" role="doc-biblioref">12</a>]</span> implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.</p>
 <p>We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets.
 This method provided good accuracy and was only slightly affected by the missing wedge artifact.
 Nevertheless, it was not quite sufficient for our downstream pyto analysis.
@@ -240,8 +240,8 @@ We also introduce a semi-automatic method to very quickly fix wrongly segmented 
 The manual segmentation of synaptic vesicles is one of the most time-intensive steps, when segmenting tomograms of presynaptic terminals.
 Synaptic vesicles also constitute a large, homogeneous group, which would create a large training set for deep learning applications.
 Therefore, we decided to develop the automatic segmentation for synaptic vesicles in an initial step.
-The used tomograms were previously manually segmented with IMOD <span class="citation" data-cites="doi:10.1006/jsbi.1996.0013">[<a href="#ref-doi:10.1006/jsbi.1996.0013" role="doc-biblioref"><strong>doi:10.1006/jsbi.1996.0013?</strong></a>]</span>.
-In a next step, filaments connecting the synaptic vesicles with each other (connectors) and to the active zone (AZ) were automatically segmented with the algorithm application Pyto <span class="citation" data-cites="doi:10.1016/j.jsb.2016.10.004">[<a href="#ref-doi:10.1016/j.jsb.2016.10.004" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2016.10.004?</strong></a>]</span>.</p>
+The used tomograms were previously manually segmented with IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">13</a>]</span>.
+In a next step, filaments connecting the synaptic vesicles with each other (connectors) and to the active zone (AZ) were automatically segmented with the algorithm application Pyto <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.</p>
 <div id="fig:pipeline" class="fignos">
 <figure>
 <img src="images/pipeline.svg" style="width:15cm" alt="Figure 1: Pipeline of automatic segmentation. a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile" /><figcaption aria-hidden="true"><span>Figure 1:</span> <strong>Pipeline of automatic segmentation.</strong> a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile</figcaption>
@@ -268,6 +268,460 @@ E, F, H, G) Same as above columns after refinement.] (images/radial_avg_115-099.
 </figure>
 <p>Evaluation metric DICE for pixel/pixel analysis</p>
 <p>Table 1- Evaluation of the segmentation- MDICE: Mask Dice coefficient for the predicted mask PDICE: Dice coefficient after post-processing SIGMA-d: diameter error on correctly detected vesicle, DELTA-c: average error center (nm) #Vesicles: number of expected vesicles TP: True Positive FN: False Negative FP: False Positive</p>
+<h1 id="final-eval-tables">Final Eval Tables</h1>
+<h2 id="train-dataset">Train Dataset</h2>
+<table>
+<thead>
+<tr class="header">
+<th><strong><em>Dataset</em></strong></th>
+<th style="text-align: center;"><strong><em>Mask DICE</em></strong></th>
+<th style="text-align: center;"><strong><em>Final Label DICE</em></strong></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong><em>δ d</em></strong></th>
+<th style="text-align: center;"><strong><em>Δ c (nm)</em></strong></th>
+<th style="text-align: center;"><strong><em># of Vesicles</em></strong></th>
+<th style="text-align: center;"><strong>TP</strong></th>
+<th style="text-align: center;"><strong>FN</strong></th>
+<th style="text-align: center;"><strong>FP</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Synaptosome C1</td>
+<td style="text-align: center;">0.44</td>
+<td style="text-align: center;">0.73</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.07</td>
+<td style="text-align: center;">2.55±1.56</td>
+<td style="text-align: center;">223</td>
+<td style="text-align: center;">198</td>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">49</td>
+</tr>
+<tr class="even">
+<td>Synaptosome C2</td>
+<td style="text-align: center;">0.8</td>
+<td style="text-align: center;">0.9</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">2.12±1.06</td>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">103</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td>Synaptosome C3</td>
+<td style="text-align: center;">0.67</td>
+<td style="text-align: center;">0.9</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">1.86±1.24</td>
+<td style="text-align: center;">128</td>
+<td style="text-align: center;">127</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td>Synaptosome C4</td>
+<td style="text-align: center;">0.62</td>
+<td style="text-align: center;">0.89</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.03</td>
+<td style="text-align: center;">1.78±0.92</td>
+<td style="text-align: center;">144</td>
+<td style="text-align: center;">141</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td>Synaptosome C5</td>
+<td style="text-align: center;">0.58</td>
+<td style="text-align: center;">0.87</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.04</td>
+<td style="text-align: center;">1.86±1.00</td>
+<td style="text-align: center;">214</td>
+<td style="text-align: center;">209</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr class="even">
+<td>Synaptosome C6</td>
+<td style="text-align: center;">0.56</td>
+<td style="text-align: center;">0.84</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.04</td>
+<td style="text-align: center;">1.92±1.05</td>
+<td style="text-align: center;">104</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr class="odd">
+<td>Synaptosome C7</td>
+<td style="text-align: center;">0.78</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.06</td>
+<td style="text-align: center;">1.86±0.90</td>
+<td style="text-align: center;">184</td>
+<td style="text-align: center;">184</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr class="even">
+<td>Synaptosome C8</td>
+<td style="text-align: center;">0.75</td>
+<td style="text-align: center;">0.9</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">1.70±0.93</td>
+<td style="text-align: center;">132</td>
+<td style="text-align: center;">126</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td>Synaptosome C9</td>
+<td style="text-align: center;">0.59</td>
+<td style="text-align: center;">0.87</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">1.87±0.91</td>
+<td style="text-align: center;">135</td>
+<td style="text-align: center;">132</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr class="even">
+<td><strong>Average</strong></td>
+<td style="text-align: center;"><strong>0.64±0.11</strong></td>
+<td style="text-align: center;"><strong>0.86±0.05</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>0.05</strong></td>
+<td style="text-align: center;"><strong>1.95±1.08</strong></td>
+<td style="text-align: center;"><strong>152.22</strong></td>
+<td style="text-align: center;"><strong>97.00%</strong></td>
+<td style="text-align: center;"><strong>3.00%</strong></td>
+<td style="text-align: center;"><strong>7.30%</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="test-dataset-same-preparation-and-microscope-with-training-set">Test Dataset (Same preparation and microscope with training set)</h2>
+<table>
+<thead>
+<tr class="header">
+<th><strong><em>Dataset</em></strong></th>
+<th style="text-align: center;"><strong><em>Mask DICE</em></strong></th>
+<th style="text-align: center;"><strong><em>Final Label DICE</em></strong></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong><em>δ d</em></strong></th>
+<th style="text-align: center;"><strong><em>Δ c (nm)</em></strong></th>
+<th style="text-align: center;"><strong><em># of Vesicles</em></strong></th>
+<th style="text-align: center;"><strong>TP</strong></th>
+<th style="text-align: center;"><strong>FN</strong></th>
+<th style="text-align: center;"><strong>FP</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Synaptosome C10</td>
+<td style="text-align: center;">0.75</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.07</td>
+<td style="text-align: center;">1.86±1.18</td>
+<td style="text-align: center;">129</td>
+<td style="text-align: center;">123</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="even">
+<td>Synaptosome T1</td>
+<td style="text-align: center;">0.75</td>
+<td style="text-align: center;">0.83</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.11</td>
+<td style="text-align: center;">2.66±1.52</td>
+<td style="text-align: center;">699</td>
+<td style="text-align: center;">687</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">33</td>
+</tr>
+<tr class="odd">
+<td>Synaptosome T2</td>
+<td style="text-align: center;">0.74</td>
+<td style="text-align: center;">0.77</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.11</td>
+<td style="text-align: center;">2.27±1.84</td>
+<td style="text-align: center;">122</td>
+<td style="text-align: center;">117</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td>Synaptosome T3</td>
+<td style="text-align: center;">0.72</td>
+<td style="text-align: center;">0.74</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.11</td>
+<td style="text-align: center;">3.64±2.22</td>
+<td style="text-align: center;">434</td>
+<td style="text-align: center;">397</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">57</td>
+</tr>
+<tr class="odd">
+<td>Synaptosome T5</td>
+<td style="text-align: center;">0.77</td>
+<td style="text-align: center;">0.85</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.08</td>
+<td style="text-align: center;">2.20±1.26</td>
+<td style="text-align: center;">535</td>
+<td style="text-align: center;">526</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td>Synaptosome T6</td>
+<td style="text-align: center;">0.6</td>
+<td style="text-align: center;">0.83</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.07</td>
+<td style="text-align: center;">2.02±1.12</td>
+<td style="text-align: center;">373</td>
+<td style="text-align: center;">353</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">42</td>
+</tr>
+<tr class="odd">
+<td>Synaptosome T7</td>
+<td style="text-align: center;">0.8</td>
+<td style="text-align: center;">0.83</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.06</td>
+<td style="text-align: center;">2.22±1.14</td>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">107</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="even">
+<td>Synaptosome T8</td>
+<td style="text-align: center;">0.83</td>
+<td style="text-align: center;">0.91</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.04</td>
+<td style="text-align: center;">2.09±1.04</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">99</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td>Synaptosome T10</td>
+<td style="text-align: center;">0.77</td>
+<td style="text-align: center;">0.86</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">1.96±1.04</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">74</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td><strong>Average</strong></td>
+<td style="text-align: center;"><strong>0.75±0.06</strong></td>
+<td style="text-align: center;"><strong>0.83±0.05</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>0.08</strong></td>
+<td style="text-align: center;"><strong>2.32±1.43</strong></td>
+<td style="text-align: center;"><strong>286.56</strong></td>
+<td style="text-align: center;"><strong>96.30%</strong></td>
+<td style="text-align: center;"><strong>3.70%</strong></td>
+<td style="text-align: center;"><strong>6.10%</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="test-dataset-3-transfer-learning">Test Dataset 3 (Transfer Learning)</h2>
+<table>
+<thead>
+<tr class="header">
+<th><strong><em>Dataset</em></strong></th>
+<th style="text-align: center;"><strong><em>Mask DICE</em></strong></th>
+<th style="text-align: center;"><strong><em>Final Label DICE</em></strong></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong><em>δ d</em></strong></th>
+<th style="text-align: center;"><strong><em>Δ c (nm)</em></strong></th>
+<th style="text-align: center;"><strong><em># of Vesicles</em></strong></th>
+<th style="text-align: center;"><strong>TP</strong></th>
+<th style="text-align: center;"><strong>FN</strong></th>
+<th style="text-align: center;"><strong>FP</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Neuron 133</td>
+<td style="text-align: center;">0.76</td>
+<td style="text-align: center;">0.86</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">2.16±1.32</td>
+<td style="text-align: center;">523</td>
+<td style="text-align: center;">467</td>
+<td style="text-align: center;">56</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td>Neuron 123</td>
+<td style="text-align: center;">0.64</td>
+<td style="text-align: center;">0.71</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">2.05±1.18</td>
+<td style="text-align: center;">66</td>
+<td style="text-align: center;">58</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td>Neuron 84</td>
+<td style="text-align: center;">0.86</td>
+<td style="text-align: center;">0.89</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.06</td>
+<td style="text-align: center;">1.44±0.75</td>
+<td style="text-align: center;">498</td>
+<td style="text-align: center;">484</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td>Neuron 134</td>
+<td style="text-align: center;">0.56</td>
+<td style="text-align: center;">0.67</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.09</td>
+<td style="text-align: center;">2.87±2.50</td>
+<td style="text-align: center;">638</td>
+<td style="text-align: center;">384</td>
+<td style="text-align: center;">254</td>
+<td style="text-align: center;">63</td>
+</tr>
+<tr class="odd">
+<td>Neuron 115</td>
+<td style="text-align: center;">0.57</td>
+<td style="text-align: center;">0.63</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.08</td>
+<td style="text-align: center;">3.56±3.23</td>
+<td style="text-align: center;">170</td>
+<td style="text-align: center;">123</td>
+<td style="text-align: center;">47</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr class="even">
+<td>Neuron 102</td>
+<td style="text-align: center;">0.73</td>
+<td style="text-align: center;">0.86</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">1.47±0.79</td>
+<td style="text-align: center;">103</td>
+<td style="text-align: center;">86</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td>Neuron 80</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.81</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.07</td>
+<td style="text-align: center;">2.67±2.00</td>
+<td style="text-align: center;">111</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td>Neuron 114</td>
+<td style="text-align: center;">0.65</td>
+<td style="text-align: center;">0.73</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.07</td>
+<td style="text-align: center;">2.68±1.79</td>
+<td style="text-align: center;">131</td>
+<td style="text-align: center;">93</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="odd">
+<td>Neuron 132</td>
+<td style="text-align: center;">0.69</td>
+<td style="text-align: center;">0.87</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.03</td>
+<td style="text-align: center;">1.65±1.26</td>
+<td style="text-align: center;">135</td>
+<td style="text-align: center;">129</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr class="even">
+<td>Neuron 73</td>
+<td style="text-align: center;">0.78</td>
+<td style="text-align: center;">0.83</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.06</td>
+<td style="text-align: center;">2.93±2.00</td>
+<td style="text-align: center;">526</td>
+<td style="text-align: center;">483</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td>Neuron 128</td>
+<td style="text-align: center;">0.67</td>
+<td style="text-align: center;">0.85</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.04</td>
+<td style="text-align: center;">2.33±1.70</td>
+<td style="text-align: center;">252</td>
+<td style="text-align: center;">232</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">19</td>
+</tr>
+<tr class="even">
+<td>Neuron 116</td>
+<td style="text-align: center;">0.62</td>
+<td style="text-align: center;">0.73</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.07</td>
+<td style="text-align: center;">2.38±1.82</td>
+<td style="text-align: center;">296</td>
+<td style="text-align: center;">207</td>
+<td style="text-align: center;">89</td>
+<td style="text-align: center;">35</td>
+</tr>
+<tr class="odd">
+<td><strong>Average</strong></td>
+<td style="text-align: center;"><strong>0.69±0.09</strong></td>
+<td style="text-align: center;"><strong>0.79±0.09</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>0.06</strong></td>
+<td style="text-align: center;"><strong>2.35±1.83</strong></td>
+<td style="text-align: center;"><strong>287.42</strong></td>
+<td style="text-align: center;"><strong>83.60%</strong></td>
+<td style="text-align: center;"><strong>16.40%</strong></td>
+<td style="text-align: center;"><strong>7.90%</strong></td>
+</tr>
+</tbody>
+</table>
 <p>Global analysis</p>
 <div id="fig:dice" class="fignos">
 <figure>
@@ -294,7 +748,7 @@ implement automatic connector and tether segmentation as a deep leaning workflow
 <p>Two datasets of different origin were used as input and test subjects for the automatic segmentation pipeline, rat synaptosomes as well as astrocytic and neural cell cultures derived from mice.
 <code class="green">\_cite Vladan, segmentation write a bit more*</code></p>
 <h4 id="rat-synaptosomes">Rat synaptosomes</h4>
-<p>The preparation of the rat synaptosomes were previously described <span class="citation" data-cites="doi:10.1038/nprot.2008.171">[<a href="#ref-doi:10.1038/nprot.2008.171" role="doc-biblioref"><strong>doi:10.1038/nprot.2008.171?</strong></a>]</span>.
+<p>The preparation of the rat synaptosomes were previously described <span class="citation" data-cites="7sGZgtQa">[<a href="#ref-7sGZgtQa" role="doc-biblioref">14</a>]</span>.
 After the purification, the synaptosomes were incubated for 30min at room temperature.
 1.3mM CaCl2 and 10 nm gold fiducials were added (gold fiducials, #s10110/8. AURION Immuno Gold Reagents &amp; Accessories. Wageningen, The Neatherlands).
 The synaptosome solution was applied to a 200-mesh lacey finder carbon film grid (#AGS166-H2. Agar Scientific. Elektron Technology UK Ltd. Stansted, UK).
@@ -303,18 +757,18 @@ Thereafter the grid was immediately plunge frozen in liquid ethane using a homeb
 The grids coated with rat synaptosomes were mounted in a cryo-holder (Gatan, Pleasonton, CA, USA) and transferred to a Tecnai F20 (FEI, Eindhoven, The Netherlands) which was set to low dose conditions, operated at 200 kV, and equipped with a field emission gun.
 Images were recorded with a 2k x 2k CCD camera (Gatan) mounted after a GIF Tridiem post-column filter (Gatan) operated in zero-loss mode.
 The sample was kept at about -180°C.
-Tilt series were acquired using SerialEM <span class="citation" data-cites="doi:10.1016/j.jsb.2005.07.007">[<a href="#ref-doi:10.1016/j.jsb.2005.07.007" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2005.07.007?</strong></a>]</span> for automated acquisition recorded typically from -50° to 50° with a 2° angular increment and an unbinned pixel size of 0.75 or 1.2 nm.
+Tilt series were acquired using SerialEM <span class="citation" data-cites="19ZFerhph">[<a href="#ref-19ZFerhph" role="doc-biblioref">15</a>]</span> for automated acquisition recorded typically from -50° to 50° with a 2° angular increment and an unbinned pixel size of 0.75 or 1.2 nm.
 Due to sample thickness (400-700 nm), tomograms were usually not recorded with higher tilt angles.
 Defocus was set between -8 to -12 µm and the total electron dose used was about 80-100 e<sup>-</sup>/Å<sup>2</sup>.
 Some tomograms were acquired at a Titan Krios equipped with a K2 direct electron detector (Gatan) without energy filter.
 The K2 camera was operated in superresolution counting mode and between 8-40 frames per tilt angle were taken.
 Tilt series were acquired using the Latitude software (Gatan) for automated acquisition recorded typically from -60° to 60° with a 2° angular increment and an unbinned pixel size of 0.6 nm.
 Defocus was set between -8 to -12 µm and the total electron dose used was about 80-100 e<sup>-</sup>/Å<sup>2</sup>.
-Prior to image processing the frames at each tilt angle, frames were aligned and averaged in 2dx MC_Automator <span class="citation" data-cites="doi:10.1016/j.jsb.2014.03.016">[<a href="#ref-doi:10.1016/j.jsb.2014.03.016" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2014.03.016?</strong></a>]</span> with motioncor <span class="citation" data-cites="doi:10.1038/nmeth.2472">[<a href="#ref-doi:10.1038/nmeth.2472" role="doc-biblioref"><strong>doi:10.1038/nmeth.2472?</strong></a>]</span>.
-3D reconstruction was done in IMOD <span class="citation" data-cites="doi:10.1006/jsbi.1996.0013">[<a href="#ref-doi:10.1006/jsbi.1996.0013" role="doc-biblioref"><strong>doi:10.1006/jsbi.1996.0013?</strong></a>]</span>.
+Prior to image processing the frames at each tilt angle, frames were aligned and averaged in 2dx MC_Automator <span class="citation" data-cites="7UkCfakv">[<a href="#ref-7UkCfakv" role="doc-biblioref">16</a>]</span> with motioncor <span class="citation" data-cites="4rVTIFyw">[<a href="#ref-4rVTIFyw" role="doc-biblioref">17</a>]</span>.
+3D reconstruction was done in IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">13</a>]</span>.
 The alignments were done using the automated fiducial tracking function and the 3D reconstructions were done using the weighted back projection followed by a nonlinear anisotropic diffusion (NAD) filtering.</p>
 <h4 id="astrocytic-and-neuronal-mouse-culture">Astrocytic and neuronal mouse culture</h4>
-<p>The preparation of astrocytic and neuronal culture has been published before <span class="citation" data-cites="doi:10.3791/50783">[<a href="#ref-doi:10.3791/50783" role="doc-biblioref"><strong>doi:10.3791/50783?</strong></a>]</span>.
+<p>The preparation of astrocytic and neuronal culture has been published before <span class="citation" data-cites="5DZLPDB7">[<a href="#ref-5DZLPDB7" role="doc-biblioref">18</a>]</span>.
 After 12 to 14 days of incubation grids with mouse neurons were plunge frozen with a Vitrobot (Thermofisher Scientific, Mark IV) with a blot time of 3 s and a blot force of -10. Wait time and drain time were not used. Humidity was set to 100% at 4°C. 4 undiluteted 10 nm BSA gold tracer (Aurion) was added directly onto the grid prior to plunge freezing.
 Cultured mouse neurons tilt series were acquired at a Titan Krios, equipped with a Falcon 3 direct electron detector (Thermofisher Scientific) without energy filter.
 The Falcon camera was operated in linear mode.
@@ -323,8 +777,8 @@ Defocus was set between -6 to -10 µm and the total electron dose used was about
 Tomogram reconstruction was done in the same way as for the synaptosome datasets.</p>
 <h3 id="manual-segmentation-procedures">Manual segmentation procedures</h3>
 <p>Manual segmentation of SVs, mitochondria, and the active zone PM was done in IMOD (Figure S4A&amp;B).
-The boundary marked the region to be analyzed by Pyto <span class="citation" data-cites="doi:10.1016/j.jsb.2016.10.004">[<a href="#ref-doi:10.1016/j.jsb.2016.10.004" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2016.10.004?</strong></a>]</span>.
-The analysis by Pyto was essentially the same as described previously <span class="citation" data-cites="doi:10.1083/jcb.200908082">[<a href="#ref-doi:10.1083/jcb.200908082" role="doc-biblioref"><strong>doi:10.1083/jcb.200908082?</strong></a>]</span> <span class="citation" data-cites="doi:10.1016/j.jsb.2016.10.004">[<a href="#ref-doi:10.1016/j.jsb.2016.10.004" role="doc-biblioref"><strong>doi:10.1016/j.jsb.2016.10.004?</strong></a>]</span>.</p>
+The boundary marked the region to be analyzed by Pyto <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.
+The analysis by Pyto was essentially the same as described previously <span class="citation" data-cites="XQJ3R1HJ">[<a href="#ref-XQJ3R1HJ" role="doc-biblioref">5</a>]</span> <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.</p>
 <p>In short, the segmented area is divided in 1 voxel thick layers parallel to the active zone for distance calculations.
 A hierarchical connectivity segmentation detects densities interconnecting vesicles (so called connectors) and densities connecting vesicles to the active zone PM (so called tethers) (Figure S4C).
 Distance calculations are done with the center of the vesicle.
@@ -393,14 +847,59 @@ We monitored all the stages of post-processing on the eventual label file with D
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-IpfJPPLG" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>Towards Visual Proteomics at High Resolution</strong> <div class="csl-block">Felix JB Bäuerlein, Wolfgang Baumeister</div> <em>Journal of Molecular Biology</em> (2021-10) <a href="https://doi.org/gn9t3v">https://doi.org/gn9t3v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jmb.2021.167187">10.1016/j.jmb.2021.167187</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34384780">34384780</a></div></div>
+</div>
+<div id="ref-2TrAHWcN" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Exploring high-resolution cryo-ET and subtomogram averaging capabilities of contemporary DEDs</strong> <div class="csl-block">Martin Obr, Wim JH Hagen, Robert A Dick, Lingbo Yu, Abhay Kotecha, Florian KM Schur</div> <em>Molecular Biology</em> (2022-01-10) <a href="https://doi.org/gn92pd">https://doi.org/gn92pd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.01.10.475481">10.1101/2022.01.10.475481</a></div></div>
+</div>
+<div id="ref-EGfvt7aR" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>High-resolution in situ structure determination by cryo-electron tomography and subtomogram averaging using emClarity</strong> <div class="csl-block">Tao Ni, Thomas Frosio, Luiza Mendonça, Yuewen Sheng, Daniel Clare, Benjamin A Himes, Peijun Zhang</div> <em>Nature Protocols</em> (2022-02) <a href="https://doi.org/gn92pc">https://doi.org/gn92pc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41596-021-00648-5">10.1038/s41596-021-00648-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/35022621">35022621</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9251519">PMC9251519</a></div></div>
+</div>
 <div id="ref-WmTa9taa" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>STRUCTURAL STUDIES BY ELECTRON TOMOGRAPHY: From Cells to Molecules</strong> <div class="csl-block">Vladan Lučić, Friedrich Förster, Wolfgang Baumeister</div> <em>Annual Review of Biochemistry</em> (2005-06-01) <a href="https://doi.org/cfd27f">https://doi.org/cfd27f</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1146/annurev.biochem.73.011303.074112">10.1146/annurev.biochem.73.011303.074112</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15952904">15952904</a></div></div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>STRUCTURAL STUDIES BY ELECTRON TOMOGRAPHY: From Cells to Molecules</strong> <div class="csl-block">Vladan Lučić, Friedrich Förster, Wolfgang Baumeister</div> <em>Annual Review of Biochemistry</em> (2005-06-01) <a href="https://doi.org/cfd27f">https://doi.org/cfd27f</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1146/annurev.biochem.73.011303.074112">10.1146/annurev.biochem.73.011303.074112</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15952904">15952904</a></div></div>
+</div>
+<div id="ref-XQJ3R1HJ" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Quantitative analysis of the native presynaptic cytomatrix by cryoelectron tomography</strong> <div class="csl-block">Rubén Fernández-Busnadiego, Benoît Zuber, Ulrike Elisabeth Maurer, Marek Cyrklaff, Wolfgang Baumeister, Vladan Lučić</div> <em>Journal of Cell Biology</em> (2010-01-11) <a href="https://doi.org/b9c26b">https://doi.org/b9c26b</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1083/jcb.200908082">10.1083/jcb.200908082</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20065095">20065095</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2812849">PMC2812849</a></div></div>
+</div>
+<div id="ref-1HtRUUZQi" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Hierarchical detection and analysis of macromolecular complexes in cryo-electron tomograms using Pyto software</strong> <div class="csl-block">Vladan Lučić, Rubén Fernández-Busnadiego, Ulrike Laugks, Wolfgang Baumeister</div> <em>Journal of Structural Biology</em> (2016-12) <a href="https://doi.org/f9d5t2">https://doi.org/f9d5t2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2016.10.004">10.1016/j.jsb.2016.10.004</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27742578">27742578</a></div></div>
+</div>
+<div id="ref-JWuvfT0Z" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Robust membrane detection based on tensor voting for electron tomography</strong> <div class="csl-block">Antonio Martinez-Sanchez, Inmaculada Garcia, Shoh Asano, Vladan Lucic, Jose-Jesus Fernandez</div> <em>Journal of Structural Biology</em> (2014-04) <a href="https://doi.org/f5zkj8">https://doi.org/f5zkj8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.02.015">10.1016/j.jsb.2014.02.015</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24625523">24625523</a></div></div>
+</div>
+<div id="ref-GNLHO53d" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Convolutional neural networks for automated annotation of cellular cryo-electron tomograms</strong> <div class="csl-block">Muyuan Chen, Wei Dai, Stella Y Sun, Darius Jonasch, Cynthia Y He, Michael F Schmid, Wah Chiu, Steven J Ludtke</div> <em>Nature Methods</em> (2017-10) <a href="https://doi.org/gkpj62">https://doi.org/gkpj62</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.4405">10.1038/nmeth.4405</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28846087">28846087</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5623144">PMC5623144</a></div></div>
+</div>
+<div id="ref-RdPTGoZx" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Automated Detection and Localization of Synaptic Vesicles in Electron Microscopy Images</strong> <div class="csl-block">Barbara Imbrosci, Dietmar Schmitz, Marta Orlando</div> <em>eneuro</em> (2022-01) <a href="https://doi.org/gn9n8k">https://doi.org/gn9n8k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1523/eneuro.0400-20.2021">10.1523/eneuro.0400-20.2021</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34983830">34983830</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8805189">PMC8805189</a></div></div>
 </div>
 <div id="ref-ld1EnZ6i" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>U-Net: Convolutional Networks for Biomedical Image Segmentation</strong> <div class="csl-block">Olaf Ronneberger, Philipp Fischer, Thomas Brox</div> <em>arXiv</em> (2015-05-19) <a href="https://arxiv.org/abs/1505.04597">https://arxiv.org/abs/1505.04597</a></div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>U-Net: Convolutional Networks for Biomedical Image Segmentation</strong> <div class="csl-block">Olaf Ronneberger, Philipp Fischer, Thomas Brox</div> <em>arXiv</em> (2015-05-19) <a href="https://arxiv.org/abs/1505.04597">https://arxiv.org/abs/1505.04597</a></div>
 </div>
 <div id="ref-D7hXMn0y" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation</strong> <div class="csl-block">Özgün Çiçek, Ahmed Abdulkadir, Soeren S Lienkamp, Thomas Brox, Olaf Ronneberger</div> <em>arXiv</em> (2016-06-22) <a href="https://arxiv.org/abs/1606.06650">https://arxiv.org/abs/1606.06650</a></div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation</strong> <div class="csl-block">Özgün Çiçek, Ahmed Abdulkadir, Soeren S Lienkamp, Thomas Brox, Olaf Ronneberger</div> <em>arXiv</em> (2016-06-22) <a href="https://arxiv.org/abs/1606.06650">https://arxiv.org/abs/1606.06650</a></div>
+</div>
+<div id="ref-12G712Zky" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Content-aware image restoration: pushing the limits of fluorescence microscopy</strong> <div class="csl-block">Martin Weigert, Uwe Schmidt, Tobias Boothe, Andreas Müller, Alexandr Dibrov, Akanksha Jain, Benjamin Wilhelm, Deborah Schmidt, Coleman Broaddus, Siân Culley, … Eugene W Myers</div> <em>Nature Methods</em> (2018-12) <a href="https://doi.org/gfkkfd">https://doi.org/gfkkfd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-018-0216-7">10.1038/s41592-018-0216-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30478326">30478326</a></div></div>
+</div>
+<div id="ref-136NHHp17" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Computer Visualization of Three-Dimensional Image Data Using IMOD</strong> <div class="csl-block">James R Kremer, David N Mastronarde, JRichard McIntosh</div> <em>Journal of Structural Biology</em> (1996-01) <a href="https://doi.org/d9nfzw">https://doi.org/d9nfzw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1006/jsbi.1996.0013">10.1006/jsbi.1996.0013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/8742726">8742726</a></div></div>
+</div>
+<div id="ref-7sGZgtQa" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>A rapid Percoll gradient procedure for preparation of synaptosomes</strong> <div class="csl-block">Peter R Dunkley, Paula E Jarvie, Phillip J Robinson</div> <em>Nature Protocols</em> (2008-11) <a href="https://doi.org/b7zwh8">https://doi.org/b7zwh8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nprot.2008.171">10.1038/nprot.2008.171</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18927557">18927557</a></div></div>
+</div>
+<div id="ref-19ZFerhph" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Automated electron microscope tomography using robust prediction of specimen movements</strong> <div class="csl-block">David N Mastronarde</div> <em>Journal of Structural Biology</em> (2005-10) <a href="https://doi.org/ff7gzx">https://doi.org/ff7gzx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2005.07.007">10.1016/j.jsb.2005.07.007</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16182563">16182563</a></div></div>
+</div>
+<div id="ref-7UkCfakv" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>2dx_automator: Implementation of a semiautomatic high-throughput high-resolution cryo-electron crystallography pipeline</strong> <div class="csl-block">Sebastian Scherer, Julia Kowal, Mohamed Chami, Venkata Dandey, Marcel Arheit, Philippe Ringler, Henning Stahlberg</div> <em>Journal of Structural Biology</em> (2014-05) <a href="https://doi.org/f522h3">https://doi.org/f522h3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.03.016">10.1016/j.jsb.2014.03.016</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24680783">24680783</a></div></div>
+</div>
+<div id="ref-4rVTIFyw" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Electron counting and beam-induced motion correction enable near-atomic-resolution single-particle cryo-EM</strong> <div class="csl-block">Xueming Li, Paul Mooney, Shawn Zheng, Christopher R Booth, Michael B Braunfeld, Sander Gubbens, David A Agard, Yifan Cheng</div> <em>Nature Methods</em> (2013-06) <a href="https://doi.org/f4zpjf">https://doi.org/f4zpjf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.2472">10.1038/nmeth.2472</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23644547">23644547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3684049">PMC3684049</a></div></div>
+</div>
+<div id="ref-5DZLPDB7" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Preparation of Primary Neurons for Visualizing Neurites in a Frozen-hydrated State Using Cryo-Electron Tomography</strong> <div class="csl-block">Sarah H Shahmoradian, Mauricio R Galiano, Chengbiao Wu, Shurui Chen, Matthew N Rasband, William C Mobley, Wah Chiu</div> <em>Journal of Visualized Experiments</em> (2014-02-12) <a href="https://doi.org/gmh9w3">https://doi.org/gmh9w3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.3791/50783">10.3791/50783</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24561719">24561719</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4089403">PMC4089403</a></div></div>
 </div>
 </div>
 <!-- default theme -->
