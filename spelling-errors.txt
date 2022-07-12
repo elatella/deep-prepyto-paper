@@ -4,8 +4,8 @@ ameen
 Amin
 anisotropic
 aseedb
-astrocytic
-Aurion
+Astrocytic
+AURION
 Automator
 automize
 Benoit
@@ -19,9 +19,9 @@ Carlsbergfondet
 CCD
 CNNs
 convolutional
-cryo
-dataset
-datasets
+Cryo
+Dataset
+Datasets
 DeepFinder
 Defocus
 dGTi
@@ -87,7 +87,7 @@ Pleasonton
 Postprocessing
 pre
 presynaptic
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability
@@ -106,9 +106,10 @@ Sørensen
 Stansted
 subcellular
 subtomogram
+subvolumes
 superresolution
 SV
-SVs
+svs
 synaptosome
 synaptosomes
 Tecnai
@@ -124,7 +125,7 @@ TP
 Tridiem
 unbinned
 undiluteted
-UNET
+UNet
 untilted
 Vitrobot
 voxel
