@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/179b65e5c280071a081c03902caca98b4e1f5509/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/179b65e5c280071a081c03902caca98b4e1f5509/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/179b65e5c280071a081c03902caca98b4e1f5509/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/14463f18bcf8a9d3dbf01cf7d7619ab05b1c62b6/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/14463f18bcf8a9d3dbf01cf7d7619ab05b1c62b6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/14463f18bcf8a9d3dbf01cf7d7619ab05b1c62b6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/179b65e5c280071a081c03902caca98b4e1f5509/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/14463f18bcf8a9d3dbf01cf7d7619ab05b1c62b6/))
 was automatically generated
-from [elatella/deep-prepyto-paper@179b65e](https://github.com/elatella/deep-prepyto-paper/tree/179b65e5c280071a081c03902caca98b4e1f5509)
+from [elatella/deep-prepyto-paper@14463f1](https://github.com/elatella/deep-prepyto-paper/tree/14463f18bcf8a9d3dbf01cf7d7619ab05b1c62b6)
 on July 12, 2022.
 </em></small>
 
@@ -479,7 +479,7 @@ We design the evaluation framework to show robust capabilities of the proposed t
 
 The quantification of the performance of the model while training is calculated with the general form of dice coefficient for the probabilistic maps and after stitching the probabilistic mask of patches back together and building the tomogram probabilistic map we have another calculation on the whole tomogram for evaluating the similarity of the predicted probability mask with ground truth. The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples.
 
-$$1-\frac{2\sum y_{true} y_{pred}%}{\sum y_{true}^2% + \sum y_{pred}^2%}$$
+$$1-\frac{2\sum y_{true} y_{pred}%}{\sum y_{true}^2%+\sum y_{pred}^2%}$$
 
 We monitored all the stages of post-processing on the eventual label file with DICE to see the effect of each post-processing step and we report the final label’s DICE.
 
@@ -490,7 +490,7 @@ $$V=\frac{1}{12}\pi(4R+d)(2R-d)$$
 
 The relevant characterization of each vesicle would diameter of vesicles which also we used to remove outliers as well (radius of vesicles in that case). The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters [formula copy-paste!]
 
-$$\delta d=1-\frac{min(dSi,dGTi)$}{max(dSi,dGTi)$}$$ {#eq:regular-equation}
+$$\delta d=1-\frac{min(dSi,dGTi)}{max(dSi,dGTi)}$$ {#eq:regular-equation}
 
 where dGTi diameter of each true manual segmented vesicle, and dSi is the diameter of its estimation.
 
