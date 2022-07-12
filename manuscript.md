@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/0255b95503941225f8d84dfd14c28c9e4d1490e3/))
 was automatically generated
-from [elatella/deep-prepyto-paper@bb3d0ac](https://github.com/elatella/deep-prepyto-paper/tree/bb3d0ac988aab0ce06b7a095630bf125459e9bf7)
+from [elatella/deep-prepyto-paper@0255b95](https://github.com/elatella/deep-prepyto-paper/tree/0255b95503941225f8d84dfd14c28c9e4d1490e3)
 on July 12, 2022.
 </em></small>
 
@@ -406,6 +406,36 @@ While we face different metrics for detecting outliers we apply Mahalanobis Dist
 
 
 ### Analysis of Results
+
+
+Evaluation
+
+We design the evaluation framework to show robust capabilities of the proposed toolbox on synaptic vesicles segmentation which not only to be content with quantitative evaluation on the neural network performance but rather assay the segmentation of vesicles in practice and using the output of the segmentation with another pre-developed toolbox for segmenting tethers and connectors in presynaptic.
+
+1. Dataset: All tomograms that we partially segmented and used for training (Synaptosome)
+2. A single tomogram with the exactly same setup and sample preparation like the train dataset
+3. Dataset: 8 Synaptosome tomogram with ground truth (with an exceeding treatment on the samples)
+4. Dataset: 12 Neuron fully segmented tomograms with completely different sample preparation and microscope setup
+
+
+
+Dice
+
+The quantification of the performance of the model while training is calculated with the general form of dice coefficient for the probabilistic maps and after stitching the probabilistic mask of patches back together and building the tomogram probabilistic map we have another calculation on the whole tomogram for evaluating the similarity of the predicted probability mask with ground truth. The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples.
+We monitored all the stages of post-processing on the eventual label file with DICE to see the effect of each post-processing step and we report the final label’s DICE.
+
+However dice coefficient is a good global measure to assess our prediction in comparison to ground truth but it is far away from how individually vesicles are segmented. For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value. What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. We can also calculate the error of the estimated diameter and center. We define a vesicle as a true-detected vesicle if the predicted center is in the hand-segmented vesicle and the other way around the center of prediction is in the predicted vesicle. This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is: (Wolfram alpha website)
+*V=1/12 * pi *(4R+d)(2R-d)
+
+Diameter Error
+
+The relevant characterization of each vesicle would diameter of vesicles which also we used to remove outliers as well (radius of vesicles in that case). The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters [formula copy-paste!]
+
+where dGTi diameter of each true manual segmented vesicle, and dSi is the diameter of its estimation.
+
+Center error
+
+The center error is a euclidean distance of ground truth and corresponding true predicted vesicles. Besides this calculation, if we measure each axis error it will reveal that human bias in segmentation is more affected on the Z-axis. [we didn't show it in number but its checked the hypothesis]
 
 
 ## References {.page_break_before}
