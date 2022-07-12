@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/elatella/deep-prepyto-paper/tree/gh-pages) branch hosts the contents of this directory at <https://elatella.github.io/deep-prepyto-paper/>.
-The permalink for this webpage version is <https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/>.
+The permalink for this webpage version is <https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://elatella.github.io/deep-prepyto-paper/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`d259e64849830c6998f8b5898189319183c59ac6`](https://github.com/elatella/deep-prepyto-paper/commit/d259e64849830c6998f8b5898189319183c59ac6).
+[`8fa07a3e071abcc8237a35e09ebe30e713b329dd`](https://github.com/elatella/deep-prepyto-paper/commit/8fa07a3e071abcc8237a35e09ebe30e713b329dd).
