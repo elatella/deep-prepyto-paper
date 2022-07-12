@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-06-29'
+date-meta: '2022-07-12'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-06-29" />
-  <meta name="citation_publication_date" content="2022-06-29" />
+  <meta name="dc.date" content="2022-07-12" />
+  <meta name="citation_publication_date" content="2022-07-12" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/bfbd81e34bde1ee2faac1779921ed2d06ab94311/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/bfbd81e34bde1ee2faac1779921ed2d06ab94311/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/bfbd81e34bde1ee2faac1779921ed2d06ab94311/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/bfbd81e34bde1ee2faac1779921ed2d06ab94311/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/bb3d0ac988aab0ce06b7a095630bf125459e9bf7/))
 was automatically generated
-from [elatella/deep-prepyto-paper@bfbd81e](https://github.com/elatella/deep-prepyto-paper/tree/bfbd81e34bde1ee2faac1779921ed2d06ab94311)
-on June 29, 2022.
+from [elatella/deep-prepyto-paper@bb3d0ac](https://github.com/elatella/deep-prepyto-paper/tree/bb3d0ac988aab0ce06b7a095630bf125459e9bf7)
+on July 12, 2022.
 </em></small>
 
 ## Authors
@@ -361,9 +361,21 @@ The tomograms that were used for this analysis were binned by a factor of 2 to 3
 
 
 ### Description of Machine Learning: Training Stage
+1. Create a training set
+	Since the scientific question of our manually segmented data was for the specific region of interest and consequently prepared segmentation was accomplished on the specific region of interest in the tomograms therefore they did not contain all vesicles in the tomogram (in the synaptosome the first 250 nm away from the active zone was interested). Moreover, because our cryo-EM images are high resolution (pixel size around 1 nm) and the data size is relativity huge we can not also feed the whole image into our model. Hence due to limited memory, we prepare our training set by splitting each volume into 32x32x32 sub volumes and keeping only volumes occupied by a sufficient amount of binarized label (at least 1000 voxels from vesicles).
+To train the network we divided the data into 10 folds and randomly chose between the created sub-volumes generated in the previous step. For validation of our training, we determine the last fold of data almost entirely from aside tomogram to avoid overfitting.
+
+#### Deep Model Training
+2. Training the 3D U-NET
+	This Experiment was conducted on AMD Ryzen Threadripper 3970X, 32x 3.7GHz workstation empowered NVIDIA GeForce RTX 2080 Ti, 11GB. All the framework has been implemented in Python using the Keras library (2.4.3) and Tensorflow (2.4.1). Moreover, we developed the GUI based on Napari (0.4.15) multi-dimensional image viewer for adding and removing vesicles by users.
+  Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel. For 200 epochs, the batch size was 50, and to stabilize our training we used batch normalization. Furthermore, on configuration, we resolved binary cross-entropy as a loss function and Adam optimizer for the training of the network.
+
+In the encoding path, we have two layers of the resolution followed by two convolutional layers, Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel with Max poling of 2x2x2. In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation. Each convolutional layer in the network goes along with the RELU activation function. Come after the convolutional layers to achieve 3D probability mask a Softmax layer applies to bring channel size to one.
+
+3. Mask prediction
+	We split large tomograms into 32x32x32 patches with step size of 24 (stride) and then stitch together the predictions to get the final probability mask.
 
 
-#### Deep Model Training  
 Unet
 Training Datasets and Batch Generation
 
@@ -372,13 +384,26 @@ Training Datasets and Batch Generation
 
 #### Optimization / Postprocessing
 -Global Threshold
-
 -Mask Tuning
-
 -Compute Radial Profile
-
--Radius Estimation (Cross Correlation through Radial Profile)
 -Remove Outlier Labels
+-Radius Estimation (Cross Correlation through Radial Profile)
+
+1. Estimating global threshold
+	In order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes something.
+
+2. Adaptive localized threshold
+although the global threshold reveals almost all desired synaptic vesicles due to variation in the intensity of vesicles surrounding some binarized labels that are far away from the spherical shape of vesicles. First, by looking at the extent value(Ratio of pixels in the region to pixels in the total bounding box. Computed as area / (rows * cols)) and the size of each particle’s binary label we can capture those vesicles that are get connected and those vesicles that captured partially.
+Then by searching more into the probability mask, we try to expand the partially detected vesicles and separate those close connected vesicles by searching between the initial threshold and one to find a better finner threshold that can separate these vesicles.
+
+
+3. Radial Profile
+
+4.Outlier removal
+
+We define feature space on predicted vesicles’ label containing thickness, membrane density, and estimated radius of a vesicle. (Benoit: after radial profile, we can add the definition of thinness and membrane as well)
+While we face different metrics for detecting outliers we apply Mahalanobis Distance MD on this multivariate space MD to calculate L2 norm distance on normalized variable using the covariance matrix of observation. Afterward, we calculate the p-value of MD and bring this evaluation setup in iterative form while giving the second chance to detect outlier vesicles while recalculating radial profile in a specific margin range (0-10) and removing them if they could not pass a margin on the p-value.
+
 
 ### Analysis of Results
 
