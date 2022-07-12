@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/9268b040f14db068abbeb7a37f218d763c74a28a/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9268b040f14db068abbeb7a37f218d763c74a28a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9268b040f14db068abbeb7a37f218d763c74a28a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/fc41ab5cefeef4e6db7d20e0a2676792efebdcd6/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fc41ab5cefeef4e6db7d20e0a2676792efebdcd6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fc41ab5cefeef4e6db7d20e0a2676792efebdcd6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/9268b040f14db068abbeb7a37f218d763c74a28a/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/fc41ab5cefeef4e6db7d20e0a2676792efebdcd6/))
 was automatically generated
-from [elatella/deep-prepyto-paper@9268b04](https://github.com/elatella/deep-prepyto-paper/tree/9268b040f14db068abbeb7a37f218d763c74a28a)
+from [elatella/deep-prepyto-paper@fc41ab5](https://github.com/elatella/deep-prepyto-paper/tree/fc41ab5cefeef4e6db7d20e0a2676792efebdcd6)
 on July 12, 2022.
 </em></small>
 
@@ -399,67 +399,72 @@ The boundary marked the region to be analyzed by Pyto [@doi:10.1016/j.jsb.2016.1
 The analysis by Pyto was essentially the same as described previously [@doi:10.1083/jcb.200908082] [@doi:10.1016/j.jsb.2016.10.004].
 
 In short, the segmented area is divided in 1 voxel thick layers parallel to the active zone for distance calculations.
-A hierarchical connectivity segmentation detects densities interconnecting vesicles (so called connectors) and densities connecting vesicles to the active zone PM (so called tethers) (Figure S4C).
+A hierarchical connectivity segmentation detects densities interconnecting vesicles (so called connectors) and densities connecting vesicles to the active zone PM (so called tethers) (Figure ).
 Distance calculations are done with the center of the vesicle.
 Mainly default settings were used.
 The segmentation procedure is conservative and tends to miss some tethers and connectors because of noise.
 Consequently, the numbers of tethers and connectors should not be considered as absolute values but rather to compare experimental groups.
-As it was done before, an upper limit was set between 2100 and 3200 nm3 on segment volume.
+As it was done before, an upper limit was set between 2100 and 3200 nm^3^ on segment volume.
 The tomograms that were used for this analysis were binned by a factor of 2 to 3, resulting in voxel sizes between 2.1 and 2.4 nm.
 
 ### Pre-processing of manual segmentation outputs from IMOD for further use (jupyter notebook pre-pyto)
 
 
 
-### Description of Machine Learning: Training Stage
-1. Create a training set
-	Since the scientific question of our manually segmented data was for the specific region of interest and consequently prepared segmentation was accomplished on the specific region of interest in the tomograms therefore they did not contain all vesicles in the tomogram (in the synaptosome the first 250 nm away from the active zone was interested). Moreover, because our cryo-EM images are high resolution (pixel size around 1 nm) and the data size is relativity huge we can not also feed the whole image into our model. Hence due to limited memory, we prepare our training set by splitting each volume into 32x32x32 sub volumes and keeping only volumes occupied by a sufficient amount of binarized label (at least 1000 voxels from vesicles).
-To train the network we divided the data into 10 folds and randomly chose between the created sub-volumes generated in the previous step. For validation of our training, we determine the last fold of data almost entirely from aside tomogram to avoid overfitting.
+### Description of Machine Learning: Create a Training Set
 
-#### Deep Model Training
-2. Training the 3D U-NET
-	This Experiment was conducted on AMD Ryzen Threadripper 3970X, 32x 3.7GHz workstation empowered NVIDIA GeForce RTX 2080 Ti, 11GB. All the framework has been implemented in Python using the Keras library (2.4.3) and Tensorflow (2.4.1). Moreover, we developed the GUI based on Napari (0.4.15) multi-dimensional image viewer for adding and removing vesicles by users.
-  Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel. For 200 epochs, the batch size was 50, and to stabilize our training we used batch normalization. Furthermore, on configuration, we resolved binary cross-entropy as a loss function and Adam optimizer for the training of the network.
+Since the scientific question of our manually segmented data was for the specific region of interest and consequently prepared segmentation was accomplished on the specific region of interest in the tomograms therefore they did not contain all vesicles in the tomogram (in the synaptosome the first 250 nm away from the active zone was interested). 
+Moreover, because our cryo-EM images are high resolution (pixel size around 1 nm) and the data size is relativity huge we can not also feed the whole image into our model. 
+Hence due to limited memory, we prepare our training set by splitting each volume into 32x32x32 sub volumes and keeping only volumes occupied by a sufficient amount of binarized label (at least 1000 voxels from vesicles).
+To train the network we divided the data into 10 folds and randomly chose between the created sub-volumes generated in the previous step. 
+For validation of our training, we determine the last fold of data almost entirely from aside tomogram to avoid overfitting.
 
-In the encoding path, we have two layers of the resolution followed by two convolutional layers, Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel with Max poling of 2x2x2. In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation. Each convolutional layer in the network goes along with the RELU activation function. Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.
+`\_add image from odt??*`{.green}
 
-3. Mask prediction
-	We split large tomograms into 32x32x32 patches with step size of 24 (stride) and then stitch together the predictions to get the final probability mask.
+#### Deep Model Training with a 3D U-NET
 
+This experiment was conducted on AMD Ryzen Threadripper 3970X, 32x 3.7GHz workstation empowered NVIDIA GeForce RTX 2080 Ti, 11GB. All the framework has been implemented in Python using the Keras library (2.4.3) and Tensorflow (2.4.1). 
+Moreover, we developed the GUI based on Napari (0.4.15) multi-dimensional image viewer for adding and removing vesicles by users.
+Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel. 
+For 200 epochs, the batch size was 50, and to stabilize our training we used batch normalization. 
+Furthermore, on configuration, we resolved binary cross-entropy as a loss function and Adam optimizer for the training of the network.
 
-Unet
-Training Datasets and Batch Generation
+In the encoding path, we have two layers of the resolution followed by two convolutional layers, Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel with Max poling of 2x2x2. 
+In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation. 
+Each convolutional layer in the network goes along with the RELU activation function. 
+Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.
+
+#### Mask prediction
+
+We split large tomograms into 32x32x32 patches with step size of 24 (stride) and then stitch together the predictions to get the final probability mask.
+
 
 ### Transfer Learning
 
 
-#### Optimization / Postprocessing
--Global Threshold
--Mask Tuning
--Compute Radial Profile
--Remove Outlier Labels
--Radius Estimation (Cross Correlation through Radial Profile)
+### Postprocessing
 
-1. Estimating global threshold
-	In order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes something.
 
-2. Adaptive localized threshold
+#### Estimating Global Threshold
+
+In order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes something.
+`\_add image from odt??*`{.green}
+
+#### Adaptive Localized Threshold
+
 although the global threshold reveals almost all desired synaptic vesicles due to variation in the intensity of vesicles surrounding some binarized labels that are far away from the spherical shape of vesicles. First, by looking at the extent value(Ratio of pixels in the region to pixels in the total bounding box. Computed as area / (rows * cols)) and the size of each particle’s binary label we can capture those vesicles that are get connected and those vesicles that captured partially.
 Then by searching more into the probability mask, we try to expand the partially detected vesicles and separate those close connected vesicles by searching between the initial threshold and one to find a better finner threshold that can separate these vesicles.
 
+#### Radial Profile
 
-3. Radial Profile
-
-4.Outlier removal
+#### Outlier Removal
 
 We define feature space on predicted vesicles’ label containing thickness, membrane density, and estimated radius of a vesicle. (Benoit: after radial profile, we can add the definition of thinness and membrane as well)
 While we face different metrics for detecting outliers we apply Mahalanobis Distance MD on this multivariate space MD to calculate L2 norm distance on normalized variable using the covariance matrix of observation. Afterward, we calculate the p-value of MD and bring this evaluation setup in iterative form while giving the second chance to detect outlier vesicles while recalculating radial profile in a specific margin range (0-10) and removing them if they could not pass a margin on the p-value.
 
+#### Radius Estimation (Cross Correlation through Radial Profile)
 
 ### Analysis of Results
-
-
-Evaluation
 
 We design the evaluation framework to show robust capabilities of the proposed toolbox on synaptic vesicles segmentation which not only to be content with quantitative evaluation on the neural network performance but rather assay the segmentation of vesicles in practice and using the output of the segmentation with another pre-developed toolbox for segmenting tethers and connectors in presynaptic.
 
@@ -470,21 +475,26 @@ We design the evaluation framework to show robust capabilities of the proposed t
 
 
 
-Dice
+#### DICE
 
 The quantification of the performance of the model while training is calculated with the general form of dice coefficient for the probabilistic maps and after stitching the probabilistic mask of patches back together and building the tomogram probabilistic map we have another calculation on the whole tomogram for evaluating the similarity of the predicted probability mask with ground truth. The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples.
+
+$$1-\frac{2\sum y_true y_pred%}{\sum y_true^2% + \sum y_pred^2%}$$
+
 We monitored all the stages of post-processing on the eventual label file with DICE to see the effect of each post-processing step and we report the final label’s DICE.
 
 However dice coefficient is a good global measure to assess our prediction in comparison to ground truth but it is far away from how individually vesicles are segmented. For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value. What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. We can also calculate the error of the estimated diameter and center. We define a vesicle as a true-detected vesicle if the predicted center is in the hand-segmented vesicle and the other way around the center of prediction is in the predicted vesicle. This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is: (Wolfram alpha website)
-*V=1/12 * pi *(4R+d)(2R-d)
+$$V=\frac{1}{12}\pi$(4R+d)(2R-d)$$
 
-Diameter Error
+#### Diameter Error
 
 The relevant characterization of each vesicle would diameter of vesicles which also we used to remove outliers as well (radius of vesicles in that case). The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters [formula copy-paste!]
 
+$$\delta$d=1-\frac{min$(dSi,dGTi)$}{max$(dSi,dGTi)$}$$ {#eq:regular-equation}
+
 where dGTi diameter of each true manual segmented vesicle, and dSi is the diameter of its estimation.
 
-Center error
+#### Center error
 
 The center error is a euclidean distance of ground truth and corresponding true predicted vesicles. Besides this calculation, if we measure each axis error it will reveal that human bias in segmentation is more affected on the Z-axis. [we didn't show it in number but its checked the hypothesis]
 
