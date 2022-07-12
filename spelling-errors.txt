@@ -4,8 +4,8 @@ ameen
 Amin
 anisotropic
 aseedb
-Astrocytic
-AURION
+astrocytic
+Aurion
 Automator
 automize
 Benoit
@@ -92,7 +92,7 @@ Radecke
 Raphaela
 recruitability
 Relion
-RELU
+relu
 Ronenberger
 RTX
 Ryzen
@@ -109,7 +109,7 @@ subtomogram
 superresolution
 SV
 SVs
-synaptosome
+Synaptosome
 synaptosomes
 Tecnai
 TEM

@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/cab5fc8969f69c1fc81728b1f712fe261a6c1a80/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/cab5fc8969f69c1fc81728b1f712fe261a6c1a80/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/cab5fc8969f69c1fc81728b1f712fe261a6c1a80/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/cab5fc8969f69c1fc81728b1f712fe261a6c1a80/))
 was automatically generated
-from [elatella/deep-prepyto-paper@6474982](https://github.com/elatella/deep-prepyto-paper/tree/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3)
+from [elatella/deep-prepyto-paper@cab5fc8](https://github.com/elatella/deep-prepyto-paper/tree/cab5fc8969f69c1fc81728b1f712fe261a6c1a80)
 on July 12, 2022.
 </em></small>
 
@@ -479,7 +479,7 @@ We design the evaluation framework to show robust capabilities of the proposed t
 
 The quantification of the performance of the model while training is calculated with the general form of dice coefficient for the probabilistic maps and after stitching the probabilistic mask of patches back together and building the tomogram probabilistic map we have another calculation on the whole tomogram for evaluating the similarity of the predicted probability mask with ground truth. The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples.
 
-$$1-\frac{2\sum y_{true} y_{pred}%}{\sum y_{true}^2%+\sum y_{pred}^2%}$$
+$$1-\frac{2\sum y_{true} y_{pred}%}{\sum y_{true}^2+\sum y_{pred}^2}$$
 
 We monitored all the stages of post-processing on the eventual label file with DICE to see the effect of each post-processing step and we report the final label’s DICE.
 

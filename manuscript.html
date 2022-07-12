@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/cab5fc8969f69c1fc81728b1f712fe261a6c1a80/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/cab5fc8969f69c1fc81728b1f712fe261a6c1a80/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/cab5fc8969f69c1fc81728b1f712fe261a6c1a80/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/cab5fc8969f69c1fc81728b1f712fe261a6c1a80/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/6474982ed3aa3d07319b9c95c77b1dabca0c1bf3">elatella/deep-prepyto-paper@6474982</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/cab5fc8969f69c1fc81728b1f712fe261a6c1a80">elatella/deep-prepyto-paper@cab5fc8</a>
 on July 12, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -837,7 +837,7 @@ While we face different metrics for detecting outliers we apply Mahalanobis Dist
 </ol>
 <h4 id="dice">DICE</h4>
 <p>The quantification of the performance of the model while training is calculated with the general form of dice coefficient for the probabilistic maps and after stitching the probabilistic mask of patches back together and building the tomogram probabilistic map we have another calculation on the whole tomogram for evaluating the similarity of the predicted probability mask with ground truth. The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples.</p>
-<p><span class="math display">\[1-\frac{2\sum y_{true} y_{pred}%}{\sum y_{true}^2%+\sum y_{pred}^2%}\]</span></p>
+<p><span class="math display">\[1-\frac{2\sum y_{true} y_{pred}%}{\sum y_{true}^2+\sum y_{pred}^2}\]</span></p>
 <p>We monitored all the stages of post-processing on the eventual label file with DICE to see the effect of each post-processing step and we report the final label’s DICE.</p>
 <p>However dice coefficient is a good global measure to assess our prediction in comparison to ground truth but it is far away from how individually vesicles are segmented. For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value. What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. We can also calculate the error of the estimated diameter and center. We define a vesicle as a true-detected vesicle if the predicted center is in the hand-segmented vesicle and the other way around the center of prediction is in the predicted vesicle. This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is: (Wolfram alpha website)
 <span class="math display">\[V=\frac{1}{12}\pi(4R+d)(2R-d)\]</span></p>
