@@ -5,7 +5,7 @@ Amin
 anisotropic
 aseedb
 Astrocytic
-AURION
+Aurion
 Automator
 automize
 Benoit
@@ -21,7 +21,7 @@ CNNs
 convolutional
 Cryo
 Dataset
-Datasets
+datasets
 DeepFinder
 Defocus
 dGTi
@@ -85,14 +85,14 @@ patchify
 PDICE
 Pleasonton
 Postprocessing
-pre
+Pre
 presynaptic
-pyto
+Pyto
 Radecke
 Raphaela
 recruitability
 Relion
-relu
+RELU
 Ronenberger
 RTX
 Ryzen
@@ -109,8 +109,8 @@ subtomogram
 subvolumes
 superresolution
 SV
-svs
-synaptosome
+SVs
+Synaptosome
 synaptosomes
 Tecnai
 TEM

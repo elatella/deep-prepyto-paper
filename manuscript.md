@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/f346aa3fc857d952ffea49c8232e59d3fa9eba06/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f346aa3fc857d952ffea49c8232e59d3fa9eba06/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f346aa3fc857d952ffea49c8232e59d3fa9eba06/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/f346aa3fc857d952ffea49c8232e59d3fa9eba06/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/))
 was automatically generated
-from [elatella/deep-prepyto-paper@f346aa3](https://github.com/elatella/deep-prepyto-paper/tree/f346aa3fc857d952ffea49c8232e59d3fa9eba06)
+from [elatella/deep-prepyto-paper@d259e64](https://github.com/elatella/deep-prepyto-paper/tree/d259e64849830c6998f8b5898189319183c59ac6)
 on July 12, 2022.
 </em></small>
 
@@ -252,7 +252,6 @@ In a next step, filaments connecting the synaptic vesicles with each other (conn
 
 ![**Pipeline of automatic segmentation.** a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks  e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile](images/pipeline.svg){#fig:pipeline width="15cm"}
 
-![**Segmentation Network: UNET.** Input Size is 32^3, in each resolution we have two convolution layer followed by batch normalization layer and relu activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).](images/unet.png){#fig:unet width="10cm"}
 
 ![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network](images/tomo.svg){#fig:tom width="15cm"}
 
