@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/9268b040f14db068abbeb7a37f218d763c74a28a/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9268b040f14db068abbeb7a37f218d763c74a28a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9268b040f14db068abbeb7a37f218d763c74a28a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/9268b040f14db068abbeb7a37f218d763c74a28a/))
 was automatically generated
-from [elatella/deep-prepyto-paper@22a740e](https://github.com/elatella/deep-prepyto-paper/tree/22a740e8a19413bdea8bc1f27d9946f3a21a3ad3)
+from [elatella/deep-prepyto-paper@9268b04](https://github.com/elatella/deep-prepyto-paper/tree/9268b040f14db068abbeb7a37f218d763c74a28a)
 on July 12, 2022.
 </em></small>
 
@@ -421,7 +421,7 @@ To train the network we divided the data into 10 folds and randomly chose betwee
 	This Experiment was conducted on AMD Ryzen Threadripper 3970X, 32x 3.7GHz workstation empowered NVIDIA GeForce RTX 2080 Ti, 11GB. All the framework has been implemented in Python using the Keras library (2.4.3) and Tensorflow (2.4.1). Moreover, we developed the GUI based on Napari (0.4.15) multi-dimensional image viewer for adding and removing vesicles by users.
   Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel. For 200 epochs, the batch size was 50, and to stabilize our training we used batch normalization. Furthermore, on configuration, we resolved binary cross-entropy as a loss function and Adam optimizer for the training of the network.
 
-In the encoding path, we have two layers of the resolution followed by two convolutional layers, Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel with Max poling of 2x2x2. In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation. Each convolutional layer in the network goes along with the RELU activation function. Come after the convolutional layers to achieve 3D probability mask a Softmax layer applies to bring channel size to one.
+In the encoding path, we have two layers of the resolution followed by two convolutional layers, Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel with Max poling of 2x2x2. In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation. Each convolutional layer in the network goes along with the RELU activation function. Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.
 
 3. Mask prediction
 	We split large tomograms into 32x32x32 patches with step size of 24 (stride) and then stitch together the predictions to get the final probability mask.
