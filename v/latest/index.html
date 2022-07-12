@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/f346aa3fc857d952ffea49c8232e59d3fa9eba06/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f346aa3fc857d952ffea49c8232e59d3fa9eba06/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f346aa3fc857d952ffea49c8232e59d3fa9eba06/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/f346aa3fc857d952ffea49c8232e59d3fa9eba06/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/d259e64849830c6998f8b5898189319183c59ac6/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/f346aa3fc857d952ffea49c8232e59d3fa9eba06">elatella/deep-prepyto-paper@f346aa3</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/d259e64849830c6998f8b5898189319183c59ac6">elatella/deep-prepyto-paper@d259e64</a>
 on July 12, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -254,14 +254,9 @@ In a next step, filaments connecting the synaptic vesicles with each other (conn
 <img src="images/pipeline.svg" style="width:15cm" alt="Figure 1: Pipeline of automatic segmentation. a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile" /><figcaption aria-hidden="true"><span>Figure 1:</span> <strong>Pipeline of automatic segmentation.</strong> a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile</figcaption>
 </figure>
 </div>
-<div id="fig:unet" class="fignos">
-<figure>
-<img src="images/unet.png" style="width:10cm" alt="Figure 2: Segmentation Network: UNET. Input Size is 32^3, in each resolution we have two convolution layer followed by batch normalization layer and relu activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network)." /><figcaption aria-hidden="true"><span>Figure 2:</span> <strong>Segmentation Network: UNET.</strong> Input Size is 32^3, in each resolution we have two convolution layer followed by batch normalization layer and relu activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).</figcaption>
-</figure>
-</div>
 <div id="fig:tom" class="fignos">
 <figure>
-<img src="images/tomo.svg" style="width:15cm" alt="Figure 3: 2D Slices A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network" /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>2D Slices</strong> A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network</figcaption>
+<img src="images/tomo.svg" style="width:15cm" alt="Figure 2: 2D Slices A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network" /><figcaption aria-hidden="true"><span>Figure 2:</span> <strong>2D Slices</strong> A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network</figcaption>
 </figure>
 </div>
 <p>Fig 4- Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets</p>
@@ -732,7 +727,7 @@ E, F, H, G) Same as above columns after refinement.] (images/radial_avg_115-099.
 <p>Global analysis</p>
 <div id="fig:dice" class="fignos">
 <figure>
-<img src="images/blinddice.png" style="width:10cm" alt="Figure 4: Dice coefficient and loss value for training and validation set." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Dice coefficient and loss value for training and validation set.</strong></figcaption>
+<img src="images/blinddice.png" style="width:10cm" alt="Figure 3: Dice coefficient and loss value for training and validation set." /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>Dice coefficient and loss value for training and validation set.</strong></figcaption>
 </figure>
 </div>
 <p>3d unet good for 3D processing
