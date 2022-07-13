@@ -5,7 +5,7 @@ Amin
 anisotropic
 aseedb
 Astrocytic
-AURION
+Aurion
 Automator
 automize
 Benoit
@@ -19,14 +19,13 @@ Carlsbergfondet
 CCD
 CNNs
 consiting
-Convolutional
-crossentropy
-Cryo
+convolutional
+cryo
 Dataset
-Datasets
+datasets
 deconvolutional
 DeepFinder
-Defocus
+defocus
 dGTi
 Didcot
 dl
@@ -68,6 +67,7 @@ Khosrozadeh
 Krios
 kV
 LabView
+lossfunction
 Lundbeckfonden
 macromolecule
 Mahalanobis
@@ -80,6 +80,7 @@ Neatherlands
 NNF
 Nordisk
 Novo
+nuber
 objectwise
 OC
 Onstruments
@@ -105,6 +106,7 @@ segementation
 seperate
 seperated
 SerialEM
+sigmoid
 situ
 Softmax
 Sørensen
@@ -134,10 +136,11 @@ undiluteted
 unet
 untilted
 Vitrobot
-voxel
+Voxel
 voxels
 Wageningen
 Weigert
+wheights
 Witz
 XXXX
 XXXXXXXX
