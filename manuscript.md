@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d0ed6dd74e117b34294ac8aa62351214bb75bf49/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d0ed6dd74e117b34294ac8aa62351214bb75bf49/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d0ed6dd74e117b34294ac8aa62351214bb75bf49/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d291eed4fb0d1e59b1ef85ee20483670d15203d5/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d291eed4fb0d1e59b1ef85ee20483670d15203d5/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d291eed4fb0d1e59b1ef85ee20483670d15203d5/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/d0ed6dd74e117b34294ac8aa62351214bb75bf49/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/d291eed4fb0d1e59b1ef85ee20483670d15203d5/))
 was automatically generated
-from [elatella/deep-prepyto-paper@d0ed6dd](https://github.com/elatella/deep-prepyto-paper/tree/d0ed6dd74e117b34294ac8aa62351214bb75bf49)
+from [elatella/deep-prepyto-paper@d291eed](https://github.com/elatella/deep-prepyto-paper/tree/d291eed4fb0d1e59b1ef85ee20483670d15203d5)
 on July 13, 2022.
 </em></small>
 
@@ -434,27 +434,27 @@ All of these subsets or "folds" were used as training sets, as an entirely seper
 
 The previously prepared subsets are fed into the 3D U-Net in batches of 50. `\_cite Ronneberger, what was changed compared to the original U-Net, is there a better publication to cite?*`{.green}
 These were passed throught the U-Net in a total of 200 epochs.
-Batch normalization was applied before ReLU activation `\_was it? cite Ioffe & Szegedy, maybe? [@doi:10.48550/arXiv.1502.03167]*`{.green}.
+Batch normalization was applied before Rectified Lienear Unit (ReLU) activation `\_was it? cite Ioffe & Szegedy, maybe? [@doi:10.48550/arXiv.1502.03167]*`{.green}.
 
 The 3D U-Net architecture is composed of a contracting or analysis path (convolutional layers), and expanding or synthesis path (deconvolutional layers) (Figure {@fig:unet}).
 `\_did we wrote our own U-Net or do we need to quote someones github for the original framework*`{.green}
 
-![**Segmentation Network: U-Net.** Input Size is 32^3 `\_voxels??*`, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).`\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2?*`{.green} ](images/unet.png){#fig:unet width="10cm"}
+![**Segmentation Network: U-Net.** Input Size is 32^3 `\_voxels??*`, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).`\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*`{.green} ](images/unet.png){#fig:unet width="10cm"}
 
 `\_what do we use as initial encoder weights and backbone*`{.green} 
-During each layer of convolution, the convolution filter `\_what kind of convolution filter was used*`{.green} consiting of a 3x3x3 kernel was moved over all the voxels in each subset twice, each time taking their dot product.
-`\_we double the number of channels every time?? Are we not using 3 channels as in RBG? *`{.green}
+During each layer of the analysis path, the convolution filter consiting of a 3x3x3 kernel, with randomly initialized weights, was moved over all the voxels in each subset twice, each time taking their dot product.
 This kernel extracts and enhances the features in different parts of the image.
--double numbers of channels
-Between each layer, the voxels were downsampled via a max-pooling step of 2x2x2, in which the maximum value of the 2x2x2 voxel cube is put forth.
+This is followed by a ReLU function, which can be described as 
 
-training: wheights -> Adam optimizer for the training of the network [@doi:10.48550/arXiv.1412.6980].
+$$f(x)=max(0,x)$$
 
- 
-In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation. 
-Each convolutional layer in the network goes along with the ReLU activation function. 
-Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.
+which will output the positive input directly, while setting negative input to 0.
 
+Between each layer, the voxels were condensed, or downsampled, via a max-pooling step of 2x2x2, in which the maximum value of the 2x2x2 voxel cube is put forth.
+With every layer of the U-Net, the input size thereby halfs, while the number of channels doubles.
+
+While the analysis path focusses on the identification of what to segement, the synthesis part focusses on their localization.
+The synthesis path of the U-Net uses the same basic architecture as the analysis path, with a slight variation of using up convolution operation and implementing skip connections, where feature maps of the analysis part are concatunated to the output of the transposed convolutions of the same level. 
 
 The sigmoid activation function is the last block of the U-Net (Figure {@fig:unet}), it triggers the loss function, which 
 As the segementation of vesicles can be considered a binary classification task, binary cross-entropy was implemented as a loss function.
@@ -465,6 +465,14 @@ with the *output size* being the nuber of scalar values in the model output, *ŷ
 `\_publication to cite?*`{.green}
 
 The binary cross-entropy lossfunction converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.
+
+
+
+training: weights -> Adam optimizer for the training of the network [@doi:10.48550/arXiv.1412.6980].
+
+"The back-propagation is done to update the weights and reduce the loss function with the help of an optimizer - the most common optimizer algorithm is gradient descent. Multiple epochs are run until the loss converges to the global minima."
+
+Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.
 
 ##### Mask prediction
 
