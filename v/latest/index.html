@@ -10,7 +10,7 @@
   <meta name="author" content="Guillaume Witz" />
   <meta name="author" content="Jakob B. Sørensen" />
   <meta name="author" content="Benoît Zuber" />
-  <meta name="dcterms.date" content="2022-07-12" />
+  <meta name="dcterms.date" content="2022-07-13" />
   <meta name="keywords" content="synapse, cryo-electron tomography, synaptic vesicles, deep learning, segmentation, post-processing, automation" />
   <title>Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms</title>
   <style>
@@ -52,8 +52,8 @@
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-07-12" />
-  <meta name="citation_publication_date" content="2022-07-12" />
+  <meta name="dc.date" content="2022-07-13" />
+  <meta name="citation_publication_date" content="2022-07-13" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/da603b1a04492144f3c5a82e17bbbeb759e5dc3b/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/da603b1a04492144f3c5a82e17bbbeb759e5dc3b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/da603b1a04492144f3c5a82e17bbbeb759e5dc3b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,10 +112,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/8fa07a3e071abcc8237a35e09ebe30e713b329dd/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/da603b1a04492144f3c5a82e17bbbeb759e5dc3b/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/8fa07a3e071abcc8237a35e09ebe30e713b329dd">elatella/deep-prepyto-paper@8fa07a3</a>
-on July 12, 2022.
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/da603b1a04492144f3c5a82e17bbbeb759e5dc3b">elatella/deep-prepyto-paper@da603b1</a>
+on July 13, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -795,32 +795,36 @@ The tomograms that were used for this analysis were binned by a factor of 2 to 3
 <h3 id="description-of-machine-learning">Description of Machine Learning</h3>
 <p>This experiment was conducted on a workstation with an AMD Ryzen Threadripper 3970X CPU with a NVIDIA GeForce RTX 2080 Ti GPU.
 All the framework has been implemented in Python using the Keras library (2.4.3) and Tensorflow (2.4.1).
-The workflow includes a GUI based on a multi-dimensional image viewer, Napari (0.4.15), enabling the user to add and remove vesicles.</p>
+The workflow includes a GUI based on a multi-dimensional image viewer, Napari (0.4.15), enabling the user to add and remove vesicles.
+<code class="green">\_any other packages required?*</code></p>
 <p>The used datasets included a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution.</p>
 <h4 id="deep-model-training-with-a-3d-u-net">Deep Model Training with a 3D U-Net</h4>
-<p>The U-Net is a CNN 
-Instance segmentation (segment each vesicle separately)
-Convolution:</p>
+<h5 id="create-an-input-voxel-patch">Create an Input Voxel Patch</h5>
+<p>The training set was prepared by splitting the 3D tomographic volume into 32x32x32 <code class="green">\_voxels??*</code> sub volumes and keeping only volumes occupied by a sufficient amount (&gt; 1000 voxels) of binarized vesicle labels.
+The obtained sub volumes were randomly divided into ten subsets of the training set, this method is termed k-fold cross-validation in the field of machine learning.
+All of these subsets or “folds” were used as training sets, as an entirely seperate set of tomographic subvolumes was used for validation, to avoid overfitting.</p>
+<p><code class="green">\_are the folds overlapping? are the tomograms normalized any further than the NAD from previous segementation before feeding it to the deeplearning model? add image from odt??, the 2D slices of the subset are supposed to be 32x32x32, but seem to have a different size... padding?? ---&gt; results*</code></p>
+<h5 id="d-u-net-architecture">3D U-Net architecture</h5>
+<p>The previously prepared subsets are fed into the 3D U-Net in batches of 50. <code class="green">\_cite Ronneberger, what was changed compared to the original U-Net, is there a better publication to cite?*</code>
+These were passed throught the U-Net in a total of 200 epochs.
+Batch normalization was applied before ReLU activation <code class="green">\_was it? cite Ioffe &amp; Szegedy, maybe? [@doi:10.48550/arXiv.1502.03167]*</code>.
+As the segementation of vesicles can be considered a binary classification task, binary crossentropy was implemented as a loss function.</p>
+<p><span class="math display">\[Loss= -\frac{1}{output size}\sum_{i=1}^{\substack{output \\ size}} y_i * log ŷ_i + (1-y_1) * log (1-ŷ_1)\]</span></p>
+<p>The 3D U-Net architecture is composed of a contracting or analysis path (convolutional layers), and expanding or synthesis path (deconvolutional layers) (Figure <a href="#fig:unet">4</a>).
+<code class="green">\_did we wrote our own U-Net or do we need to quote someones github for the original framework*</code></p>
 <div id="fig:unet" class="fignos">
 <figure>
 <img src="images/unet.png" style="width:10cm" alt="Figure 4: Segmentation Network: U-Net. Input Size is 32^3 \_voxels??*, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network)." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Segmentation Network: U-Net.</strong> Input Size is 32^3 <code>\_voxels??*</code>, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).</figcaption>
 </figure>
 </div>
-<p>Introduction
-” U-Net architecture has been introduced in 2015 by Ronenberger et al. <span class="citation" data-cites="ld1EnZ6i">[<a href="#ref-ld1EnZ6i" role="doc-biblioref">10</a>]</span>. It consists of a contracting path, typical of CNN, and a symmetric expanding path. At each expansion step, the correspondingly cropped feature map of the contracting path is concatenated. The contracting path captures context, while the expanding path coupled with concatenation enables precise localization. The U-Net architecture was developed to achieve a fast and accurate segmentation of biomedical two-dimensional images, with the requirement of only a small fraction of training data in comparison to previous CNNs. It was then extended to segment 3-dimensional biomedical images (3D U-Net) <span class="citation" data-cites="D7hXMn0y">[<a href="#ref-D7hXMn0y" role="doc-biblioref">11</a>]</span>. Weigert et al. <span class="citation" data-cites="12G712Zky">[<a href="#ref-12G712Zky" role="doc-biblioref">12</a>]</span> implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.</p>
-<p>We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets. This method provided good accuracy and was only slightly affected by the missing wedge artifact. Nevertheless, it was not quite sufficient for our downstream pyto analysis. Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. This leads to a substantial accuracy improvement, which are reflected in better pyto performance. Additionally, we designed a multivariate ranking procedure, highlighting possibly wrongly segmented SVs. We also introduce a semi-automatic method to very quickly fix wrongly segmented and missed SVs.
-”</p>
-<h5 id="create-an-input-voxel-patch">Create an Input Voxel Patch</h5>
-<p>The training set was prepared by splitting the 3D tomographic volume into 32x32x32 <code class="green">\_voxels??*</code> sub volumes and keeping only volumes occupied by a sufficient amount (&gt; 1000 voxels) of binarized vesicle labels.
-The obtained sub volumes were randomly divided into ten subsets of the training set, this method is termed k-fold cross-validation in the field of machine learning.
-All of these subsets or “folds” were used as training sets, as an entirely seperate set of tomographic subvolumes was used for validation, to avoid overfitting.</p>
-<p><code class="green">\_are the folds overlapping? are the tomograms normalized any further than the NAD from previous segementation before feeding it to the deeplearning model? add image from odt?? ---&gt; results*</code></p>
-<h5 id="u-net-architecture">U-Net architecture</h5>
-<p>Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel.
-For 200 epochs, the batch size was 50, and to stabilize our training we used batch normalization.
-Furthermore, on configuration, we resolved binary cross-entropy as a loss function and Adam optimizer for the training of the network.</p>
-<p>In the encoding path, we have two layers of the resolution followed by two convolutional layers, Kernel size determined 3x3x3, we double the number of channels every time and down sample the voxel with Max poling of 2x2x2.
-In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation.
+<p><code class="green">\_what do we use as initial encoder weights and backbone*</code>
+During each layer of convolution, the convolution filter <code class="green">\_what kind of convolution filter was used*</code> consiting of a 3x3x3 kernel was moved over all the voxels in each subset twice, each time taking their dot product.
+<code class="green">\_we double the number of channels every time?? Are we not using 3 channels as in RBG? *</code>
+This kernel extracts and enhances the features in different parts of the image.
+-double numbers of channels
+Between each layer, the voxels were downsampled via a max-pooling step of 2x2x2.</p>
+<p>Furthermore, on configuration, we resolved binary cross-entropy as a loss function and Adam optimizer for the training of the network.</p>
+<p>In the decoder path, the setup is arranged similarly to the contraction path but with up convolution operation.
 Each convolutional layer in the network goes along with the ReLU activation function.
 Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.</p>
 <h5 id="mask-prediction">Mask prediction</h5>
@@ -849,11 +853,12 @@ While we face different metrics for detecting outliers we apply Mahalanobis Dist
 <h4 id="dice">DICE</h4>
 <p>The quantification of the performance of the model while training is calculated with the general form of dice coefficient for the probabilistic maps and after stitching the probabilistic mask of patches back together and building the tomogram probabilistic map we have another calculation on the whole tomogram for evaluating the similarity of the predicted probability mask with ground truth. The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples.</p>
 <p><span class="math display">\[1-\frac{2\sum_{pixels} y_{true} y_{pred}%}{\sum_{pixels} y_{true}^2+\sum_{pixels} y_{pred}^2}\]</span></p>
+<p><code class="green">\_shouln't it be voxels instead of pixels??*</code></p>
 <p>We monitored all the stages of post-processing on the eventual label file with DICE to see the effect of each post-processing step and we report the final label’s DICE.</p>
-<p>However dice coefficient is a good global measure to assess our prediction in comparison to ground truth but it is far away from how individually vesicles are segmented. For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value. What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. We can also calculate the error of the estimated diameter and center. We define a vesicle as a true-detected vesicle if the predicted center is in the hand-segmented vesicle and the other way around the center of prediction is in the predicted vesicle. This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is: (Wolfram alpha website)
-<span class="math display">\[V=\frac{1}{12}\pi(4R+d)(2R-d)\]</span></p>
+<p>However dice coefficient is a good global measure to assess our prediction in comparison to ground truth but it is far away from how individually vesicles are segmented. For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value. What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. We can also calculate the error of the estimated diameter and center. We define a vesicle as a true-detected vesicle if the predicted center is in the hand-segmented vesicle and the other way around the center of prediction is in the predicted vesicle. This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is:</p>
+<p><span class="math display">\[V=\frac{1}{12}\pi(4R+d)(2R-d)\]</span></p>
 <h4 id="diameter-error">Diameter Error</h4>
-<p>The relevant characterization of each vesicle would diameter of vesicles which also we used to remove outliers as well (radius of vesicles in that case). The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters [formula copy-paste!]</p>
+<p>The relevant characterization of each vesicle would diameter of vesicles which also we used to remove outliers as well (radius of vesicles in that case). The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters</p>
 <p><span id="eq:regular-equation" class="eqnos"><span class="math display">\[\delta d=1-\frac{min(dSi,dGTi)}{max(dSi,dGTi)}\]</span><span class="eqnos-number">(1)</span></span> </p>
 <p>where dGTi diameter of each true manual segmented vesicle, and dSi is the diameter of its estimation.</p>
 <h4 id="center-error">Center error</h4>
