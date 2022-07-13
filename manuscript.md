@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/da603b1a04492144f3c5a82e17bbbeb759e5dc3b/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/da603b1a04492144f3c5a82e17bbbeb759e5dc3b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/da603b1a04492144f3c5a82e17bbbeb759e5dc3b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/95687c0be9ea4a3a91757b6736a06b1319816982/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/95687c0be9ea4a3a91757b6736a06b1319816982/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/95687c0be9ea4a3a91757b6736a06b1319816982/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/da603b1a04492144f3c5a82e17bbbeb759e5dc3b/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/95687c0be9ea4a3a91757b6736a06b1319816982/))
 was automatically generated
-from [elatella/deep-prepyto-paper@da603b1](https://github.com/elatella/deep-prepyto-paper/tree/da603b1a04492144f3c5a82e17bbbeb759e5dc3b)
+from [elatella/deep-prepyto-paper@95687c0](https://github.com/elatella/deep-prepyto-paper/tree/95687c0be9ea4a3a91757b6736a06b1319816982)
 on July 13, 2022.
 </em></small>
 
@@ -437,7 +437,7 @@ These were passed throught the U-Net in a total of 200 epochs.
 Batch normalization was applied before ReLU activation `\_was it? cite Ioffe & Szegedy, maybe? [@doi:10.48550/arXiv.1502.03167]*`{.green}.
 As the segementation of vesicles can be considered a binary classification task, binary crossentropy was implemented as a loss function.
 
-$$Loss= -\frac{1}{output size}\sum_{i=1}^{\substack{output \\ size}} y_i * log ŷ_i + (1-y_1) * log (1-ŷ_1)$$
+$$Loss= -\frac{1}{output  size}\sum_{i=1}^{output size} y_i * log  ŷ_i + (1-y_1) * log  (1-ŷ_1)$$
 
 The 3D U-Net architecture is composed of a contracting or analysis path (convolutional layers), and expanding or synthesis path (deconvolutional layers) (Figure {@fig:unet}).
 `\_did we wrote our own U-Net or do we need to quote someones github for the original framework*`{.green}

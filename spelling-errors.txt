@@ -21,12 +21,12 @@ CNNs
 consiting
 Convolutional
 crossentropy
-cryo
-dataset
-datasets
+Cryo
+Dataset
+Datasets
 deconvolutional
 DeepFinder
-defocus
+Defocus
 dGTi
 Didcot
 dl
@@ -91,7 +91,7 @@ Pleasonton
 Postprocessing
 pre
 presynaptic
-pyto
+Pyto
 Radecke
 Raphaela
 recruitability
@@ -115,7 +115,7 @@ subvolumes
 superresolution
 SV
 SVs
-Synaptosome
+synaptosome
 synaptosomes
 Tecnai
 TEM
@@ -131,10 +131,10 @@ TP
 Tridiem
 unbinned
 undiluteted
-UNet
+unet
 untilted
 Vitrobot
-Voxel
+voxel
 voxels
 Wageningen
 Weigert
