@@ -22,8 +22,8 @@ concatunated
 consiting
 convolutional
 Cryo
-Dataset
-datasets
+dataset
+Datasets
 deconvolutional
 DeepFinder
 Defocus
@@ -94,9 +94,9 @@ patchify
 PDICE
 Pleasonton
 Postprocessing
-Pre
+pre
 presynaptic
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability
@@ -120,9 +120,9 @@ subcellular
 subtomogram
 subvolumes
 superresolution
-sv
+SV
 SVs
-synaptosome
+Synaptosome
 synaptosomes
 Tecnai
 TEM
@@ -141,7 +141,7 @@ undiluteted
 unet
 untilted
 Vitrobot
-Voxel
+voxel
 voxels
 Wageningen
 Weigert
