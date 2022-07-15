@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/5f5a3258de398792bbc24dfc82662c0d382d9590/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f5a3258de398792bbc24dfc82662c0d382d9590/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f5a3258de398792bbc24dfc82662c0d382d9590/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/5f5a3258de398792bbc24dfc82662c0d382d9590/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/5f5a3258de398792bbc24dfc82662c0d382d9590">elatella/deep-prepyto-paper@5f5a325</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/4386a42915cddbdd4c775f2fc745c432ccd3e196">elatella/deep-prepyto-paper@4386a42</a>
 on July 15, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -262,17 +262,21 @@ In a next step, filaments connecting the synaptic vesicles with each other (conn
 <img src="images/tomo-sclae.svg" style="width:15cm" alt="Figure 2: 2D Slices A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network" /><figcaption aria-hidden="true"><span>Figure 2:</span> <strong>2D Slices</strong> A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network</figcaption>
 </figure>
 </div>
-<p>![<strong>Dice Imporvment</strong> Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets(images/improvment-neurons.png){#fig:tom width=“15cm”}</p>
+<div id="fig:tom" class="fignos">
+<figure>
+<img src="images/improvment-neurons.png" style="width:15cm" alt="Figure 3: Dice Imporvment Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets" /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>Dice Imporvment</strong> Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets</figcaption>
+</figure>
+</div>
 <div id="fig:radial_profile" class="fignos">
 <figure>
-<img src="images/radial_avg_115-099.svg" style="width:15cm" alt="Figure 3: Vesicle radius and position through radial profile and cross-correlation Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement" /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>Vesicle radius and position through radial profile and cross-correlation</strong> Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement</figcaption>
+<img src="images/radial_avg_115-099.svg" style="width:15cm" alt="Figure 4: Vesicle radius and position through radial profile and cross-correlation Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement" /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Vesicle radius and position through radial profile and cross-correlation</strong> Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement</figcaption>
 </figure>
 </div>
 <p>Fig 6- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw label with connected vesicle-labels; C) modified label with seperated vesicles —&gt; for software: IMOD</p>
 <h3 id="comparison-of-manual-segmentation-with-automatic-deep-learning-based-segmentation">Comparison of manual segmentation with automatic deep-learning based segmentation</h3>
 <div id="fig:3d" class="fignos">
 <figure>
-<img src="images/3d.png" style="width:15cm" alt="Figure 4: 3D model of manual segmented and automatically segmented synaptosome." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>3D model of manual segmented and automatically segmented synaptosome.</strong></figcaption>
+<img src="images/3d.png" style="width:15cm" alt="Figure 5: 3D model of manual segmented and automatically segmented synaptosome." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>3D model of manual segmented and automatically segmented synaptosome.</strong></figcaption>
 </figure>
 </div>
 <p>Evaluation metric DICE for pixel/pixel analysis</p>
@@ -734,7 +738,7 @@ In a next step, filaments connecting the synaptic vesicles with each other (conn
 <p>Global analysis</p>
 <div id="fig:dice" class="fignos">
 <figure>
-<img src="images/blinddice.png" style="width:15cm" alt="Figure 5: Dice coefficient and loss value for training and validation set." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Dice coefficient and loss value for training and validation set.</strong></figcaption>
+<img src="images/blinddice.png" style="width:15cm" alt="Figure 6: Dice coefficient and loss value for training and validation set." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>Dice coefficient and loss value for training and validation set.</strong></figcaption>
 </figure>
 </div>
 <p>3d unet good for 3D processing
@@ -815,11 +819,11 @@ All of these subsets or “folds” were used as training sets, as an entirely s
 <p>The previously prepared subsets are fed into the 3D U-Net in batches of 50. <code class="green">\_cite Ronneberger, what was changed compared to the original U-Net, is there a better publication to cite?*</code>
 These were passed throught the U-Net in a total of 200 epochs.
 Batch normalization was applied before Rectified Lienear Unit (ReLU) activation <code class="green">\_was it? cite Ioffe &amp; Szegedy, maybe? [@doi:10.48550/arXiv.1502.03167]*</code>.</p>
-<p>The 3D U-Net architecture is composed of a contracting or analysis path (convolutional layers), and expanding or synthesis path (deconvolutional layers) (Figure <a href="#fig:unet">6</a>).
+<p>The 3D U-Net architecture is composed of a contracting or analysis path (convolutional layers), and expanding or synthesis path (deconvolutional layers) (Figure <a href="#fig:unet">7</a>).
 <code class="green">\_did we wrote our own U-Net or do we need to quote someones github for the original framework*</code></p>
 <div id="fig:unet" class="fignos">
 <figure>
-<img src="images/unet.png" style="width:10cm" alt="Figure 6: Segmentation Network: U-Net. Input Size is 32^3 \_voxels??*, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*" /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>Segmentation Network: U-Net.</strong> Input Size is 32^3 <code>\_voxels??*</code>, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).<code class="green">\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*</code></figcaption>
+<img src="images/unet.png" style="width:10cm" alt="Figure 7: Segmentation Network: U-Net. Input Size is 32^3 \_voxels??*, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*" /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>Segmentation Network: U-Net.</strong> Input Size is 32^3 <code>\_voxels??*</code>, in each resolution we have two convolution layer followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections shows concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).<code class="green">\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*</code></figcaption>
 </figure>
 </div>
 <p><code class="green">\_what do we use as initial encoder weights and backbone*</code>
@@ -832,7 +836,7 @@ This is followed by a ReLU function, which can be described as</p>
 With every layer of the U-Net, the input size thereby halfs, while the number of channels doubles.</p>
 <p>While the analysis path focusses on the identification of what to segement, the synthesis part focusses on their localization.
 The synthesis path of the U-Net uses the same basic architecture as the analysis path, with a slight variation of using up convolution operation and implementing skip connections, where feature maps of the analysis part are concatunated to the output of the transposed convolutions of the same level.</p>
-<p>The sigmoid activation function is the last block of the U-Net (Figure <a href="#fig:unet">6</a>), it triggers the loss function, which
+<p>The sigmoid activation function is the last block of the U-Net (Figure <a href="#fig:unet">7</a>), it triggers the loss function, which
 As the segementation of vesicles can be considered a binary classification task, binary cross-entropy was implemented as a loss function.</p>
 <p><span class="math display">\[Loss= -\frac{1}{output  size}\sum_{i=1}^{output size} y_i * log  ŷ_i + (1-y_1) * log  (1-ŷ_1)\]</span></p>
 <p>with the <em>output size</em> being the nuber of scalar values in the model output, <em>ŷ_1_</em> being the <em>i</em>-th scalar value in the model output and <em>y_i_</em> being the corresponding target value.
