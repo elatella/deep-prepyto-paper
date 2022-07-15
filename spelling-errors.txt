@@ -4,7 +4,7 @@ ameen
 Amin
 anisotropic
 aseedb
-Astrocytic
+astrocytic
 AURION
 Automator
 automize
@@ -21,12 +21,12 @@ CNNs
 concatunated
 consiting
 convolutional
-cryo
+Cryo
 Dataset
-Datasets
+datasets
 deconvolutional
 DeepFinder
-defocus
+Defocus
 dGTi
 Didcot
 dl
@@ -97,7 +97,7 @@ patchify
 PDICE
 Pleasonton
 Postprocessing
-pre
+Pre
 presynaptic
 pyto
 Radecke
@@ -142,7 +142,7 @@ TP
 Tridiem
 unbinned
 undiluteted
-unet
+UNet
 untilted
 Vitrobot
 voxel
