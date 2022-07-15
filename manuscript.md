@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/b5b35df65d687a5aaec0177aecd4f4d926f5134f/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/b5b35df65d687a5aaec0177aecd4f4d926f5134f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/b5b35df65d687a5aaec0177aecd4f4d926f5134f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/5cb060521add7699a1c37d4b62ac1a2e21550dd6/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5cb060521add7699a1c37d4b62ac1a2e21550dd6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5cb060521add7699a1c37d4b62ac1a2e21550dd6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/b5b35df65d687a5aaec0177aecd4f4d926f5134f/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/5cb060521add7699a1c37d4b62ac1a2e21550dd6/))
 was automatically generated
-from [elatella/deep-prepyto-paper@b5b35df](https://github.com/elatella/deep-prepyto-paper/tree/b5b35df65d687a5aaec0177aecd4f4d926f5134f)
+from [elatella/deep-prepyto-paper@5cb0605](https://github.com/elatella/deep-prepyto-paper/tree/5cb060521add7699a1c37d4b62ac1a2e21550dd6)
 on July 15, 2022.
 </em></small>
 
@@ -268,7 +268,7 @@ Fig 6- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw l
 
 ### Comparison of manual segmentation with automatic deep-learning based segmentation
 
-![**3D model of manual segmented and automatically segmented synaptosome.**](images/3d.png)
+![**3D model of manual segmented and automatically segmented synaptosome.**](images/3d.png){#fig:3d width="15cm"}
 
 Evaluation metric DICE for pixel/pixel analysis
 
@@ -327,7 +327,7 @@ Table 1- Evaluation of the segmentation- MDICE: Mask Dice coefficient for the pr
 
 Global analysis
 
-![**Dice coefficient and loss value for training and validation set.** ](images/blinddice.png){#fig:dice width="10cm"}
+![**Dice coefficient and loss value for training and validation set.** ](images/blinddice.png){#fig:dice width="15cm"}
 
 3d unet good for 3D processing
 recent Nature methods paper by Ben Engel, DeepFinder -> Relion for STA creates mask to find more using dl
