@@ -5,7 +5,7 @@ Amin
 anisotropic
 aseedb
 Astrocytic
-Aurion
+AURION
 Automator
 automize
 Benoit
@@ -23,7 +23,7 @@ consiting
 convolutional
 cryo
 Dataset
-datasets
+Datasets
 deconvolutional
 DeepFinder
 defocus
@@ -94,7 +94,7 @@ patchify
 PDICE
 Pleasonton
 Postprocessing
-Pre
+pre
 presynaptic
 pyto
 Radecke
@@ -120,7 +120,7 @@ subcellular
 subtomogram
 subvolumes
 superresolution
-sv
+SV
 SVs
 Synaptosome
 synaptosomes
@@ -131,7 +131,7 @@ Thermofisher
 Threadripper
 thresholding
 throught
-Tomogram
+tomogram
 tomogram’s
 tomograms
 TP
@@ -141,7 +141,7 @@ undiluteted
 unet
 untilted
 Vitrobot
-Voxel
+voxel
 voxels
 Wageningen
 Weigert
