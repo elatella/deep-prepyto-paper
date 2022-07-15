@@ -287,7 +287,7 @@ content/05.materials_and_methods.md:160:dataset
 content/05.materials_and_methods.md:160:tomogram
 content/05.materials_and_methods.md:161:Dataset
 content/05.materials_and_methods.md:161:Synaptosome
-content/05.materials_and_methods.md:161:tomogram
+content/05.materials_and_methods.md:161:tomograms
 content/05.materials_and_methods.md:162:Dataset
 content/05.materials_and_methods.md:162:tomograms
 content/05.materials_and_methods.md:168:binarization

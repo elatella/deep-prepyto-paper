@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8149107fbbb5cd8d51b714855efd0612dbc8e9bf/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8149107fbbb5cd8d51b714855efd0612dbc8e9bf/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8149107fbbb5cd8d51b714855efd0612dbc8e9bf/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/8149107fbbb5cd8d51b714855efd0612dbc8e9bf/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/))
 was automatically generated
-from [elatella/deep-prepyto-paper@8149107](https://github.com/elatella/deep-prepyto-paper/tree/8149107fbbb5cd8d51b714855efd0612dbc8e9bf)
+from [elatella/deep-prepyto-paper@d471bc5](https://github.com/elatella/deep-prepyto-paper/tree/d471bc57bc22fd0638fe524a77989c6995da298d)
 on July 15, 2022.
 </em></small>
 
@@ -495,7 +495,7 @@ Whereas in the tomograms, vesicle's membrance is darker than inside of vesicles 
 
 #### Adaptive Localized Threshold
 
-although the global threshold reveals almost all desired synaptic vesicles due to variation in the intensity of vesicles surrounding some binarized labels that are far away from the spherical shape of vesicles. First, by looking at the extent value(Ratio of pixels in the region to pixels in the total bounding box. Computed as area / (rows * cols)) and the size of each particle’s binary label we can capture those vesicles that are get connected and those vesicles that captured partially.
+Although the global threshold reveals almost all desired synaptic vesicles due to variation in the intensity of vesicles surrounding but some binarized labels are far away from the spherical shape of vesicles. First, by looking at the size of each particle’s binary label and the extent value (Ratio of pixels in the region to pixels in the total bounding box. Computed as area / (rows * cols)) we can capture those vesicles that are get connected and those vesicles that captured partially.
 Then by searching more into the probability mask, we try to expand the partially detected vesicles and separate those close connected vesicles by searching between the initial threshold and one to find a better finner threshold that can separate these vesicles.
 
 #### Radial Profile
@@ -511,10 +511,10 @@ While we face different metrics for detecting outliers we apply Mahalanobis Dist
 
 We design the evaluation framework to show robust capabilities of the proposed toolbox on synaptic vesicles segmentation which not only to be content with quantitative evaluation on the neural network performance but rather assay the segmentation of vesicles in practice and using the output of the segmentation with another pre-developed toolbox for segmenting tethers and connectors in presynaptic.
 
-1. Dataset: All tomograms that we partially segmented and used for training (Synaptosome)
+1. All 9 tomograms Dataset: that we partially segmented and used for training (Synaptosome)
 2. A single tomogram with the exactly same setup and sample preparation like the train dataset
-3. Dataset: 8 Synaptosome tomogram with ground truth (with an exceeding treatment on the samples)
-4. Dataset: 12 Neuron fully segmented tomograms with completely different sample preparation and microscope setup
+3. 8 Synaptosome tomograms Dataset:  with ground truth (with an exceeding treatment on the samples)
+4. 12 Neuron fully segmented tomograms Dataset: with completely different sample preparation and microscope setup
 
 
 
