@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/b5d4274805f0712f89c802c2d8071db6ce70da16/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/b5d4274805f0712f89c802c2d8071db6ce70da16/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/b5d4274805f0712f89c802c2d8071db6ce70da16/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/5f5a3258de398792bbc24dfc82662c0d382d9590/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f5a3258de398792bbc24dfc82662c0d382d9590/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f5a3258de398792bbc24dfc82662c0d382d9590/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/b5d4274805f0712f89c802c2d8071db6ce70da16/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/5f5a3258de398792bbc24dfc82662c0d382d9590/))
 was automatically generated
-from [elatella/deep-prepyto-paper@b5d4274](https://github.com/elatella/deep-prepyto-paper/tree/b5d4274805f0712f89c802c2d8071db6ce70da16)
+from [elatella/deep-prepyto-paper@5f5a325](https://github.com/elatella/deep-prepyto-paper/tree/5f5a3258de398792bbc24dfc82662c0d382d9590)
 on July 15, 2022.
 </em></small>
 
@@ -259,7 +259,7 @@ In a next step, filaments connecting the synaptic vesicles with each other (conn
 
 ![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network](images/tomo-sclae.svg){#fig:tom width="15cm"}
 
-Fig 4- Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets
+![**Dice Imporvment** Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets(images/improvment-neurons.png){#fig:tom width="15cm"}
 
 
 ![**Vesicle radius and position through radial profile and cross-correlation** Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement](images/radial_avg_115-099.svg){#fig:radial_profile width="15cm"}
