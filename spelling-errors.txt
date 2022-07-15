@@ -4,7 +4,7 @@ ameen
 Amin
 anisotropic
 aseedb
-Astrocytic
+astrocytic
 Aurion
 Automator
 automize
@@ -20,10 +20,10 @@ CCD
 CNNs
 concatunated
 consiting
-Convolutional
+convolutional
 cryo
-dataset
-datasets
+Dataset
+Datasets
 deconvolutional
 DeepFinder
 defocus
@@ -94,7 +94,7 @@ patchify
 PDICE
 Pleasonton
 Postprocessing
-pre
+Pre
 presynaptic
 pyto
 Radecke
@@ -121,7 +121,7 @@ subtomogram
 subvolumes
 superresolution
 SV
-SVs
+svs
 synaptosome
 synaptosomes
 Tecnai
@@ -131,7 +131,7 @@ Thermofisher
 Threadripper
 thresholding
 throught
-tomogram
+Tomogram
 tomogram’s
 tomograms
 TP
