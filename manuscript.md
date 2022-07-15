@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-07-13'
+date-meta: '2022-07-15'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-07-13" />
-  <meta name="citation_publication_date" content="2022-07-13" />
+  <meta name="dc.date" content="2022-07-15" />
+  <meta name="citation_publication_date" content="2022-07-15" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d291eed4fb0d1e59b1ef85ee20483670d15203d5/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d291eed4fb0d1e59b1ef85ee20483670d15203d5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d291eed4fb0d1e59b1ef85ee20483670d15203d5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/f55a549859c071e2335a12a4c3b0c11e850c7e3d/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f55a549859c071e2335a12a4c3b0c11e850c7e3d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f55a549859c071e2335a12a4c3b0c11e850c7e3d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/d291eed4fb0d1e59b1ef85ee20483670d15203d5/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/f55a549859c071e2335a12a4c3b0c11e850c7e3d/))
 was automatically generated
-from [elatella/deep-prepyto-paper@d291eed](https://github.com/elatella/deep-prepyto-paper/tree/d291eed4fb0d1e59b1ef85ee20483670d15203d5)
-on July 13, 2022.
+from [elatella/deep-prepyto-paper@f55a549](https://github.com/elatella/deep-prepyto-paper/tree/f55a549859c071e2335a12a4c3b0c11e850c7e3d)
+on July 15, 2022.
 </em></small>
 
 ## Authors
@@ -303,7 +303,7 @@ Table 1- Evaluation of the segmentation- MDICE: Mask Dice coefficient for the pr
 | Synaptosome T10 |      0.77       |          0.86          |     |   0.05    |   1.96±1.04    |          77          |     74     |     3     |     6     |
 | **Average**     |  **0.75±0.06**  |     **0.83±0.05**      |     | **0.08**  | **2.32±1.43**  |      **286.56**      | **96.30%** | **3.70%** | **6.10%** |
 
-## Test Dataset 3 (Transfer Learning)
+## Test Dataset 3 (Neuron Dataset)
 
 | **_Dataset_** | **_Mask DICE_** | **_Final Label DICE_** |     | **_δ d_** | **_Δ c (nm)_** | **_\# of Vesicles_** |   **TP**   |   **FN**   |  **FP**   |
 | ------------- | :-------------: | :--------------------: | :-: | :-------: | :------------: | :------------------: | :--------: | :--------: | :-------: |
