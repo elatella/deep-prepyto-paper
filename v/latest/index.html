@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8149107fbbb5cd8d51b714855efd0612dbc8e9bf/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8149107fbbb5cd8d51b714855efd0612dbc8e9bf/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8149107fbbb5cd8d51b714855efd0612dbc8e9bf/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/8149107fbbb5cd8d51b714855efd0612dbc8e9bf/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/8149107fbbb5cd8d51b714855efd0612dbc8e9bf">elatella/deep-prepyto-paper@8149107</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/d471bc57bc22fd0638fe524a77989c6995da298d">elatella/deep-prepyto-paper@d471bc5</a>
 on July 15, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -853,7 +853,7 @@ As the segementation of vesicles can be considered a binary classification task,
 <p>Whereas in the tomograms, vesicle’s membrance is darker than inside of vesicles and background, in order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes average of luminance of all marginal voxels.(srounnd of vesicles)
 <code class="green">\_add image from odt??*</code></p>
 <h4 id="adaptive-localized-threshold">Adaptive Localized Threshold</h4>
-<p>although the global threshold reveals almost all desired synaptic vesicles due to variation in the intensity of vesicles surrounding some binarized labels that are far away from the spherical shape of vesicles. First, by looking at the extent value(Ratio of pixels in the region to pixels in the total bounding box. Computed as area / (rows * cols)) and the size of each particle’s binary label we can capture those vesicles that are get connected and those vesicles that captured partially.
+<p>Although the global threshold reveals almost all desired synaptic vesicles due to variation in the intensity of vesicles surrounding but some binarized labels are far away from the spherical shape of vesicles. First, by looking at the size of each particle’s binary label and the extent value (Ratio of pixels in the region to pixels in the total bounding box. Computed as area / (rows * cols)) we can capture those vesicles that are get connected and those vesicles that captured partially.
 Then by searching more into the probability mask, we try to expand the partially detected vesicles and separate those close connected vesicles by searching between the initial threshold and one to find a better finner threshold that can separate these vesicles.</p>
 <h4 id="radial-profile">Radial Profile</h4>
 <h4 id="outlier-removal">Outlier Removal</h4>
@@ -863,10 +863,10 @@ While we face different metrics for detecting outliers we apply Mahalanobis Dist
 <h3 id="analysis-of-results">Analysis of Results</h3>
 <p>We design the evaluation framework to show robust capabilities of the proposed toolbox on synaptic vesicles segmentation which not only to be content with quantitative evaluation on the neural network performance but rather assay the segmentation of vesicles in practice and using the output of the segmentation with another pre-developed toolbox for segmenting tethers and connectors in presynaptic.</p>
 <ol type="1">
-<li>Dataset: All tomograms that we partially segmented and used for training (Synaptosome)</li>
+<li>All 9 tomograms Dataset: that we partially segmented and used for training (Synaptosome)</li>
 <li>A single tomogram with the exactly same setup and sample preparation like the train dataset</li>
-<li>Dataset: 8 Synaptosome tomogram with ground truth (with an exceeding treatment on the samples)</li>
-<li>Dataset: 12 Neuron fully segmented tomograms with completely different sample preparation and microscope setup</li>
+<li>8 Synaptosome tomograms Dataset: with ground truth (with an exceeding treatment on the samples)</li>
+<li>12 Neuron fully segmented tomograms Dataset: with completely different sample preparation and microscope setup</li>
 </ol>
 <h4 id="dice">DICE</h4>
 <p>The quantification of the performance of the model while training is calculated with the general form of dice coefficient for the probabilistic maps and after stitching the probabilistic mask of patches back together and building the tomogram probabilistic map we have another calculation on the whole tomogram for evaluating the similarity of the predicted probability mask with ground truth. The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples.</p>
