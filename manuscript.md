@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/3cfe786f2bf06678a292d042b9f454ad2f07eb54/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/3cfe786f2bf06678a292d042b9f454ad2f07eb54/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/3cfe786f2bf06678a292d042b9f454ad2f07eb54/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/46e6dab354d79b0f8ff21478046d9027f16c09aa/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/46e6dab354d79b0f8ff21478046d9027f16c09aa/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/46e6dab354d79b0f8ff21478046d9027f16c09aa/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/3cfe786f2bf06678a292d042b9f454ad2f07eb54/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/46e6dab354d79b0f8ff21478046d9027f16c09aa/))
 was automatically generated
-from [elatella/deep-prepyto-paper@3cfe786](https://github.com/elatella/deep-prepyto-paper/tree/3cfe786f2bf06678a292d042b9f454ad2f07eb54)
+from [elatella/deep-prepyto-paper@46e6dab](https://github.com/elatella/deep-prepyto-paper/tree/46e6dab354d79b0f8ff21478046d9027f16c09aa)
 on July 15, 2022.
 </em></small>
 
@@ -227,8 +227,8 @@ At each expansion step, the correspondingly cropped feature map of the contracti
 The contracting path captures context, while the expanding path coupled with concatenation enables precise localization.
 The U-Net architecture was developed to achieve a fast and accurate segmentation of biomedical two-dimensional images, with the requirement of only a small fraction of training data in comparison to previous CNNs.
 *might be redundant*
-*Arranging the sequence of convolution layers in the contraction path along with skip connection and concatenating into the expansion path bring significant privilege for medical and semantic segmentation.
-Concurrent with the appearance of 3D convolutional neural networks (CNN) three-dimensional form of U-Net was also developed for volumetric image analysis.*
+Arranging the sequence of convolution layers in the contraction path along with skip connection and concatenating into the expansion path bring significant privilege for medical and semantic segmentation.
+Concurrent with the appearance of 3D convolutional neural networks (CNN) three-dimensional form of U-Net was also developed for volumetric image analysis.
 
 It was then extended to segment 3-dimensional biomedical images (3D U-Net) [@arxiv:1606.06650].
 Weigert et al. [@doi:10.1038/s41592-018-0216-7] implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.
