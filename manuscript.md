@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/46e6dab354d79b0f8ff21478046d9027f16c09aa/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/46e6dab354d79b0f8ff21478046d9027f16c09aa/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/46e6dab354d79b0f8ff21478046d9027f16c09aa/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/25575e291f04d0574343d3a2ee7a17d08f550326/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/25575e291f04d0574343d3a2ee7a17d08f550326/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/25575e291f04d0574343d3a2ee7a17d08f550326/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/46e6dab354d79b0f8ff21478046d9027f16c09aa/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/25575e291f04d0574343d3a2ee7a17d08f550326/))
 was automatically generated
-from [elatella/deep-prepyto-paper@46e6dab](https://github.com/elatella/deep-prepyto-paper/tree/46e6dab354d79b0f8ff21478046d9027f16c09aa)
+from [elatella/deep-prepyto-paper@25575e2](https://github.com/elatella/deep-prepyto-paper/tree/25575e291f04d0574343d3a2ee7a17d08f550326)
 on July 15, 2022.
 </em></small>
 
@@ -257,12 +257,11 @@ In a next step, filaments connecting the synaptic vesicles with each other (conn
 ![**Pipeline of automatic segmentation.** a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks  e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile](images/pipeline.svg){#fig:pipeline width="15cm"}
 
 
-![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network](images/tomo.svg){#fig:tom width="15cm"}
+![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network](images/tomo-sclae.svg){#fig:tom width="15cm"}
 
 Fig 4- Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets
 
-![**Vesicle radius and position through radial profile and cross-correlation**
-Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile
+![**Vesicle radius and position through radial profile and cross-correlation** Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile
 E, F, H, G) Same as above columns after refinement.] (images/radial_avg_115-099.svg){#fig:radial_profile width="15cm"}
 
 Fig 6- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw label with connected vesicle-labels; C) modified label with seperated vesicles ---> for software: IMOD
