@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/202cfa31a31390c7e2e4b838b6778fb133f1b295/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/202cfa31a31390c7e2e4b838b6778fb133f1b295/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/202cfa31a31390c7e2e4b838b6778fb133f1b295/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/202cfa31a31390c7e2e4b838b6778fb133f1b295/))
 was automatically generated
-from [elatella/deep-prepyto-paper@4386a42](https://github.com/elatella/deep-prepyto-paper/tree/4386a42915cddbdd4c775f2fc745c432ccd3e196)
+from [elatella/deep-prepyto-paper@202cfa3](https://github.com/elatella/deep-prepyto-paper/tree/202cfa31a31390c7e2e4b838b6778fb133f1b295)
 on July 15, 2022.
 </em></small>
 
@@ -490,7 +490,7 @@ We split large tomograms into 32x32x32 patches with step size of 24 (stride) and
 
 #### Estimating Global Threshold
 
-In order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes something.
+Whereas in the tomograms, vesicle's membrance are darker from inside and background, in order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes average of  luminance of all marginal voxels.(srounnd of vesicles)
 `\_add image from odt??*`{.green}
 
 #### Adaptive Localized Threshold

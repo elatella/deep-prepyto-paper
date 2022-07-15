@@ -269,6 +269,11 @@ content/05.materials_and_methods.md:123:Softmax
 content/05.materials_and_methods.md:127:tomograms
 content/05.materials_and_methods.md:133:Postprocessing
 content/05.materials_and_methods.md:138:binarize
+content/05.materials_and_methods.md:138:luminance
+content/05.materials_and_methods.md:138:membrance
+content/05.materials_and_methods.md:138:srounnd
+content/05.materials_and_methods.md:138:tomograms
+content/05.materials_and_methods.md:138:voxels
 content/05.materials_and_methods.md:143:binarized
 content/05.materials_and_methods.md:144:finner
 content/05.materials_and_methods.md:150:Benoit

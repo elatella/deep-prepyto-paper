@@ -4,8 +4,8 @@ ameen
 Amin
 anisotropic
 aseedb
-astrocytic
-Aurion
+Astrocytic
+AURION
 Automator
 automize
 Benoit
@@ -20,10 +20,10 @@ CCD
 CNNs
 concatunated
 consiting
-Convolutional
-Cryo
-dataset
-datasets
+convolutional
+cryo
+Dataset
+Datasets
 deconvolutional
 DeepFinder
 defocus
@@ -73,10 +73,12 @@ kV
 LabView
 Lienear
 lossfunction
+luminance
 Lundbeckfonden
 macromolecule
 Mahalanobis
 MDICE
+membrance
 Mopac
 motioncor
 NAD
@@ -116,6 +118,7 @@ sigmoid
 situ
 Softmax
 Sørensen
+srounnd
 Stansted
 subcellular
 subtomogram
@@ -123,7 +126,7 @@ subvolumes
 superresolution
 sv
 SVs
-synaptosome
+Synaptosome
 synaptosomes
 Tecnai
 TEM
@@ -139,7 +142,7 @@ TP
 Tridiem
 unbinned
 undiluteted
-UNet
+unet
 untilted
 Vitrobot
 voxel
