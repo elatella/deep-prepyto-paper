@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/202cfa31a31390c7e2e4b838b6778fb133f1b295/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/202cfa31a31390c7e2e4b838b6778fb133f1b295/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/202cfa31a31390c7e2e4b838b6778fb133f1b295/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/4386a42915cddbdd4c775f2fc745c432ccd3e196/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/202cfa31a31390c7e2e4b838b6778fb133f1b295/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/4386a42915cddbdd4c775f2fc745c432ccd3e196">elatella/deep-prepyto-paper@4386a42</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/202cfa31a31390c7e2e4b838b6778fb133f1b295">elatella/deep-prepyto-paper@202cfa3</a>
 on July 15, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -850,7 +850,7 @@ As the segementation of vesicles can be considered a binary classification task,
 <h4 id="transfer-learning">Transfer Learning</h4>
 <h3 id="postprocessing">Postprocessing</h3>
 <h4 id="estimating-global-threshold">Estimating Global Threshold</h4>
-<p>In order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes something.
+<p>Whereas in the tomograms, vesicle’s membrance are darker from inside and background, in order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes average of luminance of all marginal voxels.(srounnd of vesicles)
 <code class="green">\_add image from odt??*</code></p>
 <h4 id="adaptive-localized-threshold">Adaptive Localized Threshold</h4>
 <p>although the global threshold reveals almost all desired synaptic vesicles due to variation in the intensity of vesicles surrounding some binarized labels that are far away from the spherical shape of vesicles. First, by looking at the extent value(Ratio of pixels in the region to pixels in the total bounding box. Computed as area / (rows * cols)) and the size of each particle’s binary label we can capture those vesicles that are get connected and those vesicles that captured partially.
