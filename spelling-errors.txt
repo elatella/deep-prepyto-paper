@@ -4,8 +4,8 @@ ameen
 Amin
 anisotropic
 aseedb
-Astrocytic
-AURION
+astrocytic
+Aurion
 Automator
 automize
 Benoit
@@ -20,8 +20,8 @@ CCD
 CNNs
 concatunated
 consiting
-convolutional
-cryo
+Convolutional
+Cryo
 dataset
 datasets
 deconvolutional
@@ -59,7 +59,6 @@ homebuilt
 Immuno
 IMOD
 Imporvment
-improvment
 intercellular
 Jakob
 JBSorensen
@@ -95,11 +94,10 @@ Oxfordshire
 patchify
 PDICE
 Pleasonton
-png
 Postprocessing
-Pre
+pre
 presynaptic
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability
@@ -123,8 +121,8 @@ subcellular
 subtomogram
 subvolumes
 superresolution
-SV
-svs
+sv
+SVs
 synaptosome
 synaptosomes
 Tecnai
