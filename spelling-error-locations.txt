@@ -84,11 +84,9 @@ content/03.results.md:16:datasets
 content/03.results.md:16:datasets
 content/03.results.md:16:synaptosome
 content/03.results.md:16:tomograms
-content/03.results.md:19:png
 content/03.results.md:21:IMOD
 content/03.results.md:21:seperated
 content/03.results.md:21:tomogram
-content/03.results.md:25:png
 content/03.results.md:25:synaptosome
 content/03.results.md:29:FN
 content/03.results.md:29:FP
@@ -127,7 +125,6 @@ content/03.results.md:63:Dataset
 content/03.results.md:65:FN
 content/03.results.md:65:FP
 content/03.results.md:65:TP
-content/03.results.md:84:png
 content/03.results.md:86:unet
 content/03.results.md:87:DeepFinder
 content/03.results.md:87:dl
@@ -246,7 +243,6 @@ content/05.materials_and_methods.md:85:ReLU
 content/05.materials_and_methods.md:87:convolutional
 content/05.materials_and_methods.md:87:deconvolutional
 content/05.materials_and_methods.md:87:unet
-content/05.materials_and_methods.md:90:png
 content/05.materials_and_methods.md:90:ReLU
 content/05.materials_and_methods.md:90:unet
 content/05.materials_and_methods.md:90:unet
