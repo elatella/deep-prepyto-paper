@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-07-15'
+date-meta: '2022-07-16'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-07-15" />
-  <meta name="citation_publication_date" content="2022-07-15" />
+  <meta name="dc.date" content="2022-07-16" />
+  <meta name="citation_publication_date" content="2022-07-16" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/))
 was automatically generated
-from [elatella/deep-prepyto-paper@d471bc5](https://github.com/elatella/deep-prepyto-paper/tree/d471bc57bc22fd0638fe524a77989c6995da298d)
-on July 15, 2022.
+from [elatella/deep-prepyto-paper@9ad419c](https://github.com/elatella/deep-prepyto-paper/tree/9ad419ce5796463ba8414fa41732a78167606462)
+on July 16, 2022.
 </em></small>
 
 ## Authors
@@ -467,22 +467,22 @@ $$Loss= -\frac{1}{output  size}\sum_{i=1}^{output size} y_i * log  ŷ_i + (1-y_1
 with the *output size* being the nuber of scalar values in the model output, *ŷ_1_* being the *i*-th scalar value in the model output and *y_i_* being the corresponding target value.
 `\_publication to cite?*`{.green}
 
-The binary cross-entropy lossfunction converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.
+The binary cross-entropy loss function converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.
 
 
+Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one. `\_maybe cite Softmask paper? [@doi:10.48550/arXiv.2206.05499]*`{.green}.
 
-training: weights -> Adam optimizer for the training of the network [@doi:10.48550/arXiv.1412.6980].
 
-"The back-propagation is done to update the weights and reduce the loss function with the help of an optimizer - the most common optimizer algorithm is gradient descent. Multiple epochs are run until the loss converges to the global minima."
+To optimize the weights and reduce the loss function during training the Adam optimizer was used [@doi:10.48550/arXiv.1412.6980].
+200 epochs were run until the loss function reached a global minimum.
 
-Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.
 
 ##### Mask prediction
 
 We split large tomograms into 32x32x32 patches with step size of 24 (stride) and then stitch together the predictions to get the final probability mask.
 
 
-#### Transfer Learning
+#### Transfer Learning / Neuron Dataset
 
 
 ### Postprocessing

@@ -10,7 +10,7 @@
   <meta name="author" content="Guillaume Witz" />
   <meta name="author" content="Jakob B. Sørensen" />
   <meta name="author" content="Benoît Zuber" />
-  <meta name="dcterms.date" content="2022-07-15" />
+  <meta name="dcterms.date" content="2022-07-16" />
   <meta name="keywords" content="synapse, cryo-electron tomography, synaptic vesicles, deep learning, segmentation, post-processing, automation" />
   <title>Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms</title>
   <style>
@@ -52,8 +52,8 @@
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-07-15" />
-  <meta name="citation_publication_date" content="2022-07-15" />
+  <meta name="dc.date" content="2022-07-16" />
+  <meta name="citation_publication_date" content="2022-07-16" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,10 +112,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/d471bc57bc22fd0638fe524a77989c6995da298d/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/d471bc57bc22fd0638fe524a77989c6995da298d">elatella/deep-prepyto-paper@d471bc5</a>
-on July 15, 2022.
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/9ad419ce5796463ba8414fa41732a78167606462">elatella/deep-prepyto-paper@9ad419c</a>
+on July 16, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -841,13 +841,13 @@ As the segementation of vesicles can be considered a binary classification task,
 <p><span class="math display">\[Loss= -\frac{1}{output  size}\sum_{i=1}^{output size} y_i * log  ŷ_i + (1-y_1) * log  (1-ŷ_1)\]</span></p>
 <p>with the <em>output size</em> being the nuber of scalar values in the model output, <em>ŷ_1_</em> being the <em>i</em>-th scalar value in the model output and <em>y_i_</em> being the corresponding target value.
 <code class="green">\_publication to cite?*</code></p>
-<p>The binary cross-entropy lossfunction converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.</p>
-<p>training: weights -&gt; Adam optimizer for the training of the network <span class="citation" data-cites="1G9auqG3f">[<a href="#ref-1G9auqG3f" role="doc-biblioref">20</a>]</span>.</p>
-<p>“The back-propagation is done to update the weights and reduce the loss function with the help of an optimizer - the most common optimizer algorithm is gradient descent. Multiple epochs are run until the loss converges to the global minima.”</p>
-<p>Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one.</p>
+<p>The binary cross-entropy loss function converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.</p>
+<p>Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one. <code class="green">\_maybe cite Softmask paper? [@doi:10.48550/arXiv.2206.05499]*</code>.</p>
+<p>To optimize the weights and reduce the loss function during training the Adam optimizer was used <span class="citation" data-cites="1G9auqG3f">[<a href="#ref-1G9auqG3f" role="doc-biblioref">20</a>]</span>.
+200 epochs were run until the loss function reached a global minimum.</p>
 <h5 id="mask-prediction">Mask prediction</h5>
 <p>We split large tomograms into 32x32x32 patches with step size of 24 (stride) and then stitch together the predictions to get the final probability mask.</p>
-<h4 id="transfer-learning">Transfer Learning</h4>
+<h4 id="transfer-learning-neuron-dataset">Transfer Learning / Neuron Dataset</h4>
 <h3 id="postprocessing">Postprocessing</h3>
 <h4 id="estimating-global-threshold">Estimating Global Threshold</h4>
 <p>Whereas in the tomograms, vesicle’s membrance is darker than inside of vesicles and background, in order to binarize the obtained probability mask, we search through some thresholds (from 0.8 to 1.0) and select the one that minimizes average of luminance of all marginal voxels.(srounnd of vesicles)
