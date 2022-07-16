@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/f5ee8674f2fc0d058288b20728f08d3d17f2f73b/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f5ee8674f2fc0d058288b20728f08d3d17f2f73b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f5ee8674f2fc0d058288b20728f08d3d17f2f73b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/f5ee8674f2fc0d058288b20728f08d3d17f2f73b/))
 was automatically generated
-from [elatella/deep-prepyto-paper@9ad419c](https://github.com/elatella/deep-prepyto-paper/tree/9ad419ce5796463ba8414fa41732a78167606462)
+from [elatella/deep-prepyto-paper@f5ee867](https://github.com/elatella/deep-prepyto-paper/tree/f5ee8674f2fc0d058288b20728f08d3d17f2f73b)
 on July 16, 2022.
 </em></small>
 
@@ -364,7 +364,7 @@ Both datasets have been previously analyzed [@doi:10.1101/2022.03.07.483217].
 
 The preparation of the rat synaptosomes were previously described [@doi:10.1038/nprot.2008.171].
 After the purification, the synaptosomes were incubated for 30min at room temperature.
-1.3mM CaCl2 and 10 nm gold fiducials were added (gold fiducials, #s10110/8. AURION Immuno Gold Reagents & Accessories. Wageningen, The Neatherlands).
+1.3mM CaCl_2_ and 10 nm gold fiducials were added (gold fiducials, #s10110/8. AURION Immuno Gold Reagents & Accessories. Wageningen, The Neatherlands).
 The synaptosome solution was applied to a 200-mesh lacey finder carbon film grid (#AGS166-H2. Agar Scientific. Elektron Technology UK Ltd. Stansted, UK).
 Manual blotting was used to remove exess liquid with the aid of a filter paper.
 Thereafter the grid was immediately plunge frozen in liquid ethane using a homebuilt plunge freezer controlled with a LabView script (National Onstruments Corporation. Mopac Expwy Austin, TX, USA).
@@ -467,10 +467,12 @@ $$Loss= -\frac{1}{output  size}\sum_{i=1}^{output size} y_i * log  ŷ_i + (1-y_1
 with the *output size* being the nuber of scalar values in the model output, *ŷ_1_* being the *i*-th scalar value in the model output and *y_i_* being the corresponding target value.
 `\_publication to cite?*`{.green}
 
+After the last deconvolutional layer, a Softmax layer generates a 3D probability mask 
+
 The binary cross-entropy loss function converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.
 
 
-Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one. `\_maybe cite Softmask paper? [@doi:10.48550/arXiv.2206.05499]*`{.green}.
+Come after the convolutional layers to achieve a a Softmax layer applies to bring channel size to one. `\_maybe cite Softmask paper? [@doi:10.48550/arXiv.2206.05499]*`{.green}.
 
 
 To optimize the weights and reduce the loss function during training the Adam optimizer was used [@doi:10.48550/arXiv.1412.6980].

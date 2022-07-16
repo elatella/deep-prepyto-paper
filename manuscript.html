@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/f5ee8674f2fc0d058288b20728f08d3d17f2f73b/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f5ee8674f2fc0d058288b20728f08d3d17f2f73b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/f5ee8674f2fc0d058288b20728f08d3d17f2f73b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/9ad419ce5796463ba8414fa41732a78167606462/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/f5ee8674f2fc0d058288b20728f08d3d17f2f73b/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/9ad419ce5796463ba8414fa41732a78167606462">elatella/deep-prepyto-paper@9ad419c</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/f5ee8674f2fc0d058288b20728f08d3d17f2f73b">elatella/deep-prepyto-paper@f5ee867</a>
 on July 16, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -762,7 +762,7 @@ Both datasets have been previously analyzed <span class="citation" data-cites="C
 <h4 id="rat-synaptosomes">Rat synaptosomes</h4>
 <p>The preparation of the rat synaptosomes were previously described <span class="citation" data-cites="7sGZgtQa">[<a href="#ref-7sGZgtQa" role="doc-biblioref">15</a>]</span>.
 After the purification, the synaptosomes were incubated for 30min at room temperature.
-1.3mM CaCl2 and 10 nm gold fiducials were added (gold fiducials, #s10110/8. AURION Immuno Gold Reagents &amp; Accessories. Wageningen, The Neatherlands).
+1.3mM CaCl_2_ and 10 nm gold fiducials were added (gold fiducials, #s10110/8. AURION Immuno Gold Reagents &amp; Accessories. Wageningen, The Neatherlands).
 The synaptosome solution was applied to a 200-mesh lacey finder carbon film grid (#AGS166-H2. Agar Scientific. Elektron Technology UK Ltd. Stansted, UK).
 Manual blotting was used to remove exess liquid with the aid of a filter paper.
 Thereafter the grid was immediately plunge frozen in liquid ethane using a homebuilt plunge freezer controlled with a LabView script (National Onstruments Corporation. Mopac Expwy Austin, TX, USA).
@@ -841,8 +841,9 @@ As the segementation of vesicles can be considered a binary classification task,
 <p><span class="math display">\[Loss= -\frac{1}{output  size}\sum_{i=1}^{output size} y_i * log  ŷ_i + (1-y_1) * log  (1-ŷ_1)\]</span></p>
 <p>with the <em>output size</em> being the nuber of scalar values in the model output, <em>ŷ_1_</em> being the <em>i</em>-th scalar value in the model output and <em>y_i_</em> being the corresponding target value.
 <code class="green">\_publication to cite?*</code></p>
+<p>After the last deconvolutional layer, a Softmax layer generates a 3D probability mask</p>
 <p>The binary cross-entropy loss function converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.</p>
-<p>Come after the convolutional layers to achieve a 3D probability mask a Softmax layer applies to bring channel size to one. <code class="green">\_maybe cite Softmask paper? [@doi:10.48550/arXiv.2206.05499]*</code>.</p>
+<p>Come after the convolutional layers to achieve a a Softmax layer applies to bring channel size to one. <code class="green">\_maybe cite Softmask paper? [@doi:10.48550/arXiv.2206.05499]*</code>.</p>
 <p>To optimize the weights and reduce the loss function during training the Adam optimizer was used <span class="citation" data-cites="1G9auqG3f">[<a href="#ref-1G9auqG3f" role="doc-biblioref">20</a>]</span>.
 200 epochs were run until the loss function reached a global minimum.</p>
 <h5 id="mask-prediction">Mask prediction</h5>
