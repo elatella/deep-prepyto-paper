@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4ade81e44fad93669b2446115fa502f0df8e5bfa/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4ade81e44fad93669b2446115fa502f0df8e5bfa/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4ade81e44fad93669b2446115fa502f0df8e5bfa/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/fc0e6cd206207fc1bdf07248a87e10d93fa5360f/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fc0e6cd206207fc1bdf07248a87e10d93fa5360f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fc0e6cd206207fc1bdf07248a87e10d93fa5360f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/4ade81e44fad93669b2446115fa502f0df8e5bfa/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/fc0e6cd206207fc1bdf07248a87e10d93fa5360f/))
 was automatically generated
-from [elatella/deep-prepyto-paper@4ade81e](https://github.com/elatella/deep-prepyto-paper/tree/4ade81e44fad93669b2446115fa502f0df8e5bfa)
+from [elatella/deep-prepyto-paper@fc0e6cd](https://github.com/elatella/deep-prepyto-paper/tree/fc0e6cd206207fc1bdf07248a87e10d93fa5360f)
 on July 17, 2022.
 </em></small>
 
@@ -335,6 +335,9 @@ For example, a single generated vesicle label containing several close connected
 What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. 
 
 ----> local measurements such as diameter or center error in extra figure??
+Center error:
+If we measure each axis error it will reveal that human bias in segmentation is more affected on the Z-axis. [we didn't show it in number but its checked the hypothesis]
+`\_we cannot claim something without showing it. ---> this would belong into results*`{.green}
 
 3d unet good for 3D processing
 recent Nature methods paper by Ben Engel, DeepFinder -> Relion for STA creates mask to find more using dl

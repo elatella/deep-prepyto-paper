@@ -5,7 +5,7 @@ ameen
 Amin
 anisotropic
 aseedb
-astrocytic
+Astrocytic
 Aurion
 Automator
 automize
@@ -24,7 +24,7 @@ dataset
 Datasets
 deconvolutional
 DeepFinder
-defocus
+Defocus
 deteced
 dGTi
 Didcot
@@ -115,7 +115,7 @@ subtomogram
 subvolumes
 SV
 svs
-synaptosome
+Synaptosome
 synaptosomes
 Tecnai
 TEM
