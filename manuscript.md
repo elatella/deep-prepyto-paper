@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/fc0e6cd206207fc1bdf07248a87e10d93fa5360f/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fc0e6cd206207fc1bdf07248a87e10d93fa5360f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/fc0e6cd206207fc1bdf07248a87e10d93fa5360f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/a9c11f6fbfc45a38386ef7fa6eca4eef6b9b4863/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a9c11f6fbfc45a38386ef7fa6eca4eef6b9b4863/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/a9c11f6fbfc45a38386ef7fa6eca4eef6b9b4863/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/fc0e6cd206207fc1bdf07248a87e10d93fa5360f/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/a9c11f6fbfc45a38386ef7fa6eca4eef6b9b4863/))
 was automatically generated
-from [elatella/deep-prepyto-paper@fc0e6cd](https://github.com/elatella/deep-prepyto-paper/tree/fc0e6cd206207fc1bdf07248a87e10d93fa5360f)
+from [elatella/deep-prepyto-paper@a9c11f6](https://github.com/elatella/deep-prepyto-paper/tree/a9c11f6fbfc45a38386ef7fa6eca4eef6b9b4863)
 on July 17, 2022.
 </em></small>
 
@@ -433,6 +433,12 @@ The workflow includes a GUI based on a multidimensional image viewer, Napari (0.
 
 The used datasets included a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution.
 
+1. All 9 tomograms Dataset: partially segmented and used for training (Synaptosome)
+2. A single tomogram with the exactly same setup and sample preparation like the train dataset
+3. 8 Synaptosome tomograms Dataset:  with ground truth (with an exceeding treatment on the samples)
+4. 12 Neuron fully segmented tomograms Dataset: with completely different sample preparation and microscope setup
+
+
 #### Deep Model Training with a 3D U-Net
 
 ##### Create an Input Voxel Patch
@@ -507,57 +513,64 @@ The global threshold identifies the majority synaptic vesicles.
 Some vesicles, however, are more difficult to detect.
 This might be, due to high intensity variations within the tomogram, or because the predicted binarized labels are do not match the spherical shape of vesicles. `\_should go to results?*`{.green}
 
-In terms of binarized lables not matching the sperical shape of vesicles, two main classes were identifed: vesicles that were in close proximity to another and got connected, and vesicles, which were ony partially captured. 
-These two classes were then separated from the rightfully identified vesicles by comparing their label sizes and their extent value  (Ratio of pixels in the region to pixels in the total bounding box computed as area / (rows * cols)). `\_write this into a clean formular*`{.green}
-In the next step, probability masks of the partially deteced vesicles were expanded in an effort to find the correct mask.
+In terms of binarized lables not matching the spherical shape of vesicles, two main classes were identified: vesicles that were in close proximity to another and got connected, and vesicles, which were only partially captured. 
+These two classes were then separated from the rightfully identified vesicles by comparing their label sizes and their extent value  (Ratio of pixels in the region to pixels in the total bounding box computed as area / (rows * cols)). `\_write this into a clean formula*`{.green}
+In the next step, probability masks of the partially detected vesicles were expanded in an effort to find the correct mask.
 The probability masks of the connected vesicles, however, were minimized by searching for a more precise threshold, with the goal of separating the vesicles.
 
 
 #### Radial Profile
 
+`\_@Benoit?*`{.green}
+
 #### Outlier Removal
 
-We define feature space on predicted vesicles’ label containing thickness, membrane density, and estimated radius of a vesicle. `\_@Benoit: after radial profile, we can add the definition of thinness and membrane as well*`{.blue}
-While we face different metrics for detecting outliers we apply Mahalanobis Distance MD on this multivariate space MD to calculate L2 norm distance on normalized variable using the covariance matrix of observation. Afterward, we calculate the p-value of MD and bring this evaluation setup in iterative form while giving the second chance to detect outlier vesicles while recalculating radial profile in a specific margin range (0-10) and removing them if they could not pass a margin on the p-value.
+The feature space of predicted vesicle labels was defined, containing thickness, membrane density, and estimated radius of a vesicle. `\_@Benoit: after radial profile, we can add the definition of thinness and membrane as well*`{.blue}
+To detect outliers in this multivariate space, Mahalanobis Distance (MD) was applied to calculate L2 norm distance on normalized variables using the covariance matrix of observation.
+As an additional way to detect outliers, the p-value of MD was calculated, bringing this evaluation setup in iterative form.
+If the MD p-value of a specific vesicle was not in a specific margin range (0-10), their radial profile was recalculated, and the label entirely removed if they again failed to pass the margin of the p-value.
 
 #### Radius Estimation (Cross Correlation through Radial Profile)
 
+`\_@Benoit?*`{.green}
+
 ### Analysis of Results
 
-We design the evaluation framework to show robust capabilities of the proposed toolbox on synaptic vesicles segmentation which not only to be content with quantitative evaluation on the neural network performance but rather assay the segmentation of vesicles in practice and using the output of the segmentation with another pre-developed toolbox for segmenting tethers and connectors in presynaptic.
-
-1. All 9 tomograms Dataset: that we partially segmented and used for training (Synaptosome)
-2. A single tomogram with the exactly same setup and sample preparation like the train dataset
-3. 8 Synaptosome tomograms Dataset:  with ground truth (with an exceeding treatment on the samples)
-4. 12 Neuron fully segmented tomograms Dataset: with completely different sample preparation and microscope setup
-
-
+The evaluation framework was designed to assess the capabilities of the proposed toolbox for automatic synaptic vesicle segmentation.
+The framework was not only designed to evaluate quantitatively performance of the neural network, but rather assay the segmentation of vesicles in practice `\_unsure what the last part means*`{.green}.
+The pipeline also generates a specific output format, which is necessary to further analyze the presynaptic tomograms via another pre-developed toolbox (Pyto), which segments small molecular filaments associated to the synaptic vesicles, titled tethers and connectors.
 
 #### DICE
 
-The quantification of the performance of the model while training is calculated with the general form of dice coefficient for the probabilistic maps and after stitching the probabilistic mask of patches back together and building the tomogram probabilistic map we have another calculation on the whole tomogram for evaluating the similarity of the predicted probability mask with ground truth. The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples.
+The `\_general form??*`{.green} DICE coefficient for probabilistic subvolume maps was calculated after each epoch as a performance quantification while `\_during?*`{.green} training.
+The probabilistic mask subvolumes were stitched back together, creating a probabilistic map of the whole tomogram. 
+The DICE for the whole tomogram was calculated to evaluate the similarity of the predicted probability mask with ground truth. 
+The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples. `\_this sounds unnecessary difficult*`{.green}
 
 $$1-\frac{2\sum_{pixels} y_{true} y_{pred}%}{\sum_{pixels} y_{true}^2+\sum_{pixels} y_{pred}^2}$$
 
 `\_shouln't it be voxels instead of pixels??*`{.green}
 
-We monitored all the stages of post-processing on the eventual label file with DICE to see the effect of each post-processing step and we report the final label’s DICE.
-
-However dice coefficient is a good global measure to assess our prediction in comparison to ground truth but it is far away from how individually vesicles are segmented. For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value. What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. We can also calculate the error of the estimated diameter and center. We define a vesicle as a true-detected vesicle if the predicted center is in the hand-segmented vesicle and the other way around the center of prediction is in the predicted vesicle. This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is: 
-
-$$V=\frac{1}{12}\pi(4R+d)(2R-d)$$
+THE DICE was also employed to monitor all stages of post-processing on the eventual label file, to observe the effect of each post-processing step.
 
 #### Diameter Error
 
-The relevant characterization of each vesicle would diameter of vesicles which also we used to remove outliers as well (radius of vesicles in that case). The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters 
+The diameter of a vesicle is one of its relevant characterizations, and it is predefined (see Outlier Removal). 
+`\_which diameters are we using in this evaluation as input, pre- or post-outlier removal?*`{.green}
+The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters 
 
 $$\delta d=1-\frac{min(dSi,dGTi)}{max(dSi,dGTi)}$$ {#eq:regular-equation}
 
-where dGTi diameter of each true manual segmented vesicle, and dSi is the diameter of its estimation.
+where dGTi is the diameter of each true manual segmented vesicle, and dSi is the diameter of its estimation.
 
 #### Center error
 
-The center error is a euclidean distance of ground truth and corresponding true predicted vesicles. Besides this calculation, if we measure each axis error it will reveal that human bias in segmentation is more affected on the Z-axis. [we didn't show it in number but its checked the hypothesis]
+The center error is an euclidean distance of ground truth and corresponds to true predicted vesicles `\_true pos or true neg*`{.green}.
+A vesicle was defined as a true-detected vesicle if the predicted center was located inside the hand-segmented vesicle and the other way around the center of prediction was located inside the predicted vesicle. 
+`\_isn't this a bit too general, shouldn't this be a tighter evaluation?*`{.green}
+This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is: 
+
+$$V=\frac{1}{12}\pi(4R+d)(2R-d)$$
 
 
 ## References {.page_break_before}
