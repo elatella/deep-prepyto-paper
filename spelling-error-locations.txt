@@ -63,8 +63,7 @@ content/02.Introduction.md:52:SVs
 content/02.Introduction.md:53:SVs
 content/02.Introduction.md:55:endocytic
 content/02.Introduction.md:55:SV
-content/03.results.md:3:automize
-content/03.results.md:3:tomograms
+content/03.results.md:3:cryo
 content/03.results.md:5:presynaptic
 content/03.results.md:5:tomograms
 content/03.results.md:8:IMOD
@@ -81,7 +80,6 @@ content/03.results.md:14:tomogram’s
 content/03.results.md:16:datasets
 content/03.results.md:16:datasets
 content/03.results.md:16:datasets
-content/03.results.md:16:Imporvment
 content/03.results.md:16:synaptosome
 content/03.results.md:16:tomograms
 content/03.results.md:21:IMOD

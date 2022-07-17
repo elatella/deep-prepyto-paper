@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/01af1175b1748d8f4da8778020b523a4e2c0cd41/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/01af1175b1748d8f4da8778020b523a4e2c0cd41/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/01af1175b1748d8f4da8778020b523a4e2c0cd41/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/769f7b58e02a7e8b25ad67150a6957e1466320d5/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/769f7b58e02a7e8b25ad67150a6957e1466320d5/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/769f7b58e02a7e8b25ad67150a6957e1466320d5/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/01af1175b1748d8f4da8778020b523a4e2c0cd41/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/769f7b58e02a7e8b25ad67150a6957e1466320d5/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/01af1175b1748d8f4da8778020b523a4e2c0cd41">elatella/deep-prepyto-paper@01af117</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/769f7b58e02a7e8b25ad67150a6957e1466320d5">elatella/deep-prepyto-paper@769f7b5</a>
 on July 17, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -245,10 +245,9 @@ Additionally, we designed a multivariate ranking procedure, highlighting possibl
 We also introduce a semi-automatic method to very quickly fix wrongly segmented and missed SVs.</p>
 <p>Although our set of procedures was developed with the use case of SV segmentation in mind, it can be used to segment any other types of biological spherical vesicles, such as transport vesicles, secretory vesicles, endocytic vesicles, and extracellular vesicles.</p>
 <h2 id="results">Results</h2>
-<p>To automize the tracing of cellular features in tomograms, also called segmentation, we developed a deep-learning pipeline, which segments 3D objects.
--&gt; similar approaches in 2D
-The manual segmentation of synaptic vesicles is one of the most time-intensive steps, when segmenting tomograms of presynaptic terminals.
-Synaptic vesicles also constitute a large, homogeneous group, which would create a large training set for deep learning applications.
+<p>Cellular cryo- electron tomography is an upcoming field with a multitude of possible applications.</p>
+<p>The manual segmentation of synaptic vesicles is one of the most time-intensive steps, when segmenting tomograms of presynaptic terminals.
+Synaptic vesicles constitute a large, homogeneous group, constituting a large training set for deep learning applications.
 Therefore, we decided to develop the automatic segmentation for synaptic vesicles in an initial step.
 The used tomograms were previously manually segmented with IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">13</a>]</span>.
 In a next step, filaments connecting the synaptic vesicles with each other (connectors) and to the active zone (AZ) were automatically segmented with the algorithm application Pyto <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.</p>
@@ -264,7 +263,7 @@ In a next step, filaments connecting the synaptic vesicles with each other (conn
 </div>
 <div id="fig:tom" class="fignos">
 <figure>
-<img src="images/improvment-neurons.png" style="width:15cm" alt="Figure 3: Dice Imporvment Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets" /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>Dice Imporvment</strong> Dice improvements after post processing of initial predicted mask (different colors correspond to different tomograms ): a) training datasets b) synaptosome test datasets c) Neuron test datasets</figcaption>
+<img src="images/improvment-post-processing-dice.svg" style="width:15cm" alt="Figure 3: DICE Improvement DICE improvements at different post processing steps of initial predicted mask (different colors correspond to different tomograms): a) training datasets b) synaptosome test datasets c) Neuron test datasets" /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>DICE Improvement</strong> DICE improvements at different post processing steps of initial predicted mask (different colors correspond to different tomograms): a) training datasets b) synaptosome test datasets c) Neuron test datasets</figcaption>
 </figure>
 </div>
 <div id="fig:radial_profile" class="fignos">
@@ -276,7 +275,7 @@ In a next step, filaments connecting the synaptic vesicles with each other (conn
 <h3 id="comparison-of-manual-segmentation-with-automatic-deep-learning-based-segmentation">Comparison of manual segmentation with automatic deep-learning based segmentation</h3>
 <div id="fig:3d" class="fignos">
 <figure>
-<img src="images/3d.png" style="width:15cm" alt="Figure 5: 3D model of manual segmented and automatically segmented synaptosome." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>3D model of manual segmented and automatically segmented synaptosome.</strong></figcaption>
+<img src="images/3d.png" style="width:10cm" alt="Figure 5: 3D model of manual segmented and automatically segmented synaptosome." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>3D model of manual segmented and automatically segmented synaptosome.</strong></figcaption>
 </figure>
 </div>
 <p>Evaluation metric DICE for pixel/pixel analysis</p>
@@ -738,7 +737,7 @@ In a next step, filaments connecting the synaptic vesicles with each other (conn
 <p>Global analysis</p>
 <div id="fig:dice" class="fignos">
 <figure>
-<img src="images/blinddice.png" style="width:15cm" alt="Figure 6: DICE coefficient and loss value for training and validation set." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>DICE coefficient and loss value for training and validation set.</strong></figcaption>
+<img src="images/blinddice.png" style="width:7cm" alt="Figure 6: DICE coefficient and loss value for training and validation set." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>DICE coefficient and loss value for training and validation set.</strong></figcaption>
 </figure>
 </div>
 <p>While the DICE coefficient is a good global measure to assess the predictions in comparison to the ground truth, it is difficult to asses local segmentation accurracy.
