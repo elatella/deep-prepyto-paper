@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-07-16'
+date-meta: '2022-07-17'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-07-16" />
-  <meta name="citation_publication_date" content="2022-07-16" />
+  <meta name="dc.date" content="2022-07-17" />
+  <meta name="citation_publication_date" content="2022-07-17" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/74752d29b47a61b2c2ff90a1c1330c248e1edbfa/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/74752d29b47a61b2c2ff90a1c1330c248e1edbfa/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/74752d29b47a61b2c2ff90a1c1330c248e1edbfa/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/4ade81e44fad93669b2446115fa502f0df8e5bfa/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4ade81e44fad93669b2446115fa502f0df8e5bfa/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/4ade81e44fad93669b2446115fa502f0df8e5bfa/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/74752d29b47a61b2c2ff90a1c1330c248e1edbfa/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/4ade81e44fad93669b2446115fa502f0df8e5bfa/))
 was automatically generated
-from [elatella/deep-prepyto-paper@74752d2](https://github.com/elatella/deep-prepyto-paper/tree/74752d29b47a61b2c2ff90a1c1330c248e1edbfa)
-on July 16, 2022.
+from [elatella/deep-prepyto-paper@4ade81e](https://github.com/elatella/deep-prepyto-paper/tree/4ade81e44fad93669b2446115fa502f0df8e5bfa)
+on July 17, 2022.
 </em></small>
 
 ## Authors
@@ -327,7 +327,14 @@ Table 1- Evaluation of the segmentation- MDICE: Mask Dice coefficient for the pr
 
 Global analysis
 
-![**Dice coefficient and loss value for training and validation set.** ](images/blinddice.png){#fig:dice width="15cm"}
+![**DICE coefficient and loss value for training and validation set.** ](images/blinddice.png){#fig:dice width="15cm"}
+
+
+While the DICE coefficient is a good global measure to assess the predictions in comparison to the ground truth, it is difficult to asses local segmentation accurracy. 
+For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value. 
+What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. 
+
+----> local measurements such as diameter or center error in extra figure??
 
 3d unet good for 3D processing
 recent Nature methods paper by Ben Engel, DeepFinder -> Relion for STA creates mask to find more using dl
