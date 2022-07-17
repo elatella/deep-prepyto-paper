@@ -5,8 +5,8 @@ ameen
 Amin
 anisotropic
 aseedb
-astrocytic
-Aurion
+Astrocytic
+AURION
 Automator
 Benoît
 binarization
@@ -18,7 +18,7 @@ Carlsbergfondet
 CCD
 CNNs
 convolutional
-Cryo
+cryo
 dataset
 datasets
 deconvolutional
@@ -34,6 +34,7 @@ elatella
 Elektron
 endocytic
 Engel
+epoches
 Eval
 exocytosis
 Expwy
@@ -66,7 +67,7 @@ luminance
 Lundbeckfonden
 macromolecule
 Mahalanobis
-MDICE
+MDice
 Mopac
 motioncor
 NAD
@@ -80,7 +81,7 @@ OC
 overfitting
 Oxfordshire
 patchify
-PDICE
+PDice
 Pleasonton
 Postprocessing
 pre
@@ -109,9 +110,9 @@ subcellular
 subtomogram
 subvolume
 subvolumes
-SV
-SVs
-synaptosome
+sv
+svs
+Synaptosome
 synaptosomes
 Tecnai
 TEM
