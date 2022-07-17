@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/2daa29221a2d8fffba846167df3a8279396a0aef/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2daa29221a2d8fffba846167df3a8279396a0aef/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2daa29221a2d8fffba846167df3a8279396a0aef/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/128392a483e50fbe7e2501e5558d1332ec642f54/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/128392a483e50fbe7e2501e5558d1332ec642f54/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/128392a483e50fbe7e2501e5558d1332ec642f54/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/2daa29221a2d8fffba846167df3a8279396a0aef/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/128392a483e50fbe7e2501e5558d1332ec642f54/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/2daa29221a2d8fffba846167df3a8279396a0aef">elatella/deep-prepyto-paper@2daa292</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/128392a483e50fbe7e2501e5558d1332ec642f54">elatella/deep-prepyto-paper@128392a</a>
 on July 17, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -257,40 +257,37 @@ The learning progress was tracked by calculating the Dice coefficient and the lo
 The dice value for the training dataset started at a value of ~0.25 and rose to a value of over 0.9 after the initial 50 epoches.
 The loss value of the training dataset had an initial value of over 0.55 and declined to values below 0.05 after the initial 50 epochs and further striving towards 0 in the following depicted epochs.
 <code>\_Validation Dice and loss from treated synaptosome dataset?*</code>
-The validation dataset showed much more fluctuations during the</p>
+The validation dataset showed much more fluctuations during both validation and loss progression.
+The dice value for the validation dataset started at a value of ~0.27 and rose to an average value of over 0.75 after the initial 50 epoches.
+The loss value of the validation dataset had an initial value 1 and declined to values below 0.3 after the initial 50 epochs.</p>
 <div id="fig:dice" class="fignos">
 <figure>
 <img src="images/blinddice.png" style="width:7cm" alt="Figure 1: Dice coefficient and loss value for training and validation set. \_legend in figure should say &quot;Training Dice&quot;*" /><figcaption aria-hidden="true"><span>Figure 1:</span> <strong>Dice coefficient and loss value for training and validation set.</strong> <code class="green">\_legend in figure should say "Training Dice"*</code></figcaption>
 </figure>
 </div>
-<p>While the Dice coefficient is a good global measure to assess the predictions in comparison to the ground truth, it is difficult to asses local segmentation accurracy.
-For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value.
-What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates.</p>
-<p>—-&gt; local measurements such as diameter or center error in extra figure??
-Center error:
-If we measure each axis error it will reveal that human bias in segmentation is more affected on the Z-axis. [we didn’t show it in number but its checked the hypothesis]
-<code class="green">\_we cannot claim something without showing it. ---&gt; this would belong into results*</code></p>
-<p>3d unet good for 3D processing
-recent Nature methods paper by Ben Engel, DeepFinder -&gt; Relion for STA creates mask to find more using dl
--what are they doing, maybe compare that in the text, different aims; we might compare results we achieve (keep as bonus, revision)</p>
-<p>3 different types of dl: classification, localization and segmentation
-We specialize in accuratly segmenting 3D svs -&gt; results
-through the network, output is a mask, smooth Dice/ binary Dice = which one for our mask? one function for both? -&gt; Amin will check
-when we encounter error until now we remove sv(?), bug inside function -&gt; fix bug for better performance, how many fail and why?
-evaluation: objectwise evaluation for I/O, radius, center (according to nature paper) -&gt; compare with manual seg
-other common evaluation tool other than Dice (Amin wants to check)</p>
-<p>The pipeline for automatic segmentation of vesicles consists of two major parts the neural network consisting of a U-Net neural network and the post processing steps refining the probability mask generated by the U-Net (Figure <a href="#fig:pipeline">2</a>).</p>
+<p><code class="green">\_----&gt;add figures of local measurements such as diameter or center error as an extra figure, why else listed in M&amp;M??"*</code></p>
+<p>After the neural network is trained to recognize the synaptic vesicles with a sufficient probability, the trained U-Net was implemented into a pipeline.
+The pipeline for automatic segmentation of vesicles consists of two major parts: the neural network consisting of a U-Net neural network, and the post-processing steps refining the labels generated by the U-Net (Figure <a href="#fig:pipeline">2</a>).
+The three batches of tomograms (synaptosome control, synaptosome treatment and neuron) were each handed to the pipeline.</p>
 <div id="fig:pipeline" class="fignos">
 <figure>
-<img src="images/pipeline.svg" style="width:15cm" alt="Figure 2: Pipeline of automatic segmentation. a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile" /><figcaption aria-hidden="true"><span>Figure 2:</span> <strong>Pipeline of automatic segmentation.</strong> a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network d) probability masks e) stitching patches back f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile</figcaption>
+<img src="images/pipeline.svg" style="width:15cm" alt="Figure 2: Pipeline of automatic segmentation. a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile" /><figcaption aria-hidden="true"><span>Figure 2:</span> <strong>Pipeline of automatic segmentation.</strong> a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile</figcaption>
 </figure>
 </div>
+<p>Each tomogram is split into patches of 32x32x32 <code class="green">\_unit?*</code>.
+These patches are the fed into the trained U-Net, which outputs a probability mask for those patches.
+To obtain a complete probability mask, the patches are stitched back together.
+The probability mask is further refined by applying global and adaptive localized thresholding steps (Figure <a href="#fig:pipeline">2</a>, Figure <a href="#fig:tom">3</a>).</p>
 <div id="fig:tom" class="fignos">
 <figure>
-<img src="images/tomo-sclae.svg" style="width:15cm" alt="Figure 3: 2D Slices A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network" /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>2D Slices</strong> A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing C) predicted probability mask by the segmentation network</figcaption>
+<img src="images/tomo-sclae.svg" style="width:15cm" alt="Figure 3: 2D Slices A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing; purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) predicted probability mask by the segmentation network" /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>2D Slices</strong> A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing; purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) predicted probability mask by the segmentation network</figcaption>
 </figure>
 </div>
-<div id="fig:tom" class="fignos">
+<p><code class="green">\_more detail about global and adaptive localized threshold*</code>
+For further optimization of the mask, outliers were removed.
+Removed outliers mostly consisted of vesicles which were only partially segmented, and vesicles which maks were fused together due to proximity.
+The removed outliers were reevaluated by reducing or expanding their radius (Figure <a href="#fig:radial_profile">5</a>).</p>
+<div id="fig:dice-improv" class="fignos">
 <figure>
 <img src="images/improvment-post-processing-dice.svg" style="width:15cm" alt="Figure 4: Dice Improvement Dice improvements at different post processing steps of initial predicted mask (different colors correspond to different tomograms): a) training datasets b) synaptosome test datasets c) Neuron test datasets" /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Dice Improvement</strong> Dice improvements at different post processing steps of initial predicted mask (different colors correspond to different tomograms): a) training datasets b) synaptosome test datasets c) Neuron test datasets</figcaption>
 </figure>
