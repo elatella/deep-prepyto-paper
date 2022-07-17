@@ -6,7 +6,7 @@ Amin
 anisotropic
 aseedb
 Astrocytic
-Aurion
+AURION
 Automator
 automize
 Benoît
@@ -18,9 +18,9 @@ CaCl
 Carlsbergfondet
 CCD
 CNNs
-convolutional
-Cryo
-Dataset
+Convolutional
+cryo
+dataset
 datasets
 deconvolutional
 DeepFinder
@@ -111,7 +111,7 @@ subtomogram
 subvolume
 subvolumes
 SV
-SVs
+svs
 synaptosome
 synaptosomes
 Tecnai
@@ -120,13 +120,13 @@ TFS
 Thermofisher
 Threadripper
 thresholding
-tomogram
+Tomogram
 tomogram’s
 tomograms
 TP
 Tridiem
 unbinned
-unet
+UNet
 untilted
 Vitrobot
 Voxel
