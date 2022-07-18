@@ -10,7 +10,7 @@
   <meta name="author" content="Guillaume Witz" />
   <meta name="author" content="Jakob B. Sørensen" />
   <meta name="author" content="Benoît Zuber" />
-  <meta name="dcterms.date" content="2022-07-17" />
+  <meta name="dcterms.date" content="2022-07-18" />
   <meta name="keywords" content="synapse, cryo-electron tomography, synaptic vesicles, deep learning, segmentation, post-processing, automation" />
   <title>Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms</title>
   <style>
@@ -52,8 +52,8 @@
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-07-17" />
-  <meta name="citation_publication_date" content="2022-07-17" />
+  <meta name="dc.date" content="2022-07-18" />
+  <meta name="citation_publication_date" content="2022-07-18" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/128392a483e50fbe7e2501e5558d1332ec642f54/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/128392a483e50fbe7e2501e5558d1332ec642f54/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/128392a483e50fbe7e2501e5558d1332ec642f54/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/47b31da6943ccb7fedac3120d74833a07226fc6e/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/47b31da6943ccb7fedac3120d74833a07226fc6e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/47b31da6943ccb7fedac3120d74833a07226fc6e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,10 +112,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/128392a483e50fbe7e2501e5558d1332ec642f54/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/47b31da6943ccb7fedac3120d74833a07226fc6e/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/128392a483e50fbe7e2501e5558d1332ec642f54">elatella/deep-prepyto-paper@128392a</a>
-on July 17, 2022.
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/47b31da6943ccb7fedac3120d74833a07226fc6e">elatella/deep-prepyto-paper@47b31da</a>
+on July 18, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -285,29 +285,25 @@ The probability mask is further refined by applying global and adaptive localize
 </div>
 <p><code class="green">\_more detail about global and adaptive localized threshold*</code>
 For further optimization of the mask, outliers were removed.
-Removed outliers mostly consisted of vesicles which were only partially segmented, and vesicles which maks were fused together due to proximity.
-The removed outliers were reevaluated by reducing or expanding their radius (Figure <a href="#fig:radial_profile">5</a>).</p>
-<div id="fig:dice-improv" class="fignos">
-<figure>
-<img src="images/improvment-post-processing-dice.svg" style="width:15cm" alt="Figure 4: Dice Improvement Dice improvements at different post processing steps of initial predicted mask (different colors correspond to different tomograms): a) training datasets b) synaptosome test datasets c) Neuron test datasets" /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Dice Improvement</strong> Dice improvements at different post processing steps of initial predicted mask (different colors correspond to different tomograms): a) training datasets b) synaptosome test datasets c) Neuron test datasets</figcaption>
-</figure>
-</div>
+Removed outliers mostly consisted of vesicles which were only partially segmented, and vesicles which maks were adjacent due to proximity.
+The removed masks, which only partially traced the vesicles, were reevaluated by reducing or expanding their radius (Figure <a href="#fig:radial_profile">4</a>).
+<code class="green">\_was the center of the vesicles also reevaluated?*</code></p>
 <div id="fig:radial_profile" class="fignos">
 <figure>
-<img src="images/radial_avg_115-099.svg" style="width:15cm" alt="Figure 5: Vesicle radius and position through radial profile and cross-correlation Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement" /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Vesicle radius and position through radial profile and cross-correlation</strong> Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement</figcaption>
+<img src="images/radial_avg_115-099.svg" style="width:15cm" alt="Figure 4: Vesicle radius and position through radial profile and cross-correlation Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement" /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Vesicle radius and position through radial profile and cross-correlation</strong> Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement</figcaption>
 </figure>
 </div>
-<p>Fig 6- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw label with connected vesicle-labels; C) modified label with seperated vesicles —&gt; for software: IMOD</p>
-<h3 id="comparison-of-manual-segmentation-with-automatic-deep-learning-based-segmentation">Comparison of manual segmentation with automatic deep-learning based segmentation</h3>
-<div id="fig:3d" class="fignos">
+<p>The adjacent vesicle masks were seperated (Figure <code class="green">\_missing*</code>). <code class="green">\_how?*</code></p>
+<p><code class="green">\_**missing Figure- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw label with connected vesicle-labels; C) modified label with seperated vesicles ---&gt; for software: IMOD**</code></p>
+<p>The Dice coefficient was used to track the global congruence between the manually segmented mask and the predicted mask within the different tomograms (Figure <a href="#fig:dice-improv">5</a>).</p>
+<div id="fig:dice-improv" class="fignos">
 <figure>
-<img src="images/3d.png" style="width:10cm" alt="Figure 6: 3D model of manual segmented and automatically segmented synaptosome." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>3D model of manual segmented and automatically segmented synaptosome.</strong></figcaption>
+<img src="images/improvment-post-processing-dice.svg" style="width:15cm" alt="Figure 5: Dice developement during post-processing Dice developement at different post processing steps of initial predicted mask (different colors correspond to different tomograms): A) synaptosomal training datasets B) synaptosomal test datasets c) neuron test datasets" /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Dice developement during post-processing</strong> Dice developement at different post processing steps of initial predicted mask (different colors correspond to different tomograms): A) synaptosomal training datasets B) synaptosomal test datasets c) neuron test datasets</figcaption>
 </figure>
 </div>
-<p>Evaluation metric Dice for pixel/pixel analysis</p>
-<p>Table 1- Evaluation of the segmentation- MDice: Mask Dice coefficient for the predicted mask PDice: Dice coefficient after post-processing SIGMA-d: diameter error on correctly detected vesicle, DELTA-c: average error center (nm) #Vesicles: number of expected vesicles TP: True Positive FN: False Negative FP: False Positive</p>
-<h1 id="final-eval-tables">Final Eval Tables</h1>
-<h2 id="train-dataset">Train Dataset</h2>
+<h3 id="final-eval-tables">Final Eval Tables</h3>
+<p>Table 1- Evaluation of the segmentation: Mask Dice: Mask Dice coefficient for the predicted mask; Final Label Dice: Dice coefficient after post-processing; δ d: diameter error on correctly detected vesicle; Δ c: average error center (nm); # of Vesicles: number of expected vesicles; TP: True Positive; FN: False Negative; FP: False Positive</p>
+<h4 id="train-dataset">Train Dataset</h4>
 <table>
 <thead>
 <tr class="header">
@@ -446,7 +442,7 @@ The removed outliers were reevaluated by reducing or expanding their radius (Fig
 </tr>
 </tbody>
 </table>
-<h2 id="test-dataset-same-preparation-and-microscope-with-training-set">Test Dataset (Same preparation and microscope with training set)</h2>
+<h4 id="test-dataset-same-preparation-and-microscope-with-training-set">Test Dataset (Same preparation and microscope with training set)</h4>
 <table>
 <thead>
 <tr class="header">
@@ -585,7 +581,7 @@ The removed outliers were reevaluated by reducing or expanding their radius (Fig
 </tr>
 </tbody>
 </table>
-<h2 id="test-dataset-3-neuron-dataset">Test Dataset 3 (Neuron Dataset)</h2>
+<h4 id="test-dataset-3-neuron-dataset">Test Dataset 3 (Neuron Dataset)</h4>
 <table>
 <thead>
 <tr class="header">
@@ -760,8 +756,22 @@ The removed outliers were reevaluated by reducing or expanding their radius (Fig
 </tr>
 </tbody>
 </table>
+<h3 id="comparison-of-manual-segmentation-with-automatic-deep-learning-based-segmentation">Comparison of manual segmentation with automatic deep-learning based segmentation</h3>
+<div id="fig:3d" class="fignos">
+<figure>
+<img src="images/3d.png" style="width:10cm" alt="Figure 6: 3D model of manual segmented and automatically segmented synaptosome." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>3D model of manual segmented and automatically segmented synaptosome.</strong></figcaption>
+</figure>
+</div>
 <h2 id="discussion">Discussion</h2>
-<p>DICE</p>
+<p>While the Dice coefficient is a good global measure to assess the predictions in comparison to the ground truth, it is difficult to asses local segmentation accurracy.
+For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value.
+What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates.</p>
+<p>Center error:
+If we measure each axis error it will reveal that human bias in segmentation is more affected on the Z-axis. [we didn’t show it in number but its checked the hypothesis]
+<code class="green">\_we cannot claim something without showing it. ---&gt; this would belong into results*</code></p>
+<p>3d unet good for 3D processing
+recent Nature methods paper by Ben Engel, DeepFinder -&gt; Relion for STA creates mask to find more using dl
+-what are they doing, maybe compare that in the text, different aims; we might compare results we achieve (keep as bonus, revision)</p>
 <h3 id="outlook">Outlook</h3>
 <p>implement automatic cell-outline and active zone segmentation as deep learning workflow using UNet
 implement automatic connector and tether segmentation as a deep leaning workflow using UNet</p>
