@@ -4,7 +4,7 @@ ameen
 Amin
 anisotropic
 aseedb
-Astrocytic
+astrocytic
 Aurion
 Automator
 Benoît
@@ -16,10 +16,10 @@ CaCl
 Carlsbergfondet
 CCD
 CNNs
-convolutional
+Convolutional
 cryo
-Dataset
-Datasets
+dataset
+datasets
 deconvolutional
 DeepFinder
 defocus
@@ -125,7 +125,7 @@ tomograms
 TP
 Tridiem
 unbinned
-unet
+UNet
 untilted
 Vitrobot
 Voxel

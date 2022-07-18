@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/47b31da6943ccb7fedac3120d74833a07226fc6e/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/47b31da6943ccb7fedac3120d74833a07226fc6e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/47b31da6943ccb7fedac3120d74833a07226fc6e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/0b4dcda05275ee8b63b2a133a3de782923a77e68/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0b4dcda05275ee8b63b2a133a3de782923a77e68/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0b4dcda05275ee8b63b2a133a3de782923a77e68/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/47b31da6943ccb7fedac3120d74833a07226fc6e/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/0b4dcda05275ee8b63b2a133a3de782923a77e68/))
 was automatically generated
-from [elatella/deep-prepyto-paper@47b31da](https://github.com/elatella/deep-prepyto-paper/tree/47b31da6943ccb7fedac3120d74833a07226fc6e)
+from [elatella/deep-prepyto-paper@0b4dcda](https://github.com/elatella/deep-prepyto-paper/tree/0b4dcda05275ee8b63b2a133a3de782923a77e68)
 on July 18, 2022.
 </em></small>
 
@@ -447,6 +447,7 @@ All the framework has been implemented in Python using the Keras library (2.4.3)
 The workflow includes a GUI based on a multidimensional image viewer, Napari (0.4.15), enabling the user to add and remove vesicles.
 `\_any other packages required?*`{.green}
 
+
 The used datasets included a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution.
 
 1. All 9 tomograms Dataset: partially segmented and used for training (Synaptosome)
@@ -473,10 +474,12 @@ Batch normalization was applied before Rectified Linear Unit (ReLU) activation `
 
 The 3D U-Net architecture is composed of a contracting or analysis path (convolutional layers), and an expanding or synthesis path (deconvolutional layers) (Figure {@fig:unet}).
 `\_did we wrote our own U-Net or do we need to quote someones github for the original framework*`{.green}
+`\_we used CSBDeep for Convoultion blocks Benoit mentioned it in the introdction we can bring it here but github licence is BSD 3-Clause License whihc it means we dont need to reference *`{.green} 
 
 ![**Segmentation Network: U-Net.** Input Size is 32^3 `\_voxels??*`, in each resolution we have two convolution layers followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections show concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).`\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*`{.green} ](images/unet.png){#fig:unet width="10cm"}
 
 `\_what do we use as initial encoder weights and backbone*`{.green} 
+`\_code checked: keras- The Glorot uniform initializer, also called Xavier uniform initializer.*`{.green} 
 During each layer of the analysis path, the convolution filter consisting of a 3x3x3 kernel, with randomly initialized weights, was moved over all the voxels in each subset twice, each time taking their dot product.
 This kernel extracts and enhances the features in different parts of the image.
 This is followed by a ReLU function, which can be described as 
@@ -491,6 +494,7 @@ With every layer of the U-Net, the input size thereby halves, while the number o
 While the analysis path focuses on the identification of the areas of interest, the synthesis part focuses on their localization.
 The synthesis path of the U-Net uses the same basic architecture as the analysis path, with a slight variation of using up convolution operation and implementing skip connections, where feature maps of the analysis part are concatenated to the output of the transposed convolutions of the same level. 
 
+`\_code checked:final = Conv3D(n_channel_out, (1,) * n_dim, activation='sigmoid')(unet) *`{.green} 
 The sigmoid/Softmax `\_in the image you write Sigmoid but in the text Softmax, which activation function was used?*`{.green} activation function is the last block of the U-Net (Figure {@fig:unet}), it triggers the loss function, which converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.
 As the segmentation of vesicles can be considered a binary classification task, binary cross-entropy was implemented as a loss function.
 
@@ -553,7 +557,7 @@ If the MD p-value of a specific vesicle was not in a specific margin range (0-10
 ### Analysis of Results
 
 The evaluation framework was designed to assess the capabilities of the proposed toolbox for automatic synaptic vesicle segmentation.
-The framework was not only designed to evaluate quantitatively performance of the neural network, but rather assay the segmentation of vesicles in practice `\_unsure what the last part means*`{.green}.
+The framework was not only designed to evaluate quantitatively performance of the neural network, but rather assay the segmentation of vesicles in practice `\_unsure what the last part means*`{.green}. `\_I tried to say we develop the software rather than an algorithm paper with ablation study kinda more trasnfer learning but however for tranfer learning we might need add finetunning the network or say this sentence in other way*`{.green}.
 The pipeline also generates a specific output format, which is necessary to further analyze the presynaptic tomograms via another pre-developed toolbox (Pyto), which segments small molecular filaments associated to the synaptic vesicles, titled tethers and connectors.
 
 #### DICE
@@ -566,6 +570,7 @@ The binarization from the same formulation converges to this interpretation that
 $$1-\frac{2\sum_{pixels} y_{true} y_{pred}%}{\sum_{pixels} y_{true}^2+\sum_{pixels} y_{pred}^2}$$
 
 `\_shouln't it be voxels instead of pixels??*`{.green}
+`\_yes voxel is right*`{.green}
 
 THE DICE was also employed to monitor all stages of post-processing on the eventual label file, to observe the effect of each post-processing step.
 
@@ -573,6 +578,7 @@ THE DICE was also employed to monitor all stages of post-processing on the event
 
 The diameter of a vesicle is one of its relevant characterizations, and it is predefined (see Outlier Removal). 
 `\_which diameters are we using in this evaluation as input, pre- or post-outlier removal?*`{.green}
+`\_after! I meant from that perentesis that radius or dimater we assume as one charectiristic of vesicle we might can write it better *`{.green}
 The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters 
 
 $$\delta d=1-\frac{min(dSi,dGTi)}{max(dSi,dGTi)}$$ {#eq:regular-equation}
@@ -584,6 +590,7 @@ where dGTi is the diameter of each true manual segmented vesicle, and dSi is the
 The center error is an euclidean distance of ground truth and corresponds to true predicted vesicles `\_true pos or true neg*`{.green}.
 A vesicle was defined as a true-detected vesicle if the predicted center was located inside the hand-segmented vesicle and the other way around the center of prediction was located inside the predicted vesicle. 
 `\_isn't this a bit too general, shouldn't this be a tighter evaluation?*`{.green}
+`\_we assume this as hard condition to be true postive we could define like some % liek 50% intersection but this condition is generally harder`{.green}
 This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is: 
 
 $$V=\frac{1}{12}\pi(4R+d)(2R-d)$$
