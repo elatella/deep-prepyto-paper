@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/ca68fe25442cc1daaa95ab27c320864fd49134d9/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/ca68fe25442cc1daaa95ab27c320864fd49134d9/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/ca68fe25442cc1daaa95ab27c320864fd49134d9/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/ca68fe25442cc1daaa95ab27c320864fd49134d9/))
 was automatically generated
-from [elatella/deep-prepyto-paper@0ba8f17](https://github.com/elatella/deep-prepyto-paper/tree/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3)
+from [elatella/deep-prepyto-paper@ca68fe2](https://github.com/elatella/deep-prepyto-paper/tree/ca68fe25442cc1daaa95ab27c320864fd49134d9)
 on July 18, 2022.
 </em></small>
 
@@ -350,7 +350,7 @@ Table 1- Evaluation of the segmentation: Mask Dice: Mask Dice coefficient for th
 | **Average**   |  **0.69±0.09**  |     **0.79±0.09**      |     | **0.06**  | **2.35±1.83**  |      **287.42**      | **83.60%** | **16.40%** | **7.90%** |
 
 
-
+Our method transfers well across datasets even without fine-tuning which show robustness and generalization.
 
 ### Comparison of manual segmentation with automatic deep-learning based segmentation
 

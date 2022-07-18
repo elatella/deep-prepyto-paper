@@ -16,13 +16,13 @@ CaCl
 Carlsbergfondet
 CCD
 CNNs
-Convolutional
+convolutional
 cryo
 Dataset
 datasets
 deconvolutional
 DeepFinder
-defocus
+Defocus
 developement
 dGTi
 Didcot
@@ -111,7 +111,7 @@ subvolumes
 SV
 SVs
 synaptosomal
-Synaptosome
+synaptosome
 synaptosomes
 Tecnai
 TEM
@@ -125,7 +125,7 @@ tomograms
 TP
 Tridiem
 unbinned
-unet
+UNet
 untilted
 Vitrobot
 voxel
