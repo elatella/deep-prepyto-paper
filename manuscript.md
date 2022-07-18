@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/0b4dcda05275ee8b63b2a133a3de782923a77e68/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0b4dcda05275ee8b63b2a133a3de782923a77e68/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0b4dcda05275ee8b63b2a133a3de782923a77e68/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/0b4dcda05275ee8b63b2a133a3de782923a77e68/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3/))
 was automatically generated
-from [elatella/deep-prepyto-paper@0b4dcda](https://github.com/elatella/deep-prepyto-paper/tree/0b4dcda05275ee8b63b2a133a3de782923a77e68)
+from [elatella/deep-prepyto-paper@0ba8f17](https://github.com/elatella/deep-prepyto-paper/tree/0ba8f17fadfc685d0cb8a111ad2d5280d346c7f3)
 on July 18, 2022.
 </em></small>
 
@@ -594,6 +594,10 @@ A vesicle was defined as a true-detected vesicle if the predicted center was loc
 This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is: 
 
 $$V=\frac{1}{12}\pi(4R+d)(2R-d)$$
+
+### Manuscript preparation
+The manuscript was written with the open and collaborative scientific writing package Manubot [@doi:10.1371/journal.pcbi.1007128]. 
+The source code and data for this manuscript are available at <https://github.com/aseedb/synaptic_tomo_ms>.
 
 
 ## References {.page_break_before}

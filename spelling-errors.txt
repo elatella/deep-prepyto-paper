@@ -4,7 +4,7 @@ ameen
 Amin
 anisotropic
 aseedb
-astrocytic
+Astrocytic
 Aurion
 Automator
 Benoît
@@ -18,7 +18,7 @@ CCD
 CNNs
 Convolutional
 cryo
-dataset
+Dataset
 datasets
 deconvolutional
 DeepFinder
@@ -83,7 +83,7 @@ Oxfordshire
 patchify
 Pleasonton
 Postprocessing
-Pre
+pre
 presynaptic
 Pyto
 Radecke
@@ -111,7 +111,7 @@ subvolumes
 SV
 SVs
 synaptosomal
-synaptosome
+Synaptosome
 synaptosomes
 Tecnai
 TEM
@@ -125,10 +125,10 @@ tomograms
 TP
 Tridiem
 unbinned
-UNet
+unet
 untilted
 Vitrobot
-Voxel
+voxel
 voxels
 Wageningen
 Weigert
