@@ -16,13 +16,13 @@ CaCl
 Carlsbergfondet
 CCD
 CNNs
-convolutional
+Convolutional
 cryo
-Dataset
-Datasets
+dataset
+datasets
 deconvolutional
 DeepFinder
-Defocus
+defocus
 developement
 dGTi
 Didcot
@@ -85,7 +85,7 @@ Pleasonton
 Postprocessing
 pre
 presynaptic
-pyto
+Pyto
 Radecke
 Raphaela
 recruitability

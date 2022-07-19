@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/))
 was automatically generated
-from [elatella/deep-prepyto-paper@dcb5d4b](https://github.com/elatella/deep-prepyto-paper/tree/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0)
+from [elatella/deep-prepyto-paper@5f8ce74](https://github.com/elatella/deep-prepyto-paper/tree/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79)
 on July 19, 2022.
 </em></small>
 
@@ -475,7 +475,9 @@ The previously prepared subsets are fed into the 3D U-Net in batches of 50. `\_c
 These were passed through the U-Net in a total of 200 epochs.
 Batch normalization was applied before Rectified Linear Unit (ReLU) activation `\_was it? cite Ioffe & Szegedy, maybe? [@doi:10.48550/arXiv.1502.03167]*`{.green}.
 
-The 3D U-Net architecture is composed of a contracting or analysis path (convolutional layers), and an expanding or synthesis path (deconvolutional layers) (Figure {@fig:unet}).
+`\_we do not use deconv layers, instead we upsample (by repeating the data) and then apply a convolution.*`{.green}
+`\_as far as I know, nobody uses analysis/expantion path, encoder/decoder is the common and correct term.*`{.green}
+The 3D U-Net architecture is composed of a contracting or analysis path!! (convolutional layers), and an expanding or synthesis path (deconvolutional!! layers) (Figure {@fig:unet}).
 `\_did we wrote our own U-Net or do we need to quote someones github for the original framework*`{.green}
 `\_we used CSBDeep for Convoultion blocks Benoit mentioned it in the introdction we can bring it here but github licence is BSD 3-Clause License whihc it means we dont need to reference *`{.green} 
 
