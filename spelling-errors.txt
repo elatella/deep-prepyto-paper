@@ -8,7 +8,6 @@ Astrocytic
 Aurion
 Automator
 Benoît
-binarization
 binarize
 binarized
 Blegdamsvej
@@ -17,12 +16,12 @@ Carlsbergfondet
 CCD
 CNNs
 convolutional
-cryo
-dataset
+Cryo
+Dataset
 datasets
 deconvolutional
 DeepFinder
-defocus
+Defocus
 developement
 dGTi
 Didcot
@@ -85,7 +84,7 @@ Pleasonton
 Postprocessing
 pre
 presynaptic
-pyto
+Pyto
 Radecke
 Raphaela
 recruitability
@@ -125,7 +124,7 @@ tomograms
 TP
 Tridiem
 unbinned
-UNet
+unet
 untilted
 Vitrobot
 Voxel

@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/))
 was automatically generated
-from [elatella/deep-prepyto-paper@efaef97](https://github.com/elatella/deep-prepyto-paper/tree/efaef97560d4148bc5a78b0c0095a741a7e24434)
+from [elatella/deep-prepyto-paper@6fac313](https://github.com/elatella/deep-prepyto-paper/tree/6fac31346efa9b781a1d33ab80364cf9f12c8c99)
 on July 19, 2022.
 </em></small>
 
@@ -570,8 +570,9 @@ The pipeline also generates a specific output format, which is necessary to furt
 
 The `\_general form??*`{.green} DICE coefficient for probabilistic subvolume maps was calculated after each epoch as a performance quantification while `\_during?*`{.green} training.
 The probabilistic mask subvolumes were stitched back together, creating a probabilistic map of the whole tomogram. 
-The DICE for the whole tomogram was calculated to evaluate the similarity of the predicted probability mask with ground truth. 
-The binarization from the same formulation converges to this interpretation that we measure the overlap between two samples. `\_this sounds unnecessary difficult*`{.green}
+The Soft-DICE for the whole tomogram was calculated to evaluate the similarity of the predicted probability mask with ground truth. 
+Note that soft-dice is equivalent to dice, when the input is binarized (which we will do at the end of the post-processing).
+
 
 $$1-\frac{2\sum_{pixels} y_{true} y_{pred}%}{\sum_{pixels} y_{true}^2+\sum_{pixels} y_{pred}^2}$$
 
