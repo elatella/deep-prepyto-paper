@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/8884d194e9ae79dccf0700aecd2e98f804704698/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8884d194e9ae79dccf0700aecd2e98f804704698/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/8884d194e9ae79dccf0700aecd2e98f804704698/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/8884d194e9ae79dccf0700aecd2e98f804704698/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0/))
 was automatically generated
-from [elatella/deep-prepyto-paper@8884d19](https://github.com/elatella/deep-prepyto-paper/tree/8884d194e9ae79dccf0700aecd2e98f804704698)
+from [elatella/deep-prepyto-paper@dcb5d4b](https://github.com/elatella/deep-prepyto-paper/tree/dcb5d4ba65ea6ef650ea0376f97ae3ac8434f5b0)
 on July 19, 2022.
 </em></small>
 
@@ -454,6 +454,8 @@ The used datasets included a total of 30 tomograms with heterogeneous pixel size
 2. A single tomogram with the exactly same setup and sample preparation like the train dataset
 3. 8 Synaptosome tomograms Dataset:  with ground truth (with an exceeding treatment on the samples)
 4. 12 Neuron fully segmented tomograms Dataset: with completely different sample preparation and microscope setup
+
+`\_this is not good place to talk about evalution *`{.green}
 
 
 #### Deep Model Training with a 3D U-Net

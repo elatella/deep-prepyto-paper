@@ -4,8 +4,8 @@ ameen
 Amin
 anisotropic
 aseedb
-Astrocytic
-AURION
+astrocytic
+Aurion
 Automator
 Benoît
 binarization
@@ -18,11 +18,11 @@ CCD
 CNNs
 convolutional
 cryo
-dataset
-datasets
+Dataset
+Datasets
 deconvolutional
 DeepFinder
-defocus
+Defocus
 developement
 dGTi
 Didcot
@@ -111,7 +111,7 @@ subvolumes
 SV
 SVs
 synaptosomal
-synaptosome
+Synaptosome
 synaptosomes
 Tecnai
 TEM
@@ -125,10 +125,10 @@ tomograms
 TP
 Tridiem
 unbinned
-unet
+UNet
 untilted
 Vitrobot
-voxel
+Voxel
 voxels
 Wageningen
 Weigert
