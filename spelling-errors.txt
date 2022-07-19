@@ -5,7 +5,7 @@ Amin
 anisotropic
 aseedb
 Astrocytic
-Aurion
+AURION
 Automator
 Benoît
 binarization
@@ -18,11 +18,11 @@ CCD
 CNNs
 convolutional
 cryo
-Dataset
+dataset
 datasets
 deconvolutional
 DeepFinder
-Defocus
+defocus
 developement
 dGTi
 Didcot
@@ -85,7 +85,7 @@ Pleasonton
 Postprocessing
 pre
 presynaptic
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability
@@ -125,7 +125,7 @@ tomograms
 TP
 Tridiem
 unbinned
-UNet
+unet
 untilted
 Vitrobot
 voxel
