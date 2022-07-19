@@ -4,7 +4,7 @@ ameen
 Amin
 anisotropic
 aseedb
-astrocytic
+Astrocytic
 Aurion
 Automator
 Benoît
@@ -16,7 +16,7 @@ CaCl
 Carlsbergfondet
 CCD
 CNNs
-Convolutional
+convolutional
 cryo
 dataset
 datasets
@@ -85,7 +85,7 @@ Pleasonton
 Postprocessing
 pre
 presynaptic
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability

@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/))
 was automatically generated
-from [elatella/deep-prepyto-paper@5f8ce74](https://github.com/elatella/deep-prepyto-paper/tree/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79)
+from [elatella/deep-prepyto-paper@efaef97](https://github.com/elatella/deep-prepyto-paper/tree/efaef97560d4148bc5a78b0c0095a741a7e24434)
 on July 19, 2022.
 </em></small>
 
@@ -485,7 +485,7 @@ The 3D U-Net architecture is composed of a contracting or analysis path!! (convo
 
 `\_what do we use as initial encoder weights and backbone*`{.green} 
 `\_code checked: keras- The Glorot uniform initializer, also called Xavier uniform initializer.*`{.green} 
-During each layer of the analysis path, the convolution filter consisting of a 3x3x3 kernel, with randomly initialized weights, was moved over all the voxels in each subset twice, each time taking their dot product.
+During each layer of the analysis path, the convolution filter consisting of a 3x3x3 kernel, with randomly initialized weights, was moved over all the voxels in each subset twice `\_what do you mean by "twice"?  *`{.green}, each time taking their dot product.
 This kernel extracts and enhances the features in different parts of the image.
 This is followed by a ReLU function, which can be described as 
 
@@ -510,6 +510,7 @@ with the *output size* being the number of scalar values in the model output, *Å
 
 To optimize the weights and reduce the loss function during training, the Adam optimizer was used [@doi:10.48550/arXiv.1412.6980].
 200 epochs were run until the loss function reached a global minimum.
+`\_it's a local minima, we are optimizing a non-convex function with thousands of parameters*`{.green}
 
 
 ##### Mask prediction

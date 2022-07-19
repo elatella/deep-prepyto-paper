@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/efaef97560d4148bc5a78b0c0095a741a7e24434/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/5f8ce74498d1e3b96505ed59b31ca2c4e5d71f79">elatella/deep-prepyto-paper@5f8ce74</a>
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/efaef97560d4148bc5a78b0c0095a741a7e24434">elatella/deep-prepyto-paper@efaef97</a>
 on July 19, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -860,7 +860,7 @@ The 3D U-Net architecture is composed of a contracting or analysis path!! (convo
 </div>
 <p><code class="green">\_what do we use as initial encoder weights and backbone*</code>
 <code class="green">\_code checked: keras- The Glorot uniform initializer, also called Xavier uniform initializer.*</code>
-During each layer of the analysis path, the convolution filter consisting of a 3x3x3 kernel, with randomly initialized weights, was moved over all the voxels in each subset twice, each time taking their dot product.
+During each layer of the analysis path, the convolution filter consisting of a 3x3x3 kernel, with randomly initialized weights, was moved over all the voxels in each subset twice <code class="green">\_what do you mean by "twice"?  *</code>, each time taking their dot product.
 This kernel extracts and enhances the features in different parts of the image.
 This is followed by a ReLU function, which can be described as</p>
 <p><span class="math display">\[f(x)=max(0,x)\]</span></p>
@@ -876,7 +876,8 @@ As the segmentation of vesicles can be considered a binary classification task, 
 <p>with the <em>output size</em> being the number of scalar values in the model output, <em>ŷ_1_</em> being the <em>i</em>-th scalar value in the model output and <em>y_i_</em> being the corresponding target value.
 <code class="green">\_publication to cite?*</code></p>
 <p>To optimize the weights and reduce the loss function during training, the Adam optimizer was used <span class="citation" data-cites="1G9auqG3f">[<a href="#ref-1G9auqG3f" role="doc-biblioref">20</a>]</span>.
-200 epochs were run until the loss function reached a global minimum.</p>
+200 epochs were run until the loss function reached a global minimum.
+<code class="green">\_it's a local minima, we are optimizing a non-convex function with thousands of parameters*</code></p>
 <h5 id="mask-prediction">Mask prediction</h5>
 <p>The tomograms are large, 3D volumes.
 They therefore were split into 32x32x32 patches with a step size of 24 (stride) before the U-Net.
