@@ -10,7 +10,7 @@
   <meta name="author" content="Guillaume Witz" />
   <meta name="author" content="Jakob B. Sørensen" />
   <meta name="author" content="Benoît Zuber" />
-  <meta name="dcterms.date" content="2022-07-19" />
+  <meta name="dcterms.date" content="2022-08-09" />
   <meta name="keywords" content="synapse, cryo-electron tomography, synaptic vesicles, deep learning, segmentation, post-processing, automation" />
   <title>Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms</title>
   <style>
@@ -52,8 +52,8 @@
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-07-19" />
-  <meta name="citation_publication_date" content="2022-07-19" />
+  <meta name="dc.date" content="2022-08-09" />
+  <meta name="citation_publication_date" content="2022-08-09" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,10 +112,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/">permalink</a>)
+(<a href="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/6fac31346efa9b781a1d33ab80364cf9f12c8c99">elatella/deep-prepyto-paper@6fac313</a>
-on July 19, 2022.
+from <a href="https://github.com/elatella/deep-prepyto-paper/tree/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16">elatella/deep-prepyto-paper@2cb0b3e</a>
+on August 9, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -287,7 +287,7 @@ The probability mask is further refined by applying global and adaptive localize
 For further optimization of the mask, outliers were removed.
 Removed outliers mostly consisted of vesicles which were only partially segmented, and vesicles which maks were adjacent due to proximity.
 The removed masks, which only partially traced the vesicles, were reevaluated by reducing or expanding their radius (Figure <a href="#fig:radial_profile">4</a>).
-<code class="green">\_was the center of the vesicles also reevaluated?*</code></p>
+<code class="green">\_was the center of the vesicles also reevaluated?*</code> <code class="green">\_Its not clear or might be false sentence we didnt remove or re evaluate the mask?*</code></p>
 <div id="fig:radial_profile" class="fignos">
 <figure>
 <img src="images/radial_avg_115-099.svg" style="width:15cm" alt="Figure 4: Vesicle radius and position through radial profile and cross-correlation Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement" /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Vesicle radius and position through radial profile and cross-correlation</strong> Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement</figcaption>
