@@ -17,7 +17,7 @@ CCD
 CNNs
 convolutional
 Cryo
-Dataset
+dataset
 datasets
 deconvolutional
 DeepFinder
@@ -124,10 +124,10 @@ tomograms
 TP
 Tridiem
 unbinned
-unet
+UNet
 untilted
 Vitrobot
-Voxel
+voxel
 voxels
 Wageningen
 Weigert

@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-07-19'
+date-meta: '2022-08-09'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-07-19" />
-  <meta name="citation_publication_date" content="2022-07-19" />
+  <meta name="dc.date" content="2022-08-09" />
+  <meta name="citation_publication_date" content="2022-08-09" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/" />
+  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/" />
+  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://elatella.github.io/deep-prepyto-paper/v/6fac31346efa9b781a1d33ab80364cf9f12c8c99/))
+([permalink](https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/))
 was automatically generated
-from [elatella/deep-prepyto-paper@6fac313](https://github.com/elatella/deep-prepyto-paper/tree/6fac31346efa9b781a1d33ab80364cf9f12c8c99)
-on July 19, 2022.
+from [elatella/deep-prepyto-paper@2cb0b3e](https://github.com/elatella/deep-prepyto-paper/tree/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16)
+on August 9, 2022.
 </em></small>
 
 ## Authors
@@ -284,7 +284,7 @@ The probability mask is further refined by applying global and adaptive localize
 For further optimization of the mask, outliers were removed. 
 Removed outliers mostly consisted of vesicles which were only partially segmented, and vesicles which maks were adjacent due to proximity.
 The removed masks, which only partially traced the vesicles, were reevaluated by reducing or expanding their radius (Figure {@fig:radial_profile}).
-`\_was the center of the vesicles also reevaluated?*`{.green}
+`\_was the center of the vesicles also reevaluated?*`{.green} `\_Its not clear or might be false sentence we didnt remove or re evaluate the mask?*`{.green}
 
 ![**Vesicle radius and position through radial profile and cross-correlation** Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement](images/radial_avg_115-099.svg){#fig:radial_profile width="15cm"}
 
