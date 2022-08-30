@@ -24,7 +24,7 @@ dependencies:
     - isbnlib==3.10.9
     - opentimestamps-client==0.7.0
     - opentimestamps==0.4.1
-    - pandoc=2.17.0.1
+    - pandoc
     - pandoc-eqnos==2.5.0
     - pandoc-fignos==2.4.0
     - pandoc-tablenos==2.3.0
