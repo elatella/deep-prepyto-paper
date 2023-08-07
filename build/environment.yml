@@ -34,4 +34,4 @@ dependencies:
     - pybase62==0.4.3
     - pysha3==1.0.2
     - python-bitcoinlib==0.10.2
-    - pyyaml==5.4.1
+    - pyyaml
