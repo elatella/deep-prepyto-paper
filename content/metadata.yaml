@@ -1,5 +1,5 @@
 ---
-title: Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms
+title: CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms
 keywords:
   - synapse
   - cryo-electron tomography
@@ -10,7 +10,7 @@ keywords:
   - automation
 lang: en-US
 authors:
-  - github: ameen-khosrowzadeh
+  - github: amineuron
     name: Amin Khosrozadeh
     initials: AK
     orcid: XXXX-XXXX-XXXX-XXXX
